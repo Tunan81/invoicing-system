@@ -12,16 +12,15 @@ import team.tunan.constant.CommonConstant;
 @Data
 public class PageRequest {
 
-
     /**
      * 当前页号
      */
-    private long pageNumber = 1;
+    private long current = 1;
 
     /**
      * 页面大小
      */
-    private long PageSize = 10;
+    private long pageSize = 10;
 
     /**
      * 排序字段

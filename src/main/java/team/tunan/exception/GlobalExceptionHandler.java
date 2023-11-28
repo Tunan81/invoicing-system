@@ -18,14 +18,12 @@ public class GlobalExceptionHandler {
     @ExceptionHandler(BusinessException.class)
     public Result<?> businessExceptionHandler(BusinessException e) {
         log.error("BusinessException", e);
-        System.out.println(111111111);
         return Result.fail(e.getCode(), e.getMessage());
     }
 
     @ExceptionHandler(RuntimeException.class)
     public Result<?> runtimeExceptionHandler(RuntimeException e) {
         log.error("RuntimeException", e);
-        System.out.println(111111111);
         return Result.fail(HttpCodeEnum.SYSTEM_ERROR.getCode(), "系统错误");
     }
 }

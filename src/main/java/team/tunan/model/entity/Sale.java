@@ -1,5 +1,8 @@
 package team.tunan.model.entity;
 
+import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.annotation.TableLogic;
+import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -15,11 +18,12 @@ import java.util.Date;
  * @since 2023-11-21
  */
 @Data
+@TableName("sale")
 @NoArgsConstructor
 @AllArgsConstructor
-
 public class Sale implements Serializable {
 
+    @TableId
     private Long saleId;
 
     private Long productId;
@@ -32,13 +36,13 @@ public class Sale implements Serializable {
 
     private BigDecimal saleTotal;
 
-    /**
-     * 是否删除
-     */
-    private Integer isDelete;
-
     private Date createTime;
 
     private Date updateTime;
 
+    /**
+     * 是否删除
+     */
+    @TableLogic
+    private Integer isDelete;
 }

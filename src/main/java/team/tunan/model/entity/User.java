@@ -1,5 +1,8 @@
 package team.tunan.model.entity;
 
+import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.annotation.TableLogic;
+import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -14,6 +17,7 @@ import java.util.Date;
  * @since 2023-11-21
  */
 @Data
+@TableName("user")
 @NoArgsConstructor
 @AllArgsConstructor
 public class User implements Serializable {
@@ -21,6 +25,7 @@ public class User implements Serializable {
     /**
      * 用户ID
      */
+    @TableId
     private Long id;
 
     /**
@@ -63,6 +68,10 @@ public class User implements Serializable {
      */
     private Date updateTime;
 
+    /**
+     * 是否删除
+     */
+    @TableLogic
     private Integer isDelete;
 
     private static final long serialVersionUID = 1L;

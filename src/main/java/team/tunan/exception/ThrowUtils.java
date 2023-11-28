@@ -24,9 +24,6 @@ public class ThrowUtils {
 
     /**
      * 条件成立则抛异常
-     *
-     * @param condition
-     * @param errorCode
      */
     public static void throwIf(boolean condition, HttpCodeEnum httpCodeEnum) {
         throwIf(condition, new BusinessException(httpCodeEnum));

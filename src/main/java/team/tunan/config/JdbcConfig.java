@@ -16,6 +16,7 @@ import javax.sql.DataSource;
  */
 
 public class JdbcConfig {
+
     @Value("${jdbc.driver}")
     private String driver;
 
@@ -30,6 +31,7 @@ public class JdbcConfig {
 
     /**
      * 配置数据源
+     *
      * @return 数据源
      */
     @Bean
