@@ -1,5 +1,6 @@
 package team.tunan.controller;
 
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -14,6 +15,7 @@ import javax.annotation.Resource;
  * @version 1.0
  * @date 2023/11/28
  */
+@CrossOrigin
 @RestController
 @RequestMapping("/user")
 public class UserController {
