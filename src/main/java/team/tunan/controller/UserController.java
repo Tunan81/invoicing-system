@@ -147,7 +147,7 @@ public class UserController {
      * 分页获取用户列表（仅管理员）
      */
     @PostMapping("/list/page")
-    //@AuthCheck(mustRole = UserConstant.ADMIN_ROLE)
+    @AuthCheck(mustRole = UserConstant.ADMIN_ROLE)
     public Result<Page<User>> listUserByPage(@RequestBody UserQueryRequest userQueryRequest) {
         long current = userQueryRequest.getCurrent();
         long size = userQueryRequest.getPageSize();
