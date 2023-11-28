@@ -6,7 +6,7 @@ import team.tunan.common.HttpCodeEnum;
 /**
  * 抛异常工具类
  *
- * @author <a href="https://github.com/Tunan81">图南</a>
+ * @author <a href="https://gitee.com/xia-haike">图南</a>
  */
 public class ThrowUtils {
 

@@ -26,7 +26,7 @@ import javax.servlet.http.HttpServletRequest;
 /**
  * 用户服务实现
  *
- * @author <a href="https://github.com/Tunan81">图南</a>
+ * @author <a href="https://gitee.com/xia-haike">图南</a>
  */
 @Slf4j
 @Service

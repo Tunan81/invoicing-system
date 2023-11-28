@@ -6,7 +6,7 @@ import team.tunan.common.HttpCodeEnum;
 /**
  * 自定义异常类
  *
- * @author <a href="https://github.com/Tunan81">图南</a>
+ * @author <a href="https://gitee.com/xia-haike">图南</a>
  */
 public class BusinessException extends RuntimeException {
 

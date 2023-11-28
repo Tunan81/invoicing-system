@@ -18,7 +18,7 @@ import java.util.UUID;
 /**
  * 请求响应日志 AOP
  *
- * @author <a href="https://github.com/Tunan81">图南</a>
+ * @author <a href="https://gitee.com/xia-haike">图南</a>
  **/
 @Slf4j
 @Aspect
