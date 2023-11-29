@@ -26,7 +26,7 @@ import javax.servlet.http.HttpServletRequest;
  * @version 1.0
  * @date 2023/11/28
  */
-@CrossOrigin
+@CrossOrigin(allowCredentials = "true")
 @RestController
 @RequestMapping("/user")
 public class UserController {
@@ -118,8 +118,9 @@ public class UserController {
      * 删除用户
      */
     @PostMapping("/delete")
-    @AuthCheck(mustRole = UserConstant.ADMIN_ROLE)
+    //@AuthCheck(mustRole = UserConstant.ADMIN_ROLE)
     public Result<Boolean> deleteUser(@RequestBody DeleteRequest deleteRequest) {
+        System.out.println(deleteRequest);
         if (deleteRequest == null || deleteRequest.getId() <= 0) {
             throw new BusinessException(HttpCodeEnum.PARAMS_ERROR);
         }
@@ -147,7 +148,7 @@ public class UserController {
      * 分页获取用户列表（仅管理员）
      */
     @PostMapping("/list/page")
-    @AuthCheck(mustRole = UserConstant.ADMIN_ROLE)
+    //@AuthCheck(mustRole = UserConstant.ADMIN_ROLE)
     public Result<Page<User>> listUserByPage(@RequestBody UserQueryRequest userQueryRequest) {
         long current = userQueryRequest.getCurrent();
         long size = userQueryRequest.getPageSize();
@@ -174,5 +175,7 @@ public class UserController {
         ThrowUtils.throwIf(!result, HttpCodeEnum.OPERATION_ERROR);
         return Result.success(true);
     }
+
+
 
 }

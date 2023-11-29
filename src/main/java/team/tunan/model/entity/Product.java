@@ -43,7 +43,7 @@ public class Product implements Serializable {
     /**
      * 是否删除
      */
-    @TableLogic
+    @TableLogic(value = "0",delval = "1")
     private Integer isDelete;
 
 }

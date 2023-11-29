@@ -71,7 +71,7 @@ public class User implements Serializable {
     /**
      * 是否删除
      */
-    @TableLogic
+    @TableLogic(value = "0",delval = "1")
     private Integer isDelete;
 
     private static final long serialVersionUID = 1L;

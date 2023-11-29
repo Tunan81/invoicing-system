@@ -29,4 +29,12 @@ public class UserTest {
     public void testList() {
         System.out.println(userService.list());
     }
+
+    /**
+     * 测试逻辑删除
+     */
+    @Test
+    public void testDelete() {
+        System.out.println(userService.removeById(1729703368589283330L));
+    }
 }
