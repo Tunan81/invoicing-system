@@ -1,7 +1,9 @@
 package team.tunan.service;
 
 
+import com.baomidou.mybatisplus.core.conditions.Wrapper;
 import com.baomidou.mybatisplus.extension.service.IService;
+import team.tunan.model.dto.product.ProductQueryRequest;
 import team.tunan.model.entity.Product;
 
 /**
@@ -14,4 +16,5 @@ import team.tunan.model.entity.Product;
  */
 public interface IProductService extends IService<Product> {
 
+    Wrapper<Product> getQueryWrapper(ProductQueryRequest productQueryRequest);
 }

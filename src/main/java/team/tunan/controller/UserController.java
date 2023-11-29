@@ -120,7 +120,6 @@ public class UserController {
     @PostMapping("/delete")
     //@AuthCheck(mustRole = UserConstant.ADMIN_ROLE)
     public Result<Boolean> deleteUser(@RequestBody DeleteRequest deleteRequest) {
-        System.out.println(deleteRequest);
         if (deleteRequest == null || deleteRequest.getId() <= 0) {
             throw new BusinessException(HttpCodeEnum.PARAMS_ERROR);
         }
@@ -132,7 +131,7 @@ public class UserController {
      * 更新用户
      */
     @PostMapping("/update")
-    @AuthCheck(mustRole = UserConstant.ADMIN_ROLE)
+    //@AuthCheck(mustRole = UserConstant.ADMIN_ROLE)
     public Result<Boolean> updateUser(@RequestBody UserUpdateRequest userUpdateRequest) {
         if (userUpdateRequest == null || userUpdateRequest.getId() == null) {
             throw new BusinessException(HttpCodeEnum.PARAMS_ERROR);
