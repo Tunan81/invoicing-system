@@ -9,6 +9,7 @@ import team.tunan.common.HttpCodeEnum;
 import team.tunan.common.Result;
 import team.tunan.exception.BusinessException;
 import team.tunan.exception.ThrowUtils;
+import team.tunan.model.dto.purchase.PurchaseAddDTO;
 import team.tunan.model.dto.purchase.PurchaseQueryRequest;
 import team.tunan.model.entity.Purchase;
 import team.tunan.model.entity.User;
@@ -45,6 +46,14 @@ public class PurchaseController {
     @Resource
     private UserService userService;
 
+    @PostMapping("/add")
+    public Result<Boolean> add(@RequestBody PurchaseAddDTO purchaseAddDTO) {
+        if (purchaseAddDTO == null) {
+            throw new BusinessException(HttpCodeEnum.PARAMS_ERROR);
+        }
+        return Result.success(purchaseService.saveDate(purchaseAddDTO));
+    }
+
     @PostMapping("/list/page")
     public Result<Page<PurchaseVO>> listPage(@RequestBody PurchaseQueryRequest purchaseQueryRequest) {
         if (purchaseQueryRequest == null) {
@@ -72,6 +81,5 @@ public class PurchaseController {
         purchaseVOPage.setRecords(purchaseVOList);
         return Result.success(purchaseVOPage);
     }
-
 }
 

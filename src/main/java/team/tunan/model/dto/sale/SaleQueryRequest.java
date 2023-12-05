@@ -1,4 +1,4 @@
-package team.tunan.model.dto.purchase;
+package team.tunan.model.dto.sale;
 
 import lombok.Data;
 import lombok.EqualsAndHashCode;
@@ -10,20 +10,22 @@ import java.util.Date;
 /**
  * @author Tunan
  * @version 1.0
- * @date 2023/11/29
+ * @date 2023/11/30
  */
 @EqualsAndHashCode(callSuper = true)
 @Data
-public class PurchaseQueryRequest extends PageRequest implements Serializable {
+public class SaleQueryRequest extends PageRequest implements Serializable {
 
     /**
      * id
      */
-    private Long purchaseId;
+    private Long saleId;
 
     private Long userId;
 
-    private Date purchaseTime;
+    private Long productId;
+
+    private Date saleTime;
 
     private static final long serialVersionUID = 1L;
 }

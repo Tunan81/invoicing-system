@@ -1,5 +1,6 @@
-package team.tunan.model.vo;
+package team.tunan.model.dto.purchase;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.Data;
 
 import java.math.BigDecimal;
@@ -8,19 +9,20 @@ import java.util.Date;
 /**
  * @author Tunan
  * @version 1.0
- * @date 2023/11/29
+ * @date 2023/11/30
  */
 @Data
-public class PurchaseVO {
-    private Long purchaseId;
+public class PurchaseAddDTO {
 
-    private Long userId;
-
-    private String userName;
-
-    private Long productId;
-
+    /**
+     * 商品名称
+     */
     private String productName;
+
+    /**
+     * 用户ID
+     */
+    private Long userId;
 
     /**
      * 采购时间
@@ -36,5 +38,4 @@ public class PurchaseVO {
      * 采购总价
      */
     private BigDecimal totalCost;
-
 }

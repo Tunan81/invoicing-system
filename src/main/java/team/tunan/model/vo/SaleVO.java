@@ -8,11 +8,11 @@ import java.util.Date;
 /**
  * @author Tunan
  * @version 1.0
- * @date 2023/11/29
+ * @date 2023/11/30
  */
 @Data
-public class PurchaseVO {
-    private Long purchaseId;
+public class SaleVO {
+    private Long saleId;
 
     private Long userId;
 
@@ -23,18 +23,17 @@ public class PurchaseVO {
     private String productName;
 
     /**
-     * 采购时间
+     * 销售时间
      */
-    private Date purchaseTime;
+    private Date saleDate;
 
     /**
-     * 采购数量
+     * 销售数量
      */
-    private Integer purchaseQuantity;
+    private Integer saleQuantity;
 
     /**
-     * 采购总价
+     * 销售总价
      */
-    private BigDecimal totalCost;
-
+    private BigDecimal saleTotal;
 }
