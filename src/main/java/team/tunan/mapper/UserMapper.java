@@ -12,7 +12,6 @@ import team.tunan.model.entity.User;
  * @since 2023-11-21
  */
 
-@Mapper
 public interface UserMapper extends BaseMapper<User> {
 
 }

@@ -174,7 +174,4 @@ public class UserController {
         ThrowUtils.throwIf(!result, HttpCodeEnum.OPERATION_ERROR);
         return Result.success(true);
     }
-
-
-
 }

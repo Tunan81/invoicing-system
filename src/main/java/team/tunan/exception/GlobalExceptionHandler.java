@@ -15,12 +15,18 @@ import team.tunan.common.Result;
 @RestControllerAdvice
 public class GlobalExceptionHandler {
 
+    /**
+     * 业务异常
+     */
     @ExceptionHandler(BusinessException.class)
     public Result<?> businessExceptionHandler(BusinessException e) {
         log.error("BusinessException", e);
         return Result.fail(e.getCode(), e.getMessage());
     }
 
+    /**
+     * 运行时异常
+     */
     @ExceptionHandler(RuntimeException.class)
     public Result<?> runtimeExceptionHandler(RuntimeException e) {
         log.error("RuntimeException", e);
