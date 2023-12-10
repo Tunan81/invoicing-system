@@ -33,9 +33,6 @@ public class SaleServiceImpl extends ServiceImpl<SaleMapper, Sale> implements IS
     private SaleMapper saleMapper;
 
     @Resource
-    private UserService userService;
-
-    @Resource
     private IProductService productService;
 
     @Override

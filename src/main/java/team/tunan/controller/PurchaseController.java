@@ -12,14 +12,12 @@ import team.tunan.exception.ThrowUtils;
 import team.tunan.model.dto.purchase.PurchaseAddDTO;
 import team.tunan.model.dto.purchase.PurchaseQueryRequest;
 import team.tunan.model.entity.Purchase;
-import team.tunan.model.entity.User;
 import team.tunan.model.vo.PurchaseVO;
 import team.tunan.service.IProductService;
 import team.tunan.service.IPurchaseService;
 import team.tunan.service.UserService;
 
 import javax.annotation.Resource;
-import java.util.Iterator;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -52,6 +50,20 @@ public class PurchaseController {
             throw new BusinessException(HttpCodeEnum.PARAMS_ERROR);
         }
         return Result.success(purchaseService.saveDate(purchaseAddDTO));
+    }
+
+    /**
+     * 删除
+     *
+     * @param purchaseId 主键
+     * @return Result
+     */
+    @PostMapping("/delete")
+    public Result<?> delete(Long purchaseId) {
+        if (purchaseId == null) {
+            throw new BusinessException(HttpCodeEnum.PARAMS_ERROR);
+        }
+        return purchaseService.myRemoveById(purchaseId);
     }
 
     @PostMapping("/list/page")

@@ -118,7 +118,7 @@ public class UserController {
      * 删除用户
      */
     @PostMapping("/delete")
-    //@AuthCheck(mustRole = UserConstant.ADMIN_ROLE)
+    @AuthCheck(mustRole = UserConstant.ADMIN_ROLE)
     public Result<Boolean> deleteUser(@RequestBody DeleteRequest deleteRequest) {
         if (deleteRequest == null || deleteRequest.getId() <= 0) {
             throw new BusinessException(HttpCodeEnum.PARAMS_ERROR);
@@ -131,7 +131,7 @@ public class UserController {
      * 更新用户
      */
     @PostMapping("/update")
-    //@AuthCheck(mustRole = UserConstant.ADMIN_ROLE)
+    @AuthCheck(mustRole = UserConstant.ADMIN_ROLE)
     public Result<Boolean> updateUser(@RequestBody UserUpdateRequest userUpdateRequest) {
         if (userUpdateRequest == null || userUpdateRequest.getId() == null) {
             throw new BusinessException(HttpCodeEnum.PARAMS_ERROR);
@@ -147,7 +147,7 @@ public class UserController {
      * 分页获取用户列表（仅管理员）
      */
     @PostMapping("/list/page")
-    //@AuthCheck(mustRole = UserConstant.ADMIN_ROLE)
+    @AuthCheck(mustRole = UserConstant.ADMIN_ROLE)
     public Result<Page<User>> listUserByPage(@RequestBody UserQueryRequest userQueryRequest) {
         long current = userQueryRequest.getCurrent();
         long size = userQueryRequest.getPageSize();
