@@ -52,19 +52,19 @@ public class PurchaseController {
         return Result.success(purchaseService.saveDate(purchaseAddDTO));
     }
 
-    /**
-     * 删除
-     *
-     * @param purchaseId 主键
-     * @return Result
-     */
-    @PostMapping("/delete")
-    public Result<?> delete(Long purchaseId) {
-        if (purchaseId == null) {
-            throw new BusinessException(HttpCodeEnum.PARAMS_ERROR);
-        }
-        return purchaseService.myRemoveById(purchaseId);
-    }
+//    /**
+//     * 删除
+//     *
+//     * @param purchaseId 主键
+//     * @return Result
+//     */
+//    @DeleteMapping("/delete/{purchaseId}")
+//    public Result<?> delete(@PathVariable("purchaseId") Long purchaseId) {
+//        if (purchaseId == null) {
+//            throw new BusinessException(HttpCodeEnum.PARAMS_ERROR);
+//        }
+//        return purchaseService.myRemoveById(purchaseId);
+//    }
 
     @PostMapping("/list/page")
     public Result<Page<PurchaseVO>> listPage(@RequestBody PurchaseQueryRequest purchaseQueryRequest) {
