@@ -83,12 +83,15 @@ public class PurchaseServiceImpl extends ServiceImpl<PurchaseMapper, Purchase> i
     @Override
     @Transactional(rollbackFor = Exception.class)
     public Result<?> myRemoveById(Long purchaseId) {
-        Product product = productService.getOne(new QueryWrapper<Product>().eq("purchase_id", purchaseId));
+        Purchase purchase = purchaseMapper.selectById(purchaseId);
+        if (purchase == null) {
+            throw new RuntimeException("采购记录不存在");
+        }
+        Product product = productService.getById(purchase.getProductId());
         if (product == null) {
             throw new RuntimeException("商品不存在");
         }
         purchaseMapper.deleteById(purchaseId);
-        Purchase purchase = purchaseMapper.selectById(purchaseId);
         product.setStockQuantity(product.getStockQuantity() - purchase.getPurchaseQuantity());
         productService.updateById(product);
         return Result.success("删除成功");

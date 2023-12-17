@@ -1,5 +1,7 @@
 package team.tunan.model.vo;
 
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import com.fasterxml.jackson.databind.ser.std.ToStringSerializer;
 import lombok.Data;
 
 import java.math.BigDecimal;
@@ -12,12 +14,16 @@ import java.util.Date;
  */
 @Data
 public class SaleVO {
+
+    @JsonSerialize(using = ToStringSerializer.class)
     private Long saleId;
 
+    @JsonSerialize(using = ToStringSerializer.class)
     private Long userId;
 
     private String userName;
 
+    @JsonSerialize(using = ToStringSerializer.class)
     private Long productId;
 
     private String productName;
