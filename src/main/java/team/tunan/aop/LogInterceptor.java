@@ -1,6 +1,5 @@
 package team.tunan.aop;
 
-
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
 import org.aspectj.lang.ProceedingJoinPoint;
@@ -16,42 +15,50 @@ import javax.servlet.http.HttpServletRequest;
 import java.util.UUID;
 
 /**
- * 请求响应日志 AOP
+ * This class is an Aspect Oriented Programming (AOP) interceptor for logging requests and responses.
+ * It logs the start and end of each request, including the request id, path, IP, parameters, and the total time taken.
+ * The logging is done using the SLF4J logging facade.
+ * The interceptor is applied to all methods in the 'team.tunan.controller' package.
  *
  * @author <a href="https://gitee.com/xia-haike">图南</a>
- **/
+ */
 @Slf4j
 @Aspect
 @Component
 public class LogInterceptor {
 
     /**
-     * 执行拦截
+     * This method is Around advice that intercepts all methods in the 'team.tunan.controller' package.
+     * It logs the start and end of each request, including the request id, path, IP, parameters, and the total time taken.
+     * The logging is done using the SLF4J logging facade.
+     *
+     * @param point The ProceedingJoinPoint that represents the method being intercepted.
+     * @return The result of the method being intercepted.
+     * @throws Throwable If an error occurs during the execution of the method being intercepted.
      */
     @Around("execution(* team.tunan.controller.*.*(..))")
     public Object doInterceptor(ProceedingJoinPoint point) throws Throwable {
-        // 计时
+        // Start the stopwatch for timing
         StopWatch stopWatch = new StopWatch();
         stopWatch.start();
-        // 获取请求路径
+        // Get the request path
         RequestAttributes requestAttributes = RequestContextHolder.currentRequestAttributes();
         HttpServletRequest httpServletRequest = ((ServletRequestAttributes) requestAttributes).getRequest();
-        // 生成请求唯一 id
+        // Generate a unique id for the request
         String requestId = UUID.randomUUID().toString();
         String url = httpServletRequest.getRequestURI();
-        // 获取请求参数
+        // Get the request parameters
         Object[] args = point.getArgs();
         String reqParam = "[" + StringUtils.join(args, ", ") + "]";
-        // 输出请求日志
+        // Log the start of the request
         log.info("request start，id: {}, path: {}, ip: {}, params: {}", requestId, url,
                 httpServletRequest.getRemoteHost(), reqParam);
-        // 执行原方法
+        // Execute the original method
         Object result = point.proceed();
-        // 输出响应日志
+        // Log the end of the request
         stopWatch.stop();
         long totalTimeMillis = stopWatch.getTotalTimeMillis();
         log.info("request end, id: {}, cost: {}ms", requestId, totalTimeMillis);
         return result;
     }
 }
-
