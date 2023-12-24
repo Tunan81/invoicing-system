@@ -96,4 +96,26 @@ public class PurchaseServiceImpl extends ServiceImpl<PurchaseMapper, Purchase> i
         productService.updateById(product);
         return Result.success("删除成功");
     }
+
+    @Override
+    public HttpCodeEnum myUpdate(PurchaseAddDTO purchaseAddDTO) {
+        Purchase purchase = purchaseMapper.selectById(purchaseAddDTO.getPurchaseId());
+        if (purchase == null) {
+            return HttpCodeEnum.PARAMS_ERROR;
+        }
+        Product product = productService.getById(purchase.getProductId());
+        if (product == null) {
+            return HttpCodeEnum.PARAMS_ERROR;
+        }
+        // 1.更新商品库存
+        product.setStockQuantity(product.getStockQuantity() - purchase.getPurchaseQuantity() + purchaseAddDTO.getPurchaseQuantity());
+        product.setPurchasePrice(purchaseAddDTO.getTotalCost());
+        productService.updateById(product);
+        // 2.更新采购记录
+        purchase.setPurchaseQuantity(purchaseAddDTO.getPurchaseQuantity());
+        purchase.setTotalCost(purchaseAddDTO.getTotalCost());
+        purchase.setPurchaseTime(purchaseAddDTO.getPurchaseTime());
+        purchaseMapper.updateById(purchase);
+        return HttpCodeEnum.SUCCESS;
+    }
 }

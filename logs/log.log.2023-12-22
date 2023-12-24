@@ -1,0 +1,705 @@
+2023-12-22 18:26:41  [ localhost-startStop-1:0 ] - [ INFO ]  Root WebApplicationContext: initialization started
+2023-12-22 18:26:42  [ localhost-startStop-1:1400 ] - [ INFO ]  Root WebApplicationContext initialized in 1398 ms
+2023-12-22 18:26:42  [ localhost-startStop-1:1409 ] - [ INFO ]  Initializing Servlet 'dispatcher'
+2023-12-22 18:26:43  [ localhost-startStop-1:2157 ] - [ WARN ]  For Jackson Kotlin classes support please add "com.fasterxml.jackson.module:jackson-module-kotlin" to the classpath
+2023-12-22 18:26:43  [ localhost-startStop-1:2284 ] - [ INFO ]  Completed initialization in 875 ms
+2023-12-22 18:27:12  [ http-bio-8080-exec-3:31510 ] - [ INFO ]  request start，id: 8a6daf8b-67ca-4632-8373-bf29b80f27ba, path: /user/login, ip: 0:0:0:0:0:0:0:1, params: [UserLoginRequest(userAccount=haike, userPassword=261615xhk), org.apache.catalina.connector.RequestFacade@524f7bda]
+2023-12-22 18:27:12  [ http-bio-8080-exec-3:31603 ] - [ INFO ]  {dataSource-1} inited
+2023-12-22 18:27:13  [ Druid-ConnectionPool-Create-323417532:32675 ] - [ ERROR ]  create connection SQLException, url: jdbc:mysql://localhost:3306/jxc?useSSL=false&allowPublicKeyRetrieval=true, errorCode 0, state 08S01
+com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:990)
+	at com.mysql.jdbc.MysqlIO.readPacket(MysqlIO.java:633)
+	at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:1014)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2199)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2230)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2025)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:778)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:386)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:330)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1596)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1662)
+	at com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:2601)
+Caused by: java.net.SocketException: Connection reset
+	at java.net.SocketInputStream.read(SocketInputStream.java:210)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at com.mysql.jdbc.util.ReadAheadInputStream.fill(ReadAheadInputStream.java:101)
+	at com.mysql.jdbc.util.ReadAheadInputStream.readFromUnderlyingStreamIfNecessary(ReadAheadInputStream.java:144)
+	at com.mysql.jdbc.util.ReadAheadInputStream.read(ReadAheadInputStream.java:174)
+	at com.mysql.jdbc.MysqlIO.readFully(MysqlIO.java:3011)
+	at com.mysql.jdbc.MysqlIO.readPacket(MysqlIO.java:568)
+	... 16 more
+2023-12-22 18:27:14  [ http-bio-8080-exec-4:33235 ] - [ INFO ]  request start，id: 71a44935-4d43-42b6-862a-05b83c5b6c54, path: /user/login, ip: 0:0:0:0:0:0:0:1, params: [UserLoginRequest(userAccount=haike, userPassword=261615xhk), org.apache.catalina.connector.RequestFacade@2286f525]
+2023-12-22 18:27:18  [ Druid-ConnectionPool-Create-323417532:36730 ] - [ ERROR ]  create connection SQLException, url: jdbc:mysql://localhost:3306/jxc?useSSL=false&allowPublicKeyRetrieval=true, errorCode 0, state 08S01
+com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:990)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:342)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2197)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2230)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2025)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:778)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:386)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:330)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1596)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1662)
+	at com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:2601)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:607)
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:211)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:301)
+	... 15 more
+2023-12-22 18:27:18  [ Druid-ConnectionPool-Create-323417532:36731 ] - [ INFO ]  {dataSource-1} failContinuous is true
+2023-12-22 18:27:21  [ http-bio-8080-exec-5:39882 ] - [ INFO ]  request start，id: 33e76d6a-7f7f-41d8-a9cd-b11a947bc779, path: /user/login, ip: 0:0:0:0:0:0:0:1, params: [UserLoginRequest(userAccount=219970149, userPassword=261615xhk), org.apache.catalina.connector.RequestFacade@1145508f]
+2023-12-22 18:27:22  [ http-bio-8080-exec-6:40937 ] - [ INFO ]  request start，id: eace4e1e-8d5c-40fc-a40e-36a2b60b81d3, path: /user/login, ip: 0:0:0:0:0:0:0:1, params: [UserLoginRequest(userAccount=219970149, userPassword=261615xhk), org.apache.catalina.connector.RequestFacade@7a2b81c5]
+2023-12-22 18:27:22  [ http-bio-8080-exec-7:41241 ] - [ INFO ]  request start，id: b2e6acce-ec81-4542-a5ca-6523bea55c60, path: /user/login, ip: 0:0:0:0:0:0:0:1, params: [UserLoginRequest(userAccount=219970149, userPassword=261615xhk), org.apache.catalina.connector.RequestFacade@3ad64437]
+2023-12-22 18:27:22  [ Druid-ConnectionPool-Create-323417532:41308 ] - [ ERROR ]  create connection SQLException, url: jdbc:mysql://localhost:3306/jxc?useSSL=false&allowPublicKeyRetrieval=true, errorCode 0, state 08S01
+com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:990)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:342)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2197)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2230)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2025)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:778)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:386)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:330)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1596)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1662)
+	at com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:2601)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:607)
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:211)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:301)
+	... 15 more
+2023-12-22 18:27:22  [ http-bio-8080-exec-8:41458 ] - [ INFO ]  request start，id: ab8ef4b2-87e3-47f6-ba7e-f2b0273720ad, path: /user/login, ip: 0:0:0:0:0:0:0:1, params: [UserLoginRequest(userAccount=219970149, userPassword=261615xhk), org.apache.catalina.connector.RequestFacade@49b9a5af]
+2023-12-22 18:27:22  [ http-bio-8080-exec-9:41698 ] - [ INFO ]  request start，id: 966a76b1-a9f9-4c5b-9705-949759d6f637, path: /user/login, ip: 0:0:0:0:0:0:0:1, params: [UserLoginRequest(userAccount=219970149, userPassword=261615xhk), org.apache.catalina.connector.RequestFacade@35bb2c06]
+2023-12-22 18:27:27  [ Druid-ConnectionPool-Create-323417532:45888 ] - [ ERROR ]  create connection SQLException, url: jdbc:mysql://localhost:3306/jxc?useSSL=false&allowPublicKeyRetrieval=true, errorCode 0, state 08S01
+com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:990)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:342)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2197)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2230)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2025)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:778)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:386)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:330)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1596)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1662)
+	at com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:2601)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:607)
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:211)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:301)
+	... 15 more
+2023-12-22 18:27:31  [ Druid-ConnectionPool-Create-323417532:50462 ] - [ ERROR ]  create connection SQLException, url: jdbc:mysql://localhost:3306/jxc?useSSL=false&allowPublicKeyRetrieval=true, errorCode 0, state 08S01
+com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:990)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:342)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2197)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2230)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2025)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:778)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:386)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:330)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1596)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1662)
+	at com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:2601)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:607)
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:211)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:301)
+	... 15 more
+2023-12-22 18:27:36  [ Druid-ConnectionPool-Create-323417532:55030 ] - [ ERROR ]  create connection SQLException, url: jdbc:mysql://localhost:3306/jxc?useSSL=false&allowPublicKeyRetrieval=true, errorCode 0, state 08S01
+com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:990)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:342)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2197)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2230)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2025)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:778)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:386)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:330)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1596)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1662)
+	at com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:2601)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:607)
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:211)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:301)
+	... 15 more
+2023-12-22 18:27:40  [ Druid-ConnectionPool-Create-323417532:59611 ] - [ ERROR ]  create connection SQLException, url: jdbc:mysql://localhost:3306/jxc?useSSL=false&allowPublicKeyRetrieval=true, errorCode 0, state 08S01
+com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:990)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:342)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2197)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2230)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2025)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:778)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:386)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:330)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1596)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1662)
+	at com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:2601)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:607)
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:211)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:301)
+	... 15 more
+2023-12-22 18:27:41  [ Druid-ConnectionPool-Create-323417532:60695 ] - [ INFO ]  {dataSource-1} failContinuous is false
+2023-12-22 18:27:42  [ http-bio-8080-exec-3:60722 ] - [ INFO ]  user login failed, userAccount cannot match userPassword
+2023-12-22 18:27:42  [ http-bio-8080-exec-4:60722 ] - [ INFO ]  user login failed, userAccount cannot match userPassword
+2023-12-22 18:27:42  [ http-bio-8080-exec-4:60729 ] - [ ERROR ]  BusinessException
+team.tunan.exception.BusinessException: 用户不存在或密码错误
+	at team.tunan.service.impl.UserServiceImpl.userLogin(UserServiceImpl.java:103)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:344)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:205)
+	at com.sun.proxy.$Proxy86.userLogin(Unknown Source)
+	at team.tunan.controller.UserController.userLogin(UserController.java:73)
+	at team.tunan.controller.UserController$$FastClassBySpringCGLIB$$ad25d0f4.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:771)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:749)
+	at org.springframework.aop.aspectj.MethodInvocationProceedingJoinPoint.proceed(MethodInvocationProceedingJoinPoint.java:88)
+	at team.tunan.aop.LogInterceptor.doInterceptor(LogInterceptor.java:57)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethodWithGivenArgs(AbstractAspectJAdvice.java:644)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethod(AbstractAspectJAdvice.java:633)
+	at org.springframework.aop.aspectj.AspectJAroundAdvice.invoke(AspectJAroundAdvice.java:70)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:749)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:95)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:749)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:691)
+	at team.tunan.controller.UserController$$EnhancerBySpringCGLIB$$4333ea92.userLogin(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:105)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:878)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:792)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:647)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:728)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:305)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:222)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:123)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:472)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:171)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:99)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:936)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:407)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1004)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:589)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:310)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:750)
+2023-12-22 18:27:42  [ http-bio-8080-exec-3:60729 ] - [ ERROR ]  BusinessException
+team.tunan.exception.BusinessException: 用户不存在或密码错误
+	at team.tunan.service.impl.UserServiceImpl.userLogin(UserServiceImpl.java:103)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:344)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:205)
+	at com.sun.proxy.$Proxy86.userLogin(Unknown Source)
+	at team.tunan.controller.UserController.userLogin(UserController.java:73)
+	at team.tunan.controller.UserController$$FastClassBySpringCGLIB$$ad25d0f4.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:771)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:749)
+	at org.springframework.aop.aspectj.MethodInvocationProceedingJoinPoint.proceed(MethodInvocationProceedingJoinPoint.java:88)
+	at team.tunan.aop.LogInterceptor.doInterceptor(LogInterceptor.java:57)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethodWithGivenArgs(AbstractAspectJAdvice.java:644)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethod(AbstractAspectJAdvice.java:633)
+	at org.springframework.aop.aspectj.AspectJAroundAdvice.invoke(AspectJAroundAdvice.java:70)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:749)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:95)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:749)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:691)
+	at team.tunan.controller.UserController$$EnhancerBySpringCGLIB$$4333ea92.userLogin(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:105)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:878)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:792)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:647)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:728)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:305)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:222)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:123)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:472)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:171)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:99)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:936)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:407)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1004)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:589)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:310)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:750)
+2023-12-22 18:27:42  [ http-bio-8080-exec-7:60738 ] - [ INFO ]  request end, id: b2e6acce-ec81-4542-a5ca-6523bea55c60, cost: 19497ms
+2023-12-22 18:27:42  [ http-bio-8080-exec-5:60739 ] - [ INFO ]  request end, id: 33e76d6a-7f7f-41d8-a9cd-b11a947bc779, cost: 20856ms
+2023-12-22 18:27:42  [ http-bio-8080-exec-9:60739 ] - [ INFO ]  request end, id: 966a76b1-a9f9-4c5b-9705-949759d6f637, cost: 19038ms
+2023-12-22 18:27:42  [ http-bio-8080-exec-8:60740 ] - [ INFO ]  request end, id: ab8ef4b2-87e3-47f6-ba7e-f2b0273720ad, cost: 19282ms
+2023-12-22 18:27:42  [ http-bio-8080-exec-6:60740 ] - [ INFO ]  request end, id: eace4e1e-8d5c-40fc-a40e-36a2b60b81d3, cost: 19803ms
+2023-12-22 18:27:42  [ http-bio-8080-exec-4:60764 ] - [ WARN ]  Failure in @ExceptionHandler team.tunan.exception.GlobalExceptionHandler#businessExceptionHandler(BusinessException)
+ClientAbortException:  java.net.SocketException: Software caused connection abort: socket write error
+	at org.apache.catalina.connector.OutputBuffer.doFlush(OutputBuffer.java:346)
+	at org.apache.catalina.connector.OutputBuffer.flush(OutputBuffer.java:306)
+	at org.apache.catalina.connector.CoyoteOutputStream.flush(CoyoteOutputStream.java:101)
+	at org.springframework.http.converter.AbstractGenericHttpMessageConverter.write(AbstractGenericHttpMessageConverter.java:105)
+	at org.springframework.web.servlet.mvc.method.annotation.AbstractMessageConverterMethodProcessor.writeWithMessageConverters(AbstractMessageConverterMethodProcessor.java:277)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.handleReturnValue(RequestResponseBodyMethodProcessor.java:181)
+	at org.springframework.web.method.support.HandlerMethodReturnValueHandlerComposite.handleReturnValue(HandlerMethodReturnValueHandlerComposite.java:82)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:123)
+	at org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver.doResolveHandlerMethodException(ExceptionHandlerExceptionResolver.java:407)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodExceptionResolver.doResolveException(AbstractHandlerMethodExceptionResolver.java:61)
+	at org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver.resolveException(AbstractHandlerExceptionResolver.java:141)
+	at org.springframework.web.servlet.handler.HandlerExceptionResolverComposite.resolveException(HandlerExceptionResolverComposite.java:80)
+	at org.springframework.web.servlet.DispatcherServlet.processHandlerException(DispatcherServlet.java:1300)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1111)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1057)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:647)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:728)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:305)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:222)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:123)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:472)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:171)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:99)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:936)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:407)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1004)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:589)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:310)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:750)
+Caused by: java.net.SocketException: Software caused connection abort: socket write error
+	at java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:111)
+	at java.net.SocketOutputStream.write(SocketOutputStream.java:155)
+	at org.apache.coyote.http11.InternalOutputBuffer.realWriteBytes(InternalOutputBuffer.java:215)
+	at org.apache.tomcat.util.buf.ByteChunk.flushBuffer(ByteChunk.java:462)
+	at org.apache.coyote.http11.InternalOutputBuffer.flush(InternalOutputBuffer.java:119)
+	at org.apache.coyote.http11.AbstractHttp11Processor.action(AbstractHttp11Processor.java:790)
+	at org.apache.coyote.Response.action(Response.java:173)
+	at org.apache.catalina.connector.OutputBuffer.doFlush(OutputBuffer.java:341)
+	... 40 more
+2023-12-22 18:27:54  [ http-bio-8080-exec-1:72743 ] - [ INFO ]  request start，id: 7457b8ac-8b28-478f-91c1-480d794a3b75, path: /user/login, ip: 0:0:0:0:0:0:0:1, params: [UserLoginRequest(userAccount=219970149, userPassword=261615xhk), org.apache.catalina.connector.RequestFacade@524f7bda]
+2023-12-22 18:27:54  [ http-bio-8080-exec-1:72746 ] - [ INFO ]  request end, id: 7457b8ac-8b28-478f-91c1-480d794a3b75, cost: 3ms
+2023-12-22 18:27:54  [ http-bio-8080-exec-1:72755 ] - [ INFO ]  request start，id: 47c62053-0526-4cdc-b585-53c6b05ad56e, path: /user/get/login, ip: 0:0:0:0:0:0:0:1, params: [org.apache.catalina.connector.RequestFacade@2286f525]
+2023-12-22 18:27:54  [ http-bio-8080-exec-1:72758 ] - [ INFO ]  request end, id: 47c62053-0526-4cdc-b585-53c6b05ad56e, cost: 3ms
+2023-12-22 18:28:12  [ http-bio-8080-exec-7:90964 ] - [ INFO ]  request start，id: 75bb2bca-3a07-489e-b0d6-59d6e15129e5, path: /user/list/page, ip: 0:0:0:0:0:0:0:1, params: [UserQueryRequest(id=null, userName=null, userProfile=null, userRole=null)]
+2023-12-22 18:28:12  [ http-bio-8080-exec-7:91011 ] - [ INFO ]  request end, id: 75bb2bca-3a07-489e-b0d6-59d6e15129e5, cost: 47ms
+2023-12-22 18:28:13  [ http-bio-8080-exec-7:92484 ] - [ INFO ]  request start，id: ffbcbc01-b9b5-4369-a5c5-270ec9d4445f, path: /sale/list/page, ip: 0:0:0:0:0:0:0:1, params: [SaleQueryRequest(saleId=null, userId=null, productId=null, saleTime=null)]
+2023-12-22 18:28:13  [ http-bio-8080-exec-7:92498 ] - [ INFO ]  request end, id: ffbcbc01-b9b5-4369-a5c5-270ec9d4445f, cost: 14ms
+2023-12-22 18:28:14  [ http-bio-8080-exec-7:93259 ] - [ INFO ]  request start，id: 623928f8-40ee-4cce-8fe9-c4599cb9236e, path: /purchase/list/page, ip: 0:0:0:0:0:0:0:1, params: [PurchaseQueryRequest(purchaseId=null, userId=null, purchaseTime=null)]
+2023-12-22 18:28:14  [ http-bio-8080-exec-7:93278 ] - [ INFO ]  request end, id: 623928f8-40ee-4cce-8fe9-c4599cb9236e, cost: 18ms
+2023-12-22 18:28:16  [ http-bio-8080-exec-8:94989 ] - [ INFO ]  request start，id: 2235921c-eeb1-4a35-8e2e-bdf82f7df137, path: /product/list/page, ip: 0:0:0:0:0:0:0:1, params: [ProductQueryRequest(id=null, productName=null)]
+2023-12-22 18:28:16  [ http-bio-8080-exec-8:94997 ] - [ INFO ]  request end, id: 2235921c-eeb1-4a35-8e2e-bdf82f7df137, cost: 7ms
+2023-12-22 18:59:08  [ http-bio-8080-exec-2:1947526 ] - [ INFO ]  request start，id: 014923b0-72a4-49c5-8d8f-2d3151b34d26, path: /user/list/page, ip: 0:0:0:0:0:0:0:1, params: [UserQueryRequest(id=null, userName=null, userProfile=null, userRole=null)]
+2023-12-22 18:59:08  [ http-bio-8080-exec-2:1947531 ] - [ INFO ]  request end, id: 014923b0-72a4-49c5-8d8f-2d3151b34d26, cost: 4ms
+2023-12-22 18:59:09  [ http-bio-8080-exec-2:1948317 ] - [ INFO ]  request start，id: c2bb590f-1691-41ec-a3ed-35dcc87da136, path: /purchase/list/page, ip: 0:0:0:0:0:0:0:1, params: [PurchaseQueryRequest(purchaseId=null, userId=null, purchaseTime=null)]
+2023-12-22 18:59:09  [ http-bio-8080-exec-2:1948327 ] - [ INFO ]  request end, id: c2bb590f-1691-41ec-a3ed-35dcc87da136, cost: 9ms
+2023-12-22 18:59:10  [ http-bio-8080-exec-2:1949141 ] - [ INFO ]  request start，id: 0d8151be-7056-4364-a216-88f9f77a80af, path: /sale/list/page, ip: 0:0:0:0:0:0:0:1, params: [SaleQueryRequest(saleId=null, userId=null, productId=null, saleTime=null)]
+2023-12-22 18:59:10  [ http-bio-8080-exec-2:1949143 ] - [ INFO ]  request end, id: 0d8151be-7056-4364-a216-88f9f77a80af, cost: 2ms
+2023-12-22 18:59:11  [ http-bio-8080-exec-2:1950286 ] - [ INFO ]  request start，id: cedf972c-f14b-457f-a940-ce477342db14, path: /product/list/page, ip: 0:0:0:0:0:0:0:1, params: [ProductQueryRequest(id=null, productName=null)]
+2023-12-22 18:59:11  [ http-bio-8080-exec-2:1950290 ] - [ INFO ]  request end, id: cedf972c-f14b-457f-a940-ce477342db14, cost: 4ms
+2023-12-22 18:59:11  [ http-bio-8080-exec-2:1950664 ] - [ INFO ]  request start，id: e42341f3-72a6-460e-96b7-914857e66ced, path: /sale/list/page, ip: 0:0:0:0:0:0:0:1, params: [SaleQueryRequest(saleId=null, userId=null, productId=null, saleTime=null)]
+2023-12-22 18:59:11  [ http-bio-8080-exec-2:1950666 ] - [ INFO ]  request end, id: e42341f3-72a6-460e-96b7-914857e66ced, cost: 2ms
+2023-12-22 18:59:15  [ http-bio-8080-exec-2:1954056 ] - [ INFO ]  request start，id: 95466eb0-ab34-4f1b-9aa1-041156554843, path: /purchase/list/page, ip: 0:0:0:0:0:0:0:1, params: [PurchaseQueryRequest(purchaseId=null, userId=null, purchaseTime=null)]
+2023-12-22 18:59:15  [ http-bio-8080-exec-2:1954065 ] - [ INFO ]  request end, id: 95466eb0-ab34-4f1b-9aa1-041156554843, cost: 8ms
+2023-12-22 18:59:15  [ http-bio-8080-exec-2:1954588 ] - [ INFO ]  request start，id: ac825d33-d296-4fee-90d3-895649609531, path: /user/list/page, ip: 0:0:0:0:0:0:0:1, params: [UserQueryRequest(id=null, userName=null, userProfile=null, userRole=null)]
+2023-12-22 18:59:15  [ http-bio-8080-exec-2:1954591 ] - [ INFO ]  request end, id: ac825d33-d296-4fee-90d3-895649609531, cost: 2ms
+2023-12-22 18:59:25  [ http-bio-8080-exec-2:1964355 ] - [ INFO ]  request start，id: ccee048f-0f9e-4791-afcf-ee10af5c70d6, path: /product/list/page, ip: 0:0:0:0:0:0:0:1, params: [ProductQueryRequest(id=null, productName=null)]
+2023-12-22 18:59:25  [ http-bio-8080-exec-2:1964358 ] - [ INFO ]  request end, id: ccee048f-0f9e-4791-afcf-ee10af5c70d6, cost: 2ms
+2023-12-22 18:59:35  [ localhost-startStop-2:1973768 ] - [ INFO ]  {dataSource-1} closing ...
+2023-12-22 18:59:35  [ localhost-startStop-2:1973770 ] - [ INFO ]  {dataSource-1} closed
+2023-12-22 18:59:35  [ localhost-startStop-2:1973782 ] - [ INFO ]  {dataSource-0} closing ...
+2023-12-22 21:27:14  [ localhost-startStop-1:0 ] - [ INFO ]  Root WebApplicationContext: initialization started
+2023-12-22 21:27:15  [ localhost-startStop-1:1286 ] - [ INFO ]  Root WebApplicationContext initialized in 1284 ms
+2023-12-22 21:27:15  [ localhost-startStop-1:1315 ] - [ INFO ]  Initializing Servlet 'dispatcher'
+2023-12-22 21:27:16  [ localhost-startStop-1:2139 ] - [ WARN ]  For Jackson Kotlin classes support please add "com.fasterxml.jackson.module:jackson-module-kotlin" to the classpath
+2023-12-22 21:27:16  [ localhost-startStop-1:2242 ] - [ INFO ]  Completed initialization in 927 ms
+2023-12-22 21:33:04  [ http-bio-8080-exec-3:349920 ] - [ INFO ]  request start，id: 4532c811-e77d-42dc-9d58-cae09838405d, path: /user/login, ip: 0:0:0:0:0:0:0:1, params: [UserLoginRequest(userAccount=219970149, userPassword=261615xhk), org.apache.catalina.connector.RequestFacade@7178753e]
+2023-12-22 21:33:04  [ http-bio-8080-exec-3:350019 ] - [ INFO ]  {dataSource-1} inited
+2023-12-22 21:33:04  [ http-bio-8080-exec-3:350184 ] - [ INFO ]  request end, id: 4532c811-e77d-42dc-9d58-cae09838405d, cost: 268ms
+2023-12-22 21:33:04  [ http-bio-8080-exec-4:350212 ] - [ INFO ]  request start，id: 13b8e1a0-9253-491c-b6e3-39c256053e6a, path: /user/get/login, ip: 0:0:0:0:0:0:0:1, params: [org.apache.catalina.connector.RequestFacade@7178753e]
+2023-12-22 21:33:04  [ http-bio-8080-exec-4:350215 ] - [ INFO ]  request end, id: 13b8e1a0-9253-491c-b6e3-39c256053e6a, cost: 3ms
+2023-12-22 21:33:05  [ http-bio-8080-exec-8:351768 ] - [ INFO ]  request start，id: 8f2a9da1-d31a-4b98-9125-9e45772c062d, path: /user/list/page, ip: 0:0:0:0:0:0:0:1, params: [UserQueryRequest(id=null, userName=null, userProfile=null, userRole=null)]
+2023-12-22 21:33:06  [ http-bio-8080-exec-8:351925 ] - [ INFO ]  request end, id: 8f2a9da1-d31a-4b98-9125-9e45772c062d, cost: 156ms
+2023-12-22 21:33:11  [ http-bio-8080-exec-9:357596 ] - [ INFO ]  request start，id: 48ab71a8-042e-4840-87e3-821548d419fb, path: /user/update, ip: 0:0:0:0:0:0:0:1, params: [UserUpdateRequest(id=1, userName=219970149-夏海珂, userAvatar=null, userProfile=我是简介, userRole=buyer)]
+2023-12-22 21:33:11  [ http-bio-8080-exec-9:357613 ] - [ INFO ]  request end, id: 48ab71a8-042e-4840-87e3-821548d419fb, cost: 17ms
+2023-12-22 21:33:11  [ http-bio-8080-exec-9:357624 ] - [ ERROR ]  BusinessException
+team.tunan.exception.BusinessException: 无权限
+	at team.tunan.aop.AuthInterceptor.doInterceptor(AuthInterceptor.java:69)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethodWithGivenArgs(AbstractAspectJAdvice.java:644)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethod(AbstractAspectJAdvice.java:633)
+	at org.springframework.aop.aspectj.AspectJAroundAdvice.invoke(AspectJAroundAdvice.java:70)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:175)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:749)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:95)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:749)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:691)
+	at team.tunan.controller.UserController$$EnhancerBySpringCGLIB$$4d37a051.listUserByPage(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:105)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:878)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:792)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:647)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:728)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:305)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:222)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:123)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:472)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:171)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:99)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:936)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:407)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1004)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:589)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:312)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:750)
+2023-12-22 21:34:09  [ http-bio-8080-exec-4:415031 ] - [ WARN ]  No mapping for GET /userManage
+2023-12-22 21:34:25  [ http-bio-8080-exec-6:431117 ] - [ INFO ]  request start，id: f6e70e7c-6956-405b-a168-7136a4c40321, path: /user/register, ip: 0:0:0:0:0:0:0:1, params: [UserRegisterRequest(userAccount=test, userPassword=261615xhk, checkPassword=261615xhk)]
+2023-12-22 21:34:25  [ http-bio-8080-exec-6:431172 ] - [ INFO ]  request end, id: f6e70e7c-6956-405b-a168-7136a4c40321, cost: 53ms
+2023-12-22 21:34:31  [ http-bio-8080-exec-6:437112 ] - [ INFO ]  request start，id: 820227c0-3d69-4dff-8c8e-b2f58fb45266, path: /user/login, ip: 0:0:0:0:0:0:0:1, params: [UserLoginRequest(userAccount=test, userPassword=261615xhk), org.apache.catalina.connector.RequestFacade@1be86041]
+2023-12-22 21:34:31  [ http-bio-8080-exec-6:437115 ] - [ INFO ]  request end, id: 820227c0-3d69-4dff-8c8e-b2f58fb45266, cost: 2ms
+2023-12-22 21:34:31  [ http-bio-8080-exec-7:437150 ] - [ INFO ]  request start，id: 71478231-a6d0-4182-8eb9-1658e998fa4b, path: /user/get/login, ip: 0:0:0:0:0:0:0:1, params: [org.apache.catalina.connector.RequestFacade@1be86041]
+2023-12-22 21:34:31  [ http-bio-8080-exec-7:437152 ] - [ INFO ]  request end, id: 71478231-a6d0-4182-8eb9-1658e998fa4b, cost: 2ms
+2023-12-22 21:34:48  [ http-bio-8080-exec-3:453983 ] - [ INFO ]  request start，id: 7535407b-fdf3-4fb3-b891-f5ea540453b5, path: /user/register, ip: 0:0:0:0:0:0:0:1, params: [UserRegisterRequest(userAccount=test1, userPassword=12345678, checkPassword=12345678)]
+2023-12-22 21:34:48  [ http-bio-8080-exec-3:454030 ] - [ INFO ]  request end, id: 7535407b-fdf3-4fb3-b891-f5ea540453b5, cost: 47ms
+2023-12-22 21:34:57  [ http-bio-8080-exec-9:463476 ] - [ INFO ]  request start，id: 85144d34-6e72-4f3c-9ea2-94658bab8de3, path: /user/login, ip: 0:0:0:0:0:0:0:1, params: [UserLoginRequest(userAccount=219970149, userPassword=261615xhk), org.apache.catalina.connector.RequestFacade@1be86041]
+2023-12-22 21:34:57  [ http-bio-8080-exec-9:463478 ] - [ INFO ]  request end, id: 85144d34-6e72-4f3c-9ea2-94658bab8de3, cost: 2ms
+2023-12-22 21:34:57  [ http-bio-8080-exec-9:463483 ] - [ INFO ]  request start，id: 2ea94c6d-0af3-43c4-8ac4-b0848f203b3b, path: /user/get/login, ip: 0:0:0:0:0:0:0:1, params: [org.apache.catalina.connector.RequestFacade@7178753e]
+2023-12-22 21:34:57  [ http-bio-8080-exec-9:463485 ] - [ INFO ]  request end, id: 2ea94c6d-0af3-43c4-8ac4-b0848f203b3b, cost: 2ms
+2023-12-22 21:34:59  [ http-bio-8080-exec-9:465026 ] - [ INFO ]  request start，id: 4d656a62-0612-4495-83a0-60e5bb3abc79, path: /purchase/list/page, ip: 0:0:0:0:0:0:0:1, params: [PurchaseQueryRequest(purchaseId=null, userId=null, purchaseTime=null)]
+2023-12-22 21:34:59  [ http-bio-8080-exec-9:465043 ] - [ INFO ]  request end, id: 4d656a62-0612-4495-83a0-60e5bb3abc79, cost: 17ms
+2023-12-22 21:35:00  [ http-bio-8080-exec-9:465989 ] - [ INFO ]  request start，id: bbab0821-e5e8-4356-b869-f783599d7480, path: /purchase/list/page, ip: 0:0:0:0:0:0:0:1, params: [PurchaseQueryRequest(purchaseId=null, userId=null, purchaseTime=null)]
+2023-12-22 21:35:00  [ http-bio-8080-exec-9:465999 ] - [ INFO ]  request end, id: bbab0821-e5e8-4356-b869-f783599d7480, cost: 10ms
+2023-12-22 21:36:43  [ http-bio-8080-exec-2:569223 ] - [ WARN ]  No mapping for GET /purchase
+2023-12-22 21:36:52  [ http-bio-8080-exec-10:578617 ] - [ INFO ]  request start，id: 47598e2a-0ef3-44d5-8a46-3d2e35d0c61a, path: /user/login, ip: 0:0:0:0:0:0:0:1, params: [UserLoginRequest(userAccount=219970149, userPassword=261615xhk), org.apache.catalina.connector.RequestFacade@7178753e]
+2023-12-22 21:36:52  [ http-bio-8080-exec-10:578619 ] - [ INFO ]  request end, id: 47598e2a-0ef3-44d5-8a46-3d2e35d0c61a, cost: 2ms
+2023-12-22 21:36:52  [ http-bio-8080-exec-10:578624 ] - [ INFO ]  request start，id: 0b19f116-d188-4ba2-8c66-d8d58dc1dade, path: /user/get/login, ip: 0:0:0:0:0:0:0:1, params: [org.apache.catalina.connector.RequestFacade@1be86041]
+2023-12-22 21:36:52  [ http-bio-8080-exec-10:578626 ] - [ INFO ]  request end, id: 0b19f116-d188-4ba2-8c66-d8d58dc1dade, cost: 2ms
+2023-12-22 21:36:54  [ http-bio-8080-exec-10:579982 ] - [ INFO ]  request start，id: 20d99211-a208-4398-90c4-9bf35bc61862, path: /user/list/page, ip: 0:0:0:0:0:0:0:1, params: [UserQueryRequest(id=null, userName=null, userProfile=null, userRole=null)]
+2023-12-22 21:36:54  [ http-bio-8080-exec-10:579985 ] - [ INFO ]  request end, id: 20d99211-a208-4398-90c4-9bf35bc61862, cost: 3ms
+2023-12-22 21:37:05  [ http-bio-8080-exec-10:590906 ] - [ INFO ]  request start，id: 679de03c-9559-4b19-b4ec-f66a59bbde09, path: /user/update, ip: 0:0:0:0:0:0:0:1, params: [UserUpdateRequest(id=1738191261058072577, userName=test, userAvatar=null, userProfile=null, userRole=buyer)]
+2023-12-22 21:37:05  [ http-bio-8080-exec-10:590950 ] - [ INFO ]  request end, id: 679de03c-9559-4b19-b4ec-f66a59bbde09, cost: 44ms
+2023-12-22 21:37:05  [ http-bio-8080-exec-10:590959 ] - [ INFO ]  request start，id: 1c1c6852-a959-49e5-9965-796f05eb2287, path: /user/list/page, ip: 0:0:0:0:0:0:0:1, params: [UserQueryRequest(id=null, userName=null, userProfile=null, userRole=null)]
+2023-12-22 21:37:05  [ http-bio-8080-exec-10:590964 ] - [ INFO ]  request end, id: 1c1c6852-a959-49e5-9965-796f05eb2287, cost: 4ms
+2023-12-22 21:37:33  [ http-bio-8080-exec-10:619714 ] - [ INFO ]  request start，id: b617568f-c775-4d08-983d-d2b472d15eb5, path: /user/list/page, ip: 0:0:0:0:0:0:0:1, params: [UserQueryRequest(id=null, userName=null, userProfile=null, userRole=null)]
+2023-12-22 21:37:33  [ http-bio-8080-exec-10:619718 ] - [ INFO ]  request end, id: b617568f-c775-4d08-983d-d2b472d15eb5, cost: 4ms
+2023-12-22 21:37:37  [ http-bio-8080-exec-10:623694 ] - [ INFO ]  request start，id: cd2760c1-430a-4e7d-87a6-b8c4ce01ce68, path: /purchase/list/page, ip: 0:0:0:0:0:0:0:1, params: [PurchaseQueryRequest(purchaseId=null, userId=null, purchaseTime=null)]
+2023-12-22 21:37:37  [ http-bio-8080-exec-10:623707 ] - [ INFO ]  request end, id: cd2760c1-430a-4e7d-87a6-b8c4ce01ce68, cost: 13ms
+2023-12-22 21:38:43  [ http-bio-8080-exec-3:688886 ] - [ INFO ]  request start，id: c60f16d2-0e36-44a8-9925-17b405d9a156, path: /purchase/add, ip: 0:0:0:0:0:0:0:1, params: [PurchaseAddDTO(productName=水蜜桃, userId=1, purchaseTime=Fri Dec 22 08:00:00 CST 2023, purchaseQuantity=100, totalCost=1000)]
+2023-12-22 21:38:43  [ http-bio-8080-exec-3:688913 ] - [ INFO ]  request end, id: c60f16d2-0e36-44a8-9925-17b405d9a156, cost: 28ms
+2023-12-22 21:38:43  [ http-bio-8080-exec-3:688921 ] - [ INFO ]  request start，id: 67226107-8931-4b12-a3c7-c11eaf62bda3, path: /purchase/list/page, ip: 0:0:0:0:0:0:0:1, params: [PurchaseQueryRequest(purchaseId=null, userId=null, purchaseTime=null)]
+2023-12-22 21:38:43  [ http-bio-8080-exec-3:688932 ] - [ INFO ]  request end, id: 67226107-8931-4b12-a3c7-c11eaf62bda3, cost: 10ms
+2023-12-22 21:39:49  [ http-bio-8080-exec-7:754953 ] - [ INFO ]  request start，id: 92024bc4-4838-4621-bc1e-756abe5a26ed, path: /product/list/page, ip: 0:0:0:0:0:0:0:1, params: [ProductQueryRequest(id=null, productName=null)]
+2023-12-22 21:39:49  [ http-bio-8080-exec-7:754961 ] - [ INFO ]  request end, id: 92024bc4-4838-4621-bc1e-756abe5a26ed, cost: 8ms
+2023-12-22 21:39:52  [ http-bio-8080-exec-7:758824 ] - [ INFO ]  request start，id: 7b93da84-a6df-425a-86cf-4bec13e4bc7e, path: /purchase/list/page, ip: 0:0:0:0:0:0:0:1, params: [PurchaseQueryRequest(purchaseId=null, userId=null, purchaseTime=null)]
+2023-12-22 21:39:53  [ http-bio-8080-exec-7:758835 ] - [ INFO ]  request end, id: 7b93da84-a6df-425a-86cf-4bec13e4bc7e, cost: 10ms
+2023-12-22 21:40:19  [ http-bio-8080-exec-7:785396 ] - [ INFO ]  request start，id: 40cc0c5c-bfd5-4a22-ae26-5024049d7489, path: /purchase/delete/1738192342097985539, ip: 0:0:0:0:0:0:0:1, params: [1738192342097985539]
+2023-12-22 21:40:19  [ http-bio-8080-exec-7:785416 ] - [ INFO ]  request end, id: 40cc0c5c-bfd5-4a22-ae26-5024049d7489, cost: 19ms
+2023-12-22 21:40:19  [ http-bio-8080-exec-7:785421 ] - [ INFO ]  request start，id: 1544a160-0d10-449c-8af6-481aa3324d7a, path: /purchase/list/page, ip: 0:0:0:0:0:0:0:1, params: [PurchaseQueryRequest(purchaseId=null, userId=null, purchaseTime=null)]
+2023-12-22 21:40:19  [ http-bio-8080-exec-7:785428 ] - [ INFO ]  request end, id: 1544a160-0d10-449c-8af6-481aa3324d7a, cost: 6ms
+2023-12-22 21:40:20  [ http-bio-8080-exec-7:786804 ] - [ INFO ]  request start，id: c18a73c7-4030-4c32-9e74-11fe442d005b, path: /product/list/page, ip: 0:0:0:0:0:0:0:1, params: [ProductQueryRequest(id=null, productName=null)]
+2023-12-22 21:40:20  [ http-bio-8080-exec-7:786807 ] - [ INFO ]  request end, id: c18a73c7-4030-4c32-9e74-11fe442d005b, cost: 2ms
+2023-12-22 21:40:46  [ http-bio-8080-exec-7:812210 ] - [ INFO ]  request start，id: b9639bd9-ae3e-4550-b1e5-1efb24a18b07, path: /sale/list/page, ip: 0:0:0:0:0:0:0:1, params: [SaleQueryRequest(saleId=null, userId=null, productId=null, saleTime=null)]
+2023-12-22 21:40:46  [ http-bio-8080-exec-7:812221 ] - [ INFO ]  request end, id: b9639bd9-ae3e-4550-b1e5-1efb24a18b07, cost: 11ms
+2023-12-22 21:40:47  [ http-bio-8080-exec-7:813188 ] - [ INFO ]  request start，id: 6478bca7-121f-4233-a303-24559fe1e508, path: /purchase/list/page, ip: 0:0:0:0:0:0:0:1, params: [PurchaseQueryRequest(purchaseId=null, userId=null, purchaseTime=null)]
+2023-12-22 21:40:47  [ http-bio-8080-exec-7:813195 ] - [ INFO ]  request end, id: 6478bca7-121f-4233-a303-24559fe1e508, cost: 6ms
+2023-12-22 21:40:47  [ http-bio-8080-exec-7:813809 ] - [ INFO ]  request start，id: 25a70163-8095-4c41-aa54-a6bc218711a3, path: /sale/list/page, ip: 0:0:0:0:0:0:0:1, params: [SaleQueryRequest(saleId=null, userId=null, productId=null, saleTime=null)]
+2023-12-22 21:40:47  [ http-bio-8080-exec-7:813812 ] - [ INFO ]  request end, id: 25a70163-8095-4c41-aa54-a6bc218711a3, cost: 2ms
+2023-12-22 21:40:52  [ http-bio-8080-exec-7:818782 ] - [ INFO ]  request start，id: fec0a2cc-c56d-4225-8fc4-0666725c569e, path: /product/list/page, ip: 0:0:0:0:0:0:0:1, params: [ProductQueryRequest(id=null, productName=null)]
+2023-12-22 21:40:52  [ http-bio-8080-exec-7:818786 ] - [ INFO ]  request end, id: fec0a2cc-c56d-4225-8fc4-0666725c569e, cost: 3ms
+2023-12-22 21:40:54  [ http-bio-8080-exec-7:820810 ] - [ INFO ]  request start，id: 1532686c-dd8b-45ee-bfa6-28263be4514c, path: /sale/list/page, ip: 0:0:0:0:0:0:0:1, params: [SaleQueryRequest(saleId=null, userId=null, productId=null, saleTime=null)]
+2023-12-22 21:40:54  [ http-bio-8080-exec-7:820814 ] - [ INFO ]  request end, id: 1532686c-dd8b-45ee-bfa6-28263be4514c, cost: 4ms
+2023-12-22 21:41:06  [ http-bio-8080-exec-7:832449 ] - [ INFO ]  request start，id: c800fe56-597f-4f80-8cce-cbd7181d58bc, path: /sale/add, ip: 0:0:0:0:0:0:0:1, params: [SaleAddDTO(productId=null, userId=1, saleDate=Fri Dec 29 08:00:00 CST 2023, saleQuantity=10, saleTotal=100)]
+2023-12-22 21:41:06  [ http-bio-8080-exec-7:832479 ] - [ ERROR ]  RuntimeException
+java.lang.NullPointerException
+	at team.tunan.service.impl.SaleServiceImpl.saveDate(SaleServiceImpl.java:59)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:344)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:205)
+	at com.sun.proxy.$Proxy73.saveDate(Unknown Source)
+	at team.tunan.controller.SaleController.add(SaleController.java:81)
+	at team.tunan.controller.SaleController$$FastClassBySpringCGLIB$$ca723a70.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:771)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:749)
+	at org.springframework.aop.aspectj.MethodInvocationProceedingJoinPoint.proceed(MethodInvocationProceedingJoinPoint.java:88)
+	at team.tunan.aop.LogInterceptor.doInterceptor(LogInterceptor.java:57)
+	at sun.reflect.GeneratedMethodAccessor81.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethodWithGivenArgs(AbstractAspectJAdvice.java:644)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethod(AbstractAspectJAdvice.java:633)
+	at org.springframework.aop.aspectj.AspectJAroundAdvice.invoke(AspectJAroundAdvice.java:70)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:749)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:95)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:749)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:691)
+	at team.tunan.controller.SaleController$$EnhancerBySpringCGLIB$$268a1974.add(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:105)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:878)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:792)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:647)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:728)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:305)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:222)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:123)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:472)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:171)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:99)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:936)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:407)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1004)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:589)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:312)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:750)
+2023-12-22 21:43:51  [ localhost-startStop-2:997271 ] - [ INFO ]  {dataSource-1} closing ...
+2023-12-22 21:43:51  [ localhost-startStop-2:997274 ] - [ INFO ]  {dataSource-1} closed
+2023-12-22 21:43:51  [ localhost-startStop-2:997279 ] - [ INFO ]  {dataSource-0} closing ...

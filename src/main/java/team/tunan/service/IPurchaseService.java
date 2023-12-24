@@ -25,4 +25,6 @@ public interface IPurchaseService extends IService<Purchase> {
     boolean saveDate(PurchaseAddDTO purchaseAddDTO);
 
     Result<?> myRemoveById(Long purchaseId);
+
+    HttpCodeEnum myUpdate(PurchaseAddDTO purchaseAddDTO);
 }

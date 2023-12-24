@@ -15,6 +15,8 @@ import java.util.Date;
 @Data
 public class SaleAddDTO {
 
+    private String productName;
+
     @JsonSerialize(using = ToStringSerializer.class)
     private Long productId;
 

@@ -80,5 +80,34 @@ public class SaleController {
         }
         return saleService.saveDate(saleAddDTO);
     }
+
+    /**
+     * 删除
+     *
+     * @param saleId 主键
+     * @return Result
+     */
+    @DeleteMapping("/delete/{saleId}")
+    public Result<?> delete(@PathVariable("saleId") Long saleId) {
+        System.out.println(saleId);
+        if (saleId == null) {
+            throw new BusinessException(HttpCodeEnum.PARAMS_ERROR);
+        }
+        return saleService.myRemoveById(saleId);
+    }
+
+    /**
+     * 更新
+     *
+     * @param sale 实体
+     * @return Result
+     */
+    @PostMapping("/update")
+    public Result<?> update(@RequestBody Sale sale) {
+        if (sale == null) {
+            throw new BusinessException(HttpCodeEnum.PARAMS_ERROR);
+        }
+        return saleService.myUpdateById(sale);
+    }
 }
 

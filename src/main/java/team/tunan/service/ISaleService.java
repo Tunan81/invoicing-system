@@ -22,4 +22,8 @@ public interface ISaleService extends IService<Sale> {
     Wrapper<Sale> getQueryWrapper(SaleQueryRequest saleQueryRequest);
 
     Result<?> saveDate(SaleAddDTO saleAddDTO);
+
+    Result<?> myRemoveById(Long saleId);
+
+    Result<?> myUpdateById(Sale sale);
 }

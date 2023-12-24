@@ -16,6 +16,8 @@ import java.util.Date;
 @Data
 public class PurchaseAddDTO {
 
+    private Long purchaseId;
+
     /**
      * 商品名称
      */

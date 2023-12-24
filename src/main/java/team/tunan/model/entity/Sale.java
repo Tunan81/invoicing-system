@@ -30,7 +30,7 @@ public class Sale implements Serializable {
     /**
      * 销售ID
      */
-    @TableId(type = IdType.AUTO)
+    @TableId(type = IdType.ASSIGN_ID)
     @JsonSerialize(using = ToStringSerializer.class)
     private Long saleId;
 

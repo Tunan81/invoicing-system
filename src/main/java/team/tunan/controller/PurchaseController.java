@@ -67,6 +67,14 @@ public class PurchaseController {
         return purchaseService.myRemoveById(purchaseId);
     }
 
+    @PostMapping("/update")
+    public Result<Boolean> update(@RequestBody PurchaseAddDTO purchaseAddDTO) {
+        if (purchaseAddDTO == null) {
+            throw new BusinessException(HttpCodeEnum.PARAMS_ERROR);
+        }
+        return Result.success(purchaseService.myUpdate(purchaseAddDTO));
+    }
+
     @PostMapping("/list/page")
     public Result<Page<PurchaseVO>> listPage(@RequestBody PurchaseQueryRequest purchaseQueryRequest) {
         if (purchaseQueryRequest == null) {
