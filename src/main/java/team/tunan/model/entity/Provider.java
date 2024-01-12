@@ -14,6 +14,8 @@ public class Provider {
 
     private Long providerId;
 
+    private String providerNo;
+
     private String providerName;
 
     private String ProviderPhone;

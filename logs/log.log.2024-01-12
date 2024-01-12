@@ -1,0 +1,8 @@
+2024-01-12 20:24:15  [ main:0 ] - [ WARN ]  configuration key 'file.resource.loader.unicode' has been deprecated in favor of 'resource.loader.file.unicode'
+2024-01-12 20:24:15  [ main:3 ] - [ WARN ]  configuration key 'file.resource.loader.class' has been deprecated in favor of 'resource.loader.file.class'
+2024-01-12 20:27:09  [ main:0 ] - [ WARN ]  configuration key 'file.resource.loader.unicode' has been deprecated in favor of 'resource.loader.file.unicode'
+2024-01-12 20:27:09  [ main:1 ] - [ WARN ]  configuration key 'file.resource.loader.class' has been deprecated in favor of 'resource.loader.file.class'
+2024-01-12 20:28:26  [ main:0 ] - [ WARN ]  configuration key 'file.resource.loader.unicode' has been deprecated in favor of 'resource.loader.file.unicode'
+2024-01-12 20:28:26  [ main:12 ] - [ WARN ]  configuration key 'file.resource.loader.class' has been deprecated in favor of 'resource.loader.file.class'
+2024-01-12 20:28:45  [ main:0 ] - [ WARN ]  configuration key 'file.resource.loader.unicode' has been deprecated in favor of 'resource.loader.file.unicode'
+2024-01-12 20:28:45  [ main:2 ] - [ WARN ]  configuration key 'file.resource.loader.class' has been deprecated in favor of 'resource.loader.file.class'

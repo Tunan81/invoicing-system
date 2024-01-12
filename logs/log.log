@@ -1,8 +1,39 @@
-2024-01-12 20:24:15  [ main:0 ] - [ WARN ]  configuration key 'file.resource.loader.unicode' has been deprecated in favor of 'resource.loader.file.unicode'
-2024-01-12 20:24:15  [ main:3 ] - [ WARN ]  configuration key 'file.resource.loader.class' has been deprecated in favor of 'resource.loader.file.class'
-2024-01-12 20:27:09  [ main:0 ] - [ WARN ]  configuration key 'file.resource.loader.unicode' has been deprecated in favor of 'resource.loader.file.unicode'
-2024-01-12 20:27:09  [ main:1 ] - [ WARN ]  configuration key 'file.resource.loader.class' has been deprecated in favor of 'resource.loader.file.class'
-2024-01-12 20:28:26  [ main:0 ] - [ WARN ]  configuration key 'file.resource.loader.unicode' has been deprecated in favor of 'resource.loader.file.unicode'
-2024-01-12 20:28:26  [ main:12 ] - [ WARN ]  configuration key 'file.resource.loader.class' has been deprecated in favor of 'resource.loader.file.class'
-2024-01-12 20:28:45  [ main:0 ] - [ WARN ]  configuration key 'file.resource.loader.unicode' has been deprecated in favor of 'resource.loader.file.unicode'
-2024-01-12 20:28:45  [ main:2 ] - [ WARN ]  configuration key 'file.resource.loader.class' has been deprecated in favor of 'resource.loader.file.class'
+2024-01-13 04:33:54  [ localhost-startStop-1:0 ] - [ INFO ]  Root WebApplicationContext: initialization started
+2024-01-13 04:33:55  [ localhost-startStop-1:1036 ] - [ WARN ]  Can not find table primary key in Class: "team.tunan.model.entity.Provider".
+2024-01-13 04:33:55  [ localhost-startStop-1:1037 ] - [ WARN ]  class team.tunan.model.entity.Provider ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2024-01-13 04:33:56  [ localhost-startStop-1:1237 ] - [ INFO ]  Root WebApplicationContext initialized in 1234 ms
+2024-01-13 04:33:56  [ localhost-startStop-1:1259 ] - [ INFO ]  Initializing Servlet 'dispatcher'
+2024-01-13 04:33:56  [ localhost-startStop-1:1494 ] - [ WARN ]  Can not find table primary key in Class: "team.tunan.model.entity.Provider".
+2024-01-13 04:33:56  [ localhost-startStop-1:1495 ] - [ WARN ]  class team.tunan.model.entity.Provider ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2024-01-13 04:33:56  [ localhost-startStop-1:1943 ] - [ WARN ]  For Jackson Kotlin classes support please add "com.fasterxml.jackson.module:jackson-module-kotlin" to the classpath
+2024-01-13 04:33:56  [ localhost-startStop-1:2031 ] - [ INFO ]  Completed initialization in 772 ms
+2024-01-13 04:35:08  [ http-bio-8080-exec-3:73493 ] - [ INFO ]  request start，id: 03ff6820-4896-4ad3-90b2-37682be6bde3, path: /product/list/page, ip: 0:0:0:0:0:0:0:1, params: [ProductQueryRequest(id=null, productName=null)]
+2024-01-13 04:35:08  [ http-bio-8080-exec-3:73621 ] - [ INFO ]  {dataSource-1} inited
+2024-01-13 04:35:08  [ http-bio-8080-exec-3:73826 ] - [ INFO ]  request end, id: 03ff6820-4896-4ad3-90b2-37682be6bde3, cost: 336ms
+2024-01-13 04:35:13  [ http-bio-8080-exec-5:78274 ] - [ INFO ]  request start，id: 86cb0f95-2190-4dd9-853f-b0d3e441aa6a, path: /product/list/page, ip: 0:0:0:0:0:0:0:1, params: [ProductQueryRequest(id=null, productName=null)]
+2024-01-13 04:35:13  [ http-bio-8080-exec-5:78280 ] - [ INFO ]  request end, id: 86cb0f95-2190-4dd9-853f-b0d3e441aa6a, cost: 5ms
+2024-01-13 04:35:15  [ http-bio-8080-exec-6:80142 ] - [ INFO ]  request start，id: b49df948-4cd8-4687-b8f7-648d281f33d1, path: /product/list/page, ip: 0:0:0:0:0:0:0:1, params: [ProductQueryRequest(id=null, productName=null)]
+2024-01-13 04:35:15  [ http-bio-8080-exec-6:80148 ] - [ INFO ]  request end, id: b49df948-4cd8-4687-b8f7-648d281f33d1, cost: 6ms
+2024-01-13 04:36:38  [ http-bio-8080-exec-8:163681 ] - [ INFO ]  request start，id: 7e5222e2-02a6-4a50-81c0-fd4c80f96941, path: /product/list/page, ip: 0:0:0:0:0:0:0:1, params: [ProductQueryRequest(id=null, productName=null)]
+2024-01-13 04:36:38  [ http-bio-8080-exec-8:163693 ] - [ INFO ]  request end, id: 7e5222e2-02a6-4a50-81c0-fd4c80f96941, cost: 12ms
+2024-01-13 04:39:33  [ http-bio-8080-exec-3:338179 ] - [ INFO ]  request start，id: ca5cfc76-8f28-4d4f-886f-21ab7cfb8015, path: /provider/list/page, ip: 0:0:0:0:0:0:0:1, params: [ProviderQueryRequest(providerId=null, providerName=null)]
+2024-01-13 04:39:33  [ http-bio-8080-exec-3:338197 ] - [ INFO ]  request end, id: ca5cfc76-8f28-4d4f-886f-21ab7cfb8015, cost: 18ms
+2024-01-13 04:40:12  [ http-bio-8080-exec-3:377124 ] - [ INFO ]  request start，id: efb6da51-f9c3-42e6-bdd2-467f12ce0930, path: /provider/list/page, ip: 0:0:0:0:0:0:0:1, params: [ProviderQueryRequest(providerId=null, providerName=null)]
+2024-01-13 04:40:12  [ http-bio-8080-exec-3:377128 ] - [ INFO ]  request end, id: efb6da51-f9c3-42e6-bdd2-467f12ce0930, cost: 3ms
+2024-01-13 04:40:16  [ http-bio-8080-exec-3:381071 ] - [ INFO ]  request start，id: 644dd6c8-32a0-4b14-9151-09b8fa5983ac, path: /product/list/page, ip: 0:0:0:0:0:0:0:1, params: [ProductQueryRequest(id=null, productName=null)]
+2024-01-13 04:40:16  [ http-bio-8080-exec-3:381076 ] - [ INFO ]  request end, id: 644dd6c8-32a0-4b14-9151-09b8fa5983ac, cost: 4ms
+2024-01-13 04:40:16  [ http-bio-8080-exec-3:381394 ] - [ INFO ]  request start，id: e87ef385-e0df-4b0e-9c72-724974c8c2ac, path: /provider/list/page, ip: 0:0:0:0:0:0:0:1, params: [ProviderQueryRequest(providerId=null, providerName=null)]
+2024-01-13 04:40:16  [ http-bio-8080-exec-3:381398 ] - [ INFO ]  request end, id: e87ef385-e0df-4b0e-9c72-724974c8c2ac, cost: 3ms
+2024-01-13 04:40:26  [ http-bio-8080-exec-3:391999 ] - [ INFO ]  request start，id: 03df406c-e63b-4f8b-97fb-fc69fa27a4fa, path: /provider/list/page, ip: 0:0:0:0:0:0:0:1, params: [ProviderQueryRequest(providerId=null, providerName=null)]
+2024-01-13 04:40:26  [ http-bio-8080-exec-3:392001 ] - [ INFO ]  request end, id: 03df406c-e63b-4f8b-97fb-fc69fa27a4fa, cost: 2ms
+2024-01-13 04:41:37  [ http-bio-8080-exec-8:462922 ] - [ INFO ]  request start，id: 93abca92-489d-48f2-8363-f3cdf70ee586, path: /provider/list/page, ip: 0:0:0:0:0:0:0:1, params: [ProviderQueryRequest(providerId=null, providerName=null)]
+2024-01-13 04:41:37  [ http-bio-8080-exec-8:462925 ] - [ INFO ]  request end, id: 93abca92-489d-48f2-8363-f3cdf70ee586, cost: 2ms
+2024-01-13 04:42:32  [ http-bio-8080-exec-1:517340 ] - [ INFO ]  request start，id: 29ab200d-c9b0-477b-9816-1889916062df, path: /provider/list/page, ip: 0:0:0:0:0:0:0:1, params: [ProviderQueryRequest(providerId=null, providerName=null)]
+2024-01-13 04:42:32  [ http-bio-8080-exec-1:517343 ] - [ INFO ]  request end, id: 29ab200d-c9b0-477b-9816-1889916062df, cost: 3ms
+2024-01-13 04:43:30  [ http-bio-8080-exec-2:575735 ] - [ INFO ]  request start，id: 1f166434-89d8-4945-a8e0-f1c691885c4f, path: /provider/list/page, ip: 0:0:0:0:0:0:0:1, params: [ProviderQueryRequest(providerId=null, providerName=null)]
+2024-01-13 04:43:30  [ http-bio-8080-exec-2:575738 ] - [ INFO ]  request end, id: 1f166434-89d8-4945-a8e0-f1c691885c4f, cost: 2ms
+2024-01-13 04:43:49  [ http-bio-8080-exec-6:594246 ] - [ INFO ]  request start，id: ae7bc8ec-4402-4970-875f-fc8f914ad9cc, path: /provider/list/page, ip: 0:0:0:0:0:0:0:1, params: [ProviderQueryRequest(providerId=null, providerName=null)]
+2024-01-13 04:43:49  [ http-bio-8080-exec-6:594248 ] - [ INFO ]  request end, id: ae7bc8ec-4402-4970-875f-fc8f914ad9cc, cost: 2ms
+2024-01-13 04:47:16  [ localhost-startStop-2:801331 ] - [ INFO ]  {dataSource-1} closing ...
+2024-01-13 04:47:16  [ localhost-startStop-2:801334 ] - [ INFO ]  {dataSource-1} closed
+2024-01-13 04:47:16  [ localhost-startStop-2:801339 ] - [ INFO ]  {dataSource-0} closing ...
