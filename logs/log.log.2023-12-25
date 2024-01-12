@@ -1,0 +1,155 @@
+2023-12-25 18:58:57  [ localhost-startStop-1:0 ] - [ INFO ]  Root WebApplicationContext: initialization started
+2023-12-25 18:58:58  [ localhost-startStop-1:1608 ] - [ INFO ]  Root WebApplicationContext initialized in 1606 ms
+2023-12-25 18:58:58  [ localhost-startStop-1:1635 ] - [ INFO ]  Initializing Servlet 'dispatcher'
+2023-12-25 18:58:59  [ localhost-startStop-1:2505 ] - [ WARN ]  For Jackson Kotlin classes support please add "com.fasterxml.jackson.module:jackson-module-kotlin" to the classpath
+2023-12-25 18:58:59  [ localhost-startStop-1:2616 ] - [ INFO ]  Completed initialization in 981 ms
+2023-12-25 18:59:46  [ http-bio-8080-exec-3:49145 ] - [ INFO ]  request start，id: 35641408-f619-4612-8ea0-a94e7ae57ebc, path: /user/login, ip: 0:0:0:0:0:0:0:1, params: [UserLoginRequest(userAccount=219970149, userPassword=261615xhk), org.apache.catalina.connector.RequestFacade@5b07c4cf]
+2023-12-25 18:59:46  [ http-bio-8080-exec-3:49233 ] - [ INFO ]  {dataSource-1} inited
+2023-12-25 18:59:47  [ Druid-ConnectionPool-Create-1028785400:50255 ] - [ ERROR ]  create connection SQLException, url: jdbc:mysql://localhost:3306/jxc?useSSL=false&allowPublicKeyRetrieval=true, errorCode 0, state 08S01
+com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:990)
+	at com.mysql.jdbc.MysqlIO.readPacket(MysqlIO.java:633)
+	at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:1014)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2199)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2230)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2025)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:778)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:386)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:330)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1596)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1662)
+	at com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:2601)
+Caused by: java.net.SocketException: Connection reset
+	at java.net.SocketInputStream.read(SocketInputStream.java:210)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at com.mysql.jdbc.util.ReadAheadInputStream.fill(ReadAheadInputStream.java:101)
+	at com.mysql.jdbc.util.ReadAheadInputStream.readFromUnderlyingStreamIfNecessary(ReadAheadInputStream.java:144)
+	at com.mysql.jdbc.util.ReadAheadInputStream.read(ReadAheadInputStream.java:174)
+	at com.mysql.jdbc.MysqlIO.readFully(MysqlIO.java:3011)
+	at com.mysql.jdbc.MysqlIO.readPacket(MysqlIO.java:568)
+	... 16 more
+2023-12-25 18:59:47  [ http-bio-8080-exec-4:50285 ] - [ INFO ]  request start，id: e46caba9-11d0-46d8-b6ae-1912e0c446f8, path: /user/login, ip: 0:0:0:0:0:0:0:1, params: [UserLoginRequest(userAccount=219970149, userPassword=261615xhk), org.apache.catalina.connector.RequestFacade@676fa48]
+2023-12-25 18:59:48  [ http-bio-8080-exec-5:51796 ] - [ INFO ]  request start，id: ea30702b-5b7a-4b45-947b-96c963a7c808, path: /user/login, ip: 0:0:0:0:0:0:0:1, params: [UserLoginRequest(userAccount=219970149, userPassword=261615xhk), org.apache.catalina.connector.RequestFacade@136a86ae]
+2023-12-25 18:59:51  [ Druid-ConnectionPool-Create-1028785400:54311 ] - [ ERROR ]  create connection SQLException, url: jdbc:mysql://localhost:3306/jxc?useSSL=false&allowPublicKeyRetrieval=true, errorCode 0, state 08S01
+com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:990)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:342)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2197)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2230)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2025)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:778)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:386)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:330)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1596)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1662)
+	at com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:2601)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:607)
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:211)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:301)
+	... 15 more
+2023-12-25 18:59:51  [ Druid-ConnectionPool-Create-1028785400:54312 ] - [ INFO ]  {dataSource-1} failContinuous is true
+2023-12-25 18:59:55  [ Druid-ConnectionPool-Create-1028785400:58885 ] - [ ERROR ]  create connection SQLException, url: jdbc:mysql://localhost:3306/jxc?useSSL=false&allowPublicKeyRetrieval=true, errorCode 0, state 08S01
+com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:990)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:342)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2197)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2230)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2025)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:778)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:386)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:330)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1596)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1662)
+	at com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:2601)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:607)
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:211)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:301)
+	... 15 more
+2023-12-25 18:59:58  [ Druid-ConnectionPool-Create-1028785400:60997 ] - [ INFO ]  {dataSource-1} failContinuous is false
+2023-12-25 18:59:58  [ http-bio-8080-exec-5:61026 ] - [ INFO ]  request end, id: ea30702b-5b7a-4b45-947b-96c963a7c808, cost: 9229ms
+2023-12-25 18:59:58  [ http-bio-8080-exec-3:61026 ] - [ INFO ]  request end, id: 35641408-f619-4612-8ea0-a94e7ae57ebc, cost: 11885ms
+2023-12-25 18:59:58  [ http-bio-8080-exec-4:61026 ] - [ INFO ]  request end, id: e46caba9-11d0-46d8-b6ae-1912e0c446f8, cost: 10741ms
+2023-12-25 18:59:58  [ http-bio-8080-exec-6:61916 ] - [ INFO ]  request start，id: 22291d30-e36a-4d47-98b6-1f2a18ea4e68, path: /user/login, ip: 0:0:0:0:0:0:0:1, params: [UserLoginRequest(userAccount=219970149, userPassword=261615xhk), org.apache.catalina.connector.RequestFacade@676fa48]
+2023-12-25 18:59:58  [ http-bio-8080-exec-6:61919 ] - [ INFO ]  request end, id: 22291d30-e36a-4d47-98b6-1f2a18ea4e68, cost: 3ms
+2023-12-25 18:59:58  [ http-bio-8080-exec-7:61927 ] - [ INFO ]  request start，id: 36b45c30-c5df-44c8-a146-6ee7e2362044, path: /user/get/login, ip: 0:0:0:0:0:0:0:1, params: [org.apache.catalina.connector.RequestFacade@5b07c4cf]
+2023-12-25 18:59:58  [ http-bio-8080-exec-7:61930 ] - [ INFO ]  request end, id: 36b45c30-c5df-44c8-a146-6ee7e2362044, cost: 3ms
+2023-12-25 19:00:00  [ http-bio-8080-exec-8:63373 ] - [ INFO ]  request start，id: 00322b26-3f35-420e-8b23-a70361d3d03a, path: /user/list/page, ip: 0:0:0:0:0:0:0:1, params: [UserQueryRequest(id=null, userName=null, userProfile=null, userRole=null)]
+2023-12-25 19:00:00  [ http-bio-8080-exec-8:63543 ] - [ INFO ]  request end, id: 00322b26-3f35-420e-8b23-a70361d3d03a, cost: 169ms
+2023-12-25 19:00:01  [ http-bio-8080-exec-10:64722 ] - [ INFO ]  request start，id: cf67f647-25a4-4655-a12a-c07a94129f0d, path: /purchase/list/page, ip: 0:0:0:0:0:0:0:1, params: [PurchaseQueryRequest(purchaseId=null, userId=null, purchaseTime=null)]
+2023-12-25 19:00:01  [ http-bio-8080-exec-10:64746 ] - [ INFO ]  request end, id: cf67f647-25a4-4655-a12a-c07a94129f0d, cost: 24ms
+2023-12-25 19:00:02  [ http-bio-8080-exec-10:65310 ] - [ INFO ]  request start，id: 5fc44dae-49ee-4d05-a704-9641365ecdbd, path: /sale/list/page, ip: 0:0:0:0:0:0:0:1, params: [SaleQueryRequest(saleId=null, userId=null, productId=null, saleTime=null)]
+2023-12-25 19:00:02  [ http-bio-8080-exec-10:65334 ] - [ INFO ]  request end, id: 5fc44dae-49ee-4d05-a704-9641365ecdbd, cost: 24ms
+2023-12-25 19:00:02  [ http-bio-8080-exec-10:65896 ] - [ INFO ]  request start，id: 86acfda2-fcf1-464c-9c1a-a16398564122, path: /product/list/page, ip: 0:0:0:0:0:0:0:1, params: [ProductQueryRequest(id=null, productName=null)]
+2023-12-25 19:00:02  [ http-bio-8080-exec-10:65901 ] - [ INFO ]  request end, id: 86acfda2-fcf1-464c-9c1a-a16398564122, cost: 6ms
+2023-12-25 19:00:03  [ http-bio-8080-exec-10:66645 ] - [ INFO ]  request start，id: 815f8b5b-7299-4c63-8b30-0247231c88c1, path: /sale/list/page, ip: 0:0:0:0:0:0:0:1, params: [SaleQueryRequest(saleId=null, userId=null, productId=null, saleTime=null)]
+2023-12-25 19:00:03  [ http-bio-8080-exec-10:66656 ] - [ INFO ]  request end, id: 815f8b5b-7299-4c63-8b30-0247231c88c1, cost: 11ms
+2023-12-25 19:00:03  [ http-bio-8080-exec-10:66939 ] - [ INFO ]  request start，id: 723a7449-3e32-4826-a4cc-678f7c06b0c2, path: /purchase/list/page, ip: 0:0:0:0:0:0:0:1, params: [PurchaseQueryRequest(purchaseId=null, userId=null, purchaseTime=null)]
+2023-12-25 19:00:03  [ http-bio-8080-exec-10:66949 ] - [ INFO ]  request end, id: 723a7449-3e32-4826-a4cc-678f7c06b0c2, cost: 10ms
+2023-12-25 19:00:04  [ http-bio-8080-exec-10:67324 ] - [ INFO ]  request start，id: 09ee886f-dc9c-4429-ac63-367bbe966ef1, path: /user/list/page, ip: 0:0:0:0:0:0:0:1, params: [UserQueryRequest(id=null, userName=null, userProfile=null, userRole=null)]
+2023-12-25 19:00:04  [ http-bio-8080-exec-10:67326 ] - [ INFO ]  request end, id: 09ee886f-dc9c-4429-ac63-367bbe966ef1, cost: 2ms
+2023-12-25 19:00:08  [ http-bio-8080-exec-10:71827 ] - [ INFO ]  request start，id: 41aff59d-6d1a-4043-b1ca-b018ae639b80, path: /purchase/list/page, ip: 0:0:0:0:0:0:0:1, params: [PurchaseQueryRequest(purchaseId=null, userId=null, purchaseTime=null)]
+2023-12-25 19:00:08  [ http-bio-8080-exec-10:71834 ] - [ INFO ]  request end, id: 41aff59d-6d1a-4043-b1ca-b018ae639b80, cost: 6ms
+2023-12-25 19:00:09  [ http-bio-8080-exec-10:72244 ] - [ INFO ]  request start，id: 9ed2330b-19ec-4745-b89e-f9056b5f7c43, path: /sale/list/page, ip: 0:0:0:0:0:0:0:1, params: [SaleQueryRequest(saleId=null, userId=null, productId=null, saleTime=null)]
+2023-12-25 19:00:09  [ http-bio-8080-exec-10:72252 ] - [ INFO ]  request end, id: 9ed2330b-19ec-4745-b89e-f9056b5f7c43, cost: 8ms
+2023-12-25 19:00:09  [ http-bio-8080-exec-10:72890 ] - [ INFO ]  request start，id: 9f7f2cdc-3813-47f1-bf6c-27d1e48cbd49, path: /product/list/page, ip: 0:0:0:0:0:0:0:1, params: [ProductQueryRequest(id=null, productName=null)]
+2023-12-25 19:00:09  [ http-bio-8080-exec-10:72895 ] - [ INFO ]  request end, id: 9f7f2cdc-3813-47f1-bf6c-27d1e48cbd49, cost: 4ms
+2023-12-25 19:00:10  [ http-bio-8080-exec-10:73449 ] - [ INFO ]  request start，id: 923b485a-e338-4eb5-aafd-2fc64cb300e0, path: /sale/list/page, ip: 0:0:0:0:0:0:0:1, params: [SaleQueryRequest(saleId=null, userId=null, productId=null, saleTime=null)]
+2023-12-25 19:00:10  [ http-bio-8080-exec-10:73459 ] - [ INFO ]  request end, id: 923b485a-e338-4eb5-aafd-2fc64cb300e0, cost: 10ms
+2023-12-25 19:00:25  [ localhost-startStop-2:88469 ] - [ INFO ]  {dataSource-1} closing ...
+2023-12-25 19:00:25  [ localhost-startStop-2:88470 ] - [ INFO ]  {dataSource-1} closed
+2023-12-25 19:00:25  [ localhost-startStop-2:88477 ] - [ INFO ]  {dataSource-0} closing ...

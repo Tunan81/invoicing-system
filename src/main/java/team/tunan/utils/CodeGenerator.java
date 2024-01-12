@@ -16,7 +16,7 @@ public class CodeGenerator {
     }
 
     private static void generate() {
-        FastAutoGenerator.create("jdbc:mysql://localhost:3306/jxc?serverTimezone=GMT%2b8", "root", "261615")
+        FastAutoGenerator.create("jdbc:mysql://localhost:3306/jxc?serverTimezone=GMT%2b8&useSSL=false", "root", "261615")
                 .globalConfig(builder -> {
                     builder.author("Tunan") // 设置作者
                             //.enableSwagger() // 开启 swagger 模式
@@ -34,7 +34,7 @@ public class CodeGenerator {
                     builder.entityBuilder().enableLombok();
                     builder.controllerBuilder().enableHyphenStyle()  // 开启驼峰转连字符
                             .enableRestStyle();  // 开启生成@RestController 控制器
-                    builder.addInclude("sale","purchase","product") // 设置需要生成的表名
+                    builder.addInclude("provider") // 设置需要生成的表名
                             .addTablePrefix(); // 设置过滤表前缀
                 })
                 .execute();

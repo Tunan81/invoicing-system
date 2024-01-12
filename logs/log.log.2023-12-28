@@ -1,0 +1,7 @@
+2023-12-28 12:04:25  [ localhost-startStop-1:0 ] - [ INFO ]  Root WebApplicationContext: initialization started
+2023-12-28 12:04:26  [ localhost-startStop-1:1457 ] - [ INFO ]  Root WebApplicationContext initialized in 1454 ms
+2023-12-28 12:04:26  [ localhost-startStop-1:1484 ] - [ INFO ]  Initializing Servlet 'dispatcher'
+2023-12-28 12:04:27  [ localhost-startStop-1:2197 ] - [ WARN ]  For Jackson Kotlin classes support please add "com.fasterxml.jackson.module:jackson-module-kotlin" to the classpath
+2023-12-28 12:04:27  [ localhost-startStop-1:2299 ] - [ INFO ]  Completed initialization in 815 ms
+2023-12-28 12:06:07  [ localhost-startStop-2:102051 ] - [ INFO ]  {dataSource-0} closing ...
+2023-12-28 12:06:07  [ localhost-startStop-2:102060 ] - [ INFO ]  {dataSource-0} closing ...

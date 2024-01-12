@@ -1,4 +1,4 @@
-2024-01-05 22:04:14  [ http-bio-8080-exec-3:79422 ] - [ ERROR ]  BusinessException
+2024-01-02 22:15:30  [ http-bio-8080-exec-3:181837 ] - [ ERROR ]  BusinessException
 team.tunan.exception.BusinessException: 用户不存在或密码错误
 	at team.tunan.service.impl.UserServiceImpl.userLogin(UserServiceImpl.java:103)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
@@ -29,7 +29,7 @@ team.tunan.exception.BusinessException: 用户不存在或密码错误
 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
 	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:749)
 	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:691)
-	at team.tunan.controller.UserController$$EnhancerBySpringCGLIB$$85f7b15d.userLogin(<generated>)
+	at team.tunan.controller.UserController$$EnhancerBySpringCGLIB$$de4e762b.userLogin(<generated>)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)

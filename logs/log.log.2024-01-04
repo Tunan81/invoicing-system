@@ -1,0 +1,264 @@
+2024-01-04 08:43:47  [ localhost-startStop-1:0 ] - [ INFO ]  Root WebApplicationContext: initialization started
+2024-01-04 08:43:48  [ localhost-startStop-1:1215 ] - [ INFO ]  Root WebApplicationContext initialized in 1212 ms
+2024-01-04 08:43:48  [ localhost-startStop-1:1239 ] - [ INFO ]  Initializing Servlet 'dispatcher'
+2024-01-04 08:43:49  [ localhost-startStop-1:2162 ] - [ WARN ]  For Jackson Kotlin classes support please add "com.fasterxml.jackson.module:jackson-module-kotlin" to the classpath
+2024-01-04 08:43:49  [ localhost-startStop-1:2272 ] - [ INFO ]  Completed initialization in 1033 ms
+2024-01-04 08:44:19  [ http-bio-8080-exec-3:32134 ] - [ INFO ]  request start，id: 7e21a7e8-f849-4aae-ba8c-15154101de5f, path: /product/list/page, ip: 0:0:0:0:0:0:0:1, params: [ProductQueryRequest(id=null, productName=null)]
+2024-01-04 08:44:19  [ http-bio-8080-exec-3:32268 ] - [ INFO ]  {dataSource-1} inited
+2024-01-04 08:44:20  [ Druid-ConnectionPool-Create-2103567784:33365 ] - [ ERROR ]  create connection SQLException, url: jdbc:mysql://localhost:3306/jxc?useSSL=false&allowPublicKeyRetrieval=true, errorCode 0, state 08S01
+com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:990)
+	at com.mysql.jdbc.MysqlIO.readPacket(MysqlIO.java:633)
+	at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:1014)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2199)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2230)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2025)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:778)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:386)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:330)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1596)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1662)
+	at com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:2601)
+Caused by: java.net.SocketException: Connection reset
+	at java.net.SocketInputStream.read(SocketInputStream.java:210)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at com.mysql.jdbc.util.ReadAheadInputStream.fill(ReadAheadInputStream.java:101)
+	at com.mysql.jdbc.util.ReadAheadInputStream.readFromUnderlyingStreamIfNecessary(ReadAheadInputStream.java:144)
+	at com.mysql.jdbc.util.ReadAheadInputStream.read(ReadAheadInputStream.java:174)
+	at com.mysql.jdbc.MysqlIO.readFully(MysqlIO.java:3011)
+	at com.mysql.jdbc.MysqlIO.readPacket(MysqlIO.java:568)
+	... 16 more
+2024-01-04 08:44:25  [ Druid-ConnectionPool-Create-2103567784:37429 ] - [ ERROR ]  create connection SQLException, url: jdbc:mysql://localhost:3306/jxc?useSSL=false&allowPublicKeyRetrieval=true, errorCode 0, state 08S01
+com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:990)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:342)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2197)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2230)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2025)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:778)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:386)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:330)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1596)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1662)
+	at com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:2601)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:607)
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:211)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:301)
+	... 15 more
+2024-01-04 08:44:25  [ Druid-ConnectionPool-Create-2103567784:37430 ] - [ INFO ]  {dataSource-1} failContinuous is true
+2024-01-04 08:44:29  [ Druid-ConnectionPool-Create-2103567784:42006 ] - [ ERROR ]  create connection SQLException, url: jdbc:mysql://localhost:3306/jxc?useSSL=false&allowPublicKeyRetrieval=true, errorCode 0, state 08S01
+com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:990)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:342)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2197)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2230)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2025)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:778)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:386)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:330)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1596)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1662)
+	at com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:2601)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:607)
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:211)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:301)
+	... 15 more
+2024-01-04 08:44:34  [ Druid-ConnectionPool-Create-2103567784:46574 ] - [ ERROR ]  create connection SQLException, url: jdbc:mysql://localhost:3306/jxc?useSSL=false&allowPublicKeyRetrieval=true, errorCode 0, state 08S01
+com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:990)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:342)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2197)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2230)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2025)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:778)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:386)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:330)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1596)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1662)
+	at com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:2601)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:607)
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:211)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:301)
+	... 15 more
+2024-01-04 08:44:36  [ Druid-ConnectionPool-Create-2103567784:48668 ] - [ INFO ]  {dataSource-1} failContinuous is false
+2024-01-04 08:44:36  [ http-bio-8080-exec-3:48800 ] - [ INFO ]  request end, id: 7e21a7e8-f849-4aae-ba8c-15154101de5f, cost: 16670ms
+2024-01-04 08:44:38  [ http-bio-8080-exec-4:50900 ] - [ INFO ]  request start，id: edd8affe-fe2e-4a64-a145-2b11cb439386, path: /product/list/page, ip: 0:0:0:0:0:0:0:1, params: [ProductQueryRequest(id=null, productName=null)]
+2024-01-04 08:44:38  [ http-bio-8080-exec-4:50905 ] - [ INFO ]  request end, id: edd8affe-fe2e-4a64-a145-2b11cb439386, cost: 5ms
+2024-01-04 08:45:48  [ http-bio-8080-exec-8:121044 ] - [ INFO ]  request start，id: 6f75d3c8-29ee-4c33-81c7-6cf7ff5ee9e5, path: /user/login, ip: 0:0:0:0:0:0:0:1, params: [UserLoginRequest(userAccount=219970149, userPassword=261615xhk), org.apache.catalina.connector.RequestFacade@735a042d]
+2024-01-04 08:45:48  [ http-bio-8080-exec-8:121070 ] - [ INFO ]  request end, id: 6f75d3c8-29ee-4c33-81c7-6cf7ff5ee9e5, cost: 25ms
+2024-01-04 08:45:48  [ http-bio-8080-exec-9:121076 ] - [ INFO ]  request start，id: b4485d8c-1e5a-4b90-8c28-240d23b7d187, path: /user/get/login, ip: 0:0:0:0:0:0:0:1, params: [org.apache.catalina.connector.RequestFacade@735a042d]
+2024-01-04 08:45:48  [ http-bio-8080-exec-9:121079 ] - [ INFO ]  request end, id: b4485d8c-1e5a-4b90-8c28-240d23b7d187, cost: 2ms
+2024-01-04 08:45:52  [ http-bio-8080-exec-10:125105 ] - [ INFO ]  request start，id: 169a0fc7-f4b6-471a-99a9-bb1a432cbdd5, path: /user/list/page, ip: 0:0:0:0:0:0:0:1, params: [UserQueryRequest(id=null, userName=null, userProfile=null, userRole=null)]
+2024-01-04 08:45:52  [ http-bio-8080-exec-10:125110 ] - [ INFO ]  request end, id: 169a0fc7-f4b6-471a-99a9-bb1a432cbdd5, cost: 5ms
+2024-01-04 08:46:03  [ http-bio-8080-exec-10:135812 ] - [ INFO ]  request start，id: 998510fd-0f67-41ad-a19c-20b5efca54aa, path: /user/update, ip: 0:0:0:0:0:0:0:1, params: [UserUpdateRequest(id=1738782067888480258, userName=demo, userAvatar=null, userProfile=简介, userRole=buyer)]
+2024-01-04 08:46:03  [ http-bio-8080-exec-10:135837 ] - [ INFO ]  request end, id: 998510fd-0f67-41ad-a19c-20b5efca54aa, cost: 25ms
+2024-01-04 08:46:03  [ http-bio-8080-exec-10:135846 ] - [ INFO ]  request start，id: c5c67be3-2981-4d29-ae6d-b48e0a432602, path: /user/list/page, ip: 0:0:0:0:0:0:0:1, params: [UserQueryRequest(id=null, userName=null, userProfile=null, userRole=null)]
+2024-01-04 08:46:03  [ http-bio-8080-exec-10:135851 ] - [ INFO ]  request end, id: c5c67be3-2981-4d29-ae6d-b48e0a432602, cost: 4ms
+2024-01-04 08:46:23  [ http-bio-8080-exec-10:156291 ] - [ INFO ]  request start，id: 828a2b93-2f60-4af4-9417-b2a86968f5f4, path: /purchase/list/page, ip: 0:0:0:0:0:0:0:1, params: [PurchaseQueryRequest(purchaseId=null, userId=null, purchaseTime=null)]
+2024-01-04 08:46:23  [ http-bio-8080-exec-10:156309 ] - [ INFO ]  request end, id: 828a2b93-2f60-4af4-9417-b2a86968f5f4, cost: 18ms
+2024-01-04 08:46:30  [ http-bio-8080-exec-10:162936 ] - [ INFO ]  request start，id: d4c3ccc1-615b-4d42-a701-d9e29f52abde, path: /sale/list/page, ip: 0:0:0:0:0:0:0:1, params: [SaleQueryRequest(saleId=null, userId=null, productId=null, saleTime=null)]
+2024-01-04 08:46:30  [ http-bio-8080-exec-10:162963 ] - [ INFO ]  request end, id: d4c3ccc1-615b-4d42-a701-d9e29f52abde, cost: 27ms
+2024-01-04 08:46:30  [ http-bio-8080-exec-10:163282 ] - [ INFO ]  request start，id: ed90eac8-26ec-41de-9bc0-65d7dc08fab4, path: /product/list/page, ip: 0:0:0:0:0:0:0:1, params: [ProductQueryRequest(id=null, productName=null)]
+2024-01-04 08:46:30  [ http-bio-8080-exec-10:163286 ] - [ INFO ]  request end, id: ed90eac8-26ec-41de-9bc0-65d7dc08fab4, cost: 4ms
+2024-01-04 08:46:34  [ http-bio-8080-exec-10:166733 ] - [ INFO ]  request start，id: c5a8da47-c7b5-46a5-9135-de4a04428358, path: /purchase/list/page, ip: 0:0:0:0:0:0:0:1, params: [PurchaseQueryRequest(purchaseId=null, userId=null, purchaseTime=null)]
+2024-01-04 08:46:34  [ http-bio-8080-exec-10:166745 ] - [ INFO ]  request end, id: c5a8da47-c7b5-46a5-9135-de4a04428358, cost: 12ms
+2024-01-04 08:46:52  [ http-bio-8080-exec-10:185028 ] - [ INFO ]  request start，id: 9ed37d54-a62e-4095-959f-2fccf1d6c09b, path: /purchase/add, ip: 0:0:0:0:0:0:0:1, params: [PurchaseAddDTO(purchaseId=null, productName=苹果, userId=1, purchaseTime=Thu Jan 04 08:00:00 CST 2024, purchaseQuantity=100, totalCost=1000)]
+2024-01-04 08:46:52  [ http-bio-8080-exec-10:185061 ] - [ INFO ]  request end, id: 9ed37d54-a62e-4095-959f-2fccf1d6c09b, cost: 33ms
+2024-01-04 08:46:52  [ http-bio-8080-exec-10:185069 ] - [ INFO ]  request start，id: a8aa30f2-2b2e-457d-a26b-150f29dac6c9, path: /purchase/list/page, ip: 0:0:0:0:0:0:0:1, params: [PurchaseQueryRequest(purchaseId=null, userId=null, purchaseTime=null)]
+2024-01-04 08:46:52  [ http-bio-8080-exec-10:185079 ] - [ INFO ]  request end, id: a8aa30f2-2b2e-457d-a26b-150f29dac6c9, cost: 9ms
+2024-01-04 08:46:55  [ http-bio-8080-exec-10:188045 ] - [ INFO ]  request start，id: 6489ee58-0db1-47d4-b13b-9e2ef1ddb326, path: /product/list/page, ip: 0:0:0:0:0:0:0:1, params: [ProductQueryRequest(id=null, productName=null)]
+2024-01-04 08:46:55  [ http-bio-8080-exec-10:188048 ] - [ INFO ]  request end, id: 6489ee58-0db1-47d4-b13b-9e2ef1ddb326, cost: 3ms
+2024-01-04 08:47:00  [ http-bio-8080-exec-8:192807 ] - [ INFO ]  request start，id: a39e7cb3-2a8f-4d68-8af2-502dabb02bdc, path: /purchase/list/page, ip: 0:0:0:0:0:0:0:1, params: [PurchaseQueryRequest(purchaseId=null, userId=null, purchaseTime=null)]
+2024-01-04 08:47:00  [ http-bio-8080-exec-8:192814 ] - [ INFO ]  request end, id: a39e7cb3-2a8f-4d68-8af2-502dabb02bdc, cost: 7ms
+2024-01-04 08:47:34  [ http-bio-8080-exec-9:227075 ] - [ INFO ]  request start，id: 56c9cae5-5efb-42b5-b84b-5574972b7ee7, path: /sale/list/page, ip: 0:0:0:0:0:0:0:1, params: [SaleQueryRequest(saleId=null, userId=null, productId=null, saleTime=null)]
+2024-01-04 08:47:34  [ http-bio-8080-exec-9:227084 ] - [ INFO ]  request end, id: 56c9cae5-5efb-42b5-b84b-5574972b7ee7, cost: 9ms
+2024-01-04 08:47:40  [ http-bio-8080-exec-9:232733 ] - [ INFO ]  request start，id: 5e786dbd-c0dc-4efd-8ce9-7ea93221ab74, path: /sale/update, ip: 0:0:0:0:0:0:0:1, params: [Sale(saleId=1738784958443409410, productId=null, userId=null, saleDate=Sun Dec 24 08:00:00 CST 2023, saleQuantity=10, saleTotal=10, createTime=null, updateTime=null, isDelete=null)]
+2024-01-04 08:47:40  [ http-bio-8080-exec-9:232742 ] - [ INFO ]  request end, id: 5e786dbd-c0dc-4efd-8ce9-7ea93221ab74, cost: 9ms
+2024-01-04 08:47:40  [ http-bio-8080-exec-9:232750 ] - [ INFO ]  request start，id: d033d4f1-5b68-42b9-8c89-c533aa31b91f, path: /sale/list/page, ip: 0:0:0:0:0:0:0:1, params: [SaleQueryRequest(saleId=null, userId=null, productId=null, saleTime=null)]
+2024-01-04 08:47:40  [ http-bio-8080-exec-9:232757 ] - [ INFO ]  request end, id: d033d4f1-5b68-42b9-8c89-c533aa31b91f, cost: 7ms
+2024-01-04 08:48:17  [ http-bio-8080-exec-5:270284 ] - [ WARN ]  No mapping for GET /sale
+2024-01-04 08:48:27  [ localhost-startStop-2:280073 ] - [ INFO ]  {dataSource-1} closing ...
+2024-01-04 08:48:27  [ localhost-startStop-2:280075 ] - [ INFO ]  {dataSource-1} closed
+2024-01-04 08:48:27  [ localhost-startStop-2:280082 ] - [ INFO ]  {dataSource-0} closing ...
+2024-01-04 14:59:54  [ localhost-startStop-1:0 ] - [ INFO ]  Root WebApplicationContext: initialization started
+2024-01-04 14:59:57  [ localhost-startStop-1:3482 ] - [ INFO ]  Root WebApplicationContext initialized in 3476 ms
+2024-01-04 14:59:57  [ localhost-startStop-1:3537 ] - [ INFO ]  Initializing Servlet 'dispatcher'
+2024-01-04 15:00:19  [ localhost-startStop-1:0 ] - [ INFO ]  Root WebApplicationContext: initialization started
+2024-01-04 15:00:22  [ localhost-startStop-1:2612 ] - [ INFO ]  Root WebApplicationContext initialized in 2610 ms
+2024-01-04 15:00:22  [ localhost-startStop-1:2624 ] - [ INFO ]  Initializing Servlet 'dispatcher'
+2024-01-04 15:00:23  [ localhost-startStop-1:3934 ] - [ WARN ]  For Jackson Kotlin classes support please add "com.fasterxml.jackson.module:jackson-module-kotlin" to the classpath
+2024-01-04 15:00:23  [ localhost-startStop-1:4170 ] - [ INFO ]  Completed initialization in 1546 ms
+2024-01-04 15:25:15  [ http-bio-8080-exec-3:1496232 ] - [ INFO ]  request start，id: 27114cb8-138c-4c90-8056-064fe2a2a10a, path: /user/login, ip: 0:0:0:0:0:0:0:1, params: [UserLoginRequest(userAccount=219970149, userPassword=261615xhk), org.apache.catalina.connector.RequestFacade@281d9713]
+2024-01-04 15:25:15  [ http-bio-8080-exec-3:1496432 ] - [ INFO ]  {dataSource-1} inited
+2024-01-04 15:25:16  [ http-bio-8080-exec-3:1496807 ] - [ INFO ]  request end, id: 27114cb8-138c-4c90-8056-064fe2a2a10a, cost: 583ms
+2024-01-04 15:25:16  [ http-bio-8080-exec-4:1496868 ] - [ INFO ]  request start，id: 16a8644c-2bd6-4c7d-84c1-e9aac4543d7a, path: /user/get/login, ip: 0:0:0:0:0:0:0:1, params: [org.apache.catalina.connector.RequestFacade@281d9713]
+2024-01-04 15:25:16  [ http-bio-8080-exec-4:1496875 ] - [ INFO ]  request end, id: 16a8644c-2bd6-4c7d-84c1-e9aac4543d7a, cost: 6ms
+2024-01-04 15:25:18  [ http-bio-8080-exec-5:1499278 ] - [ INFO ]  request start，id: 168fb59d-b498-4758-a082-04467571d167, path: /user/list/page, ip: 0:0:0:0:0:0:0:1, params: [UserQueryRequest(id=null, userName=null, userProfile=null, userRole=null)]
+2024-01-04 15:25:19  [ http-bio-8080-exec-5:1499642 ] - [ INFO ]  request end, id: 168fb59d-b498-4758-a082-04467571d167, cost: 363ms
+2024-01-04 15:25:22  [ http-bio-8080-exec-7:1503389 ] - [ INFO ]  request start，id: 9cbb3379-7555-4184-a741-2d7e423a9f5a, path: /purchase/list/page, ip: 0:0:0:0:0:0:0:1, params: [PurchaseQueryRequest(purchaseId=null, userId=null, purchaseTime=null)]
+2024-01-04 15:25:22  [ http-bio-8080-exec-7:1503438 ] - [ INFO ]  request end, id: 9cbb3379-7555-4184-a741-2d7e423a9f5a, cost: 49ms
+2024-01-04 15:25:23  [ http-bio-8080-exec-9:1503924 ] - [ INFO ]  request start，id: 2a238f64-ee3b-4b86-a132-9772f1e2ff95, path: /user/list/page, ip: 0:0:0:0:0:0:0:1, params: [UserQueryRequest(id=null, userName=null, userProfile=null, userRole=null)]
+2024-01-04 15:25:23  [ http-bio-8080-exec-9:1503936 ] - [ INFO ]  request end, id: 2a238f64-ee3b-4b86-a132-9772f1e2ff95, cost: 12ms
+2024-01-04 15:25:24  [ http-bio-8080-exec-10:1504633 ] - [ INFO ]  request start，id: e61f7f8d-36d0-412c-851c-071451249806, path: /purchase/list/page, ip: 0:0:0:0:0:0:0:1, params: [PurchaseQueryRequest(purchaseId=null, userId=null, purchaseTime=null)]
+2024-01-04 15:25:24  [ http-bio-8080-exec-10:1504658 ] - [ INFO ]  request end, id: e61f7f8d-36d0-412c-851c-071451249806, cost: 25ms
+2024-01-04 15:25:24  [ http-bio-8080-exec-10:1505092 ] - [ INFO ]  request start，id: af1c9bdf-41c8-4ef3-bce9-1bed5941c6b1, path: /user/list/page, ip: 0:0:0:0:0:0:0:1, params: [UserQueryRequest(id=null, userName=null, userProfile=null, userRole=null)]
+2024-01-04 15:25:24  [ http-bio-8080-exec-10:1505100 ] - [ INFO ]  request end, id: af1c9bdf-41c8-4ef3-bce9-1bed5941c6b1, cost: 8ms
+2024-01-04 15:25:25  [ http-bio-8080-exec-10:1505620 ] - [ INFO ]  request start，id: efc4448b-df3b-4e47-88b0-2da5124ec1e2, path: /purchase/list/page, ip: 0:0:0:0:0:0:0:1, params: [PurchaseQueryRequest(purchaseId=null, userId=null, purchaseTime=null)]
+2024-01-04 15:25:25  [ http-bio-8080-exec-10:1505652 ] - [ INFO ]  request end, id: efc4448b-df3b-4e47-88b0-2da5124ec1e2, cost: 31ms
+2024-01-04 15:25:28  [ http-bio-8080-exec-10:1508785 ] - [ INFO ]  request start，id: fd01ecb0-527f-4577-bb58-f3e8e67c8a5a, path: /user/list/page, ip: 0:0:0:0:0:0:0:1, params: [UserQueryRequest(id=null, userName=null, userProfile=null, userRole=null)]
+2024-01-04 15:25:28  [ http-bio-8080-exec-10:1508792 ] - [ INFO ]  request end, id: fd01ecb0-527f-4577-bb58-f3e8e67c8a5a, cost: 6ms
+2024-01-04 15:25:33  [ http-bio-8080-exec-10:1513915 ] - [ INFO ]  request start，id: c355d479-b924-454d-9900-b1d57874394c, path: /user/update, ip: 0:0:0:0:0:0:0:1, params: [UserUpdateRequest(id=1738782067888480258, userName=demo, userAvatar=null, userProfile=简, userRole=buyer)]
+2024-01-04 15:25:33  [ http-bio-8080-exec-10:1513970 ] - [ INFO ]  request end, id: c355d479-b924-454d-9900-b1d57874394c, cost: 55ms
+2024-01-04 15:25:33  [ http-bio-8080-exec-10:1513989 ] - [ INFO ]  request start，id: 0362a32d-8faf-448f-8a9f-559a08e1387b, path: /user/list/page, ip: 0:0:0:0:0:0:0:1, params: [UserQueryRequest(id=null, userName=null, userProfile=null, userRole=null)]
+2024-01-04 15:25:33  [ http-bio-8080-exec-10:1513995 ] - [ INFO ]  request end, id: 0362a32d-8faf-448f-8a9f-559a08e1387b, cost: 6ms
+2024-01-04 15:25:38  [ http-bio-8080-exec-10:1518953 ] - [ INFO ]  request start，id: 210a640f-fd4c-484a-a3f0-366292a27666, path: /user/delete, ip: 0:0:0:0:0:0:0:1, params: [DeleteRequest(id=1738782067888480258)]
+2024-01-04 15:25:38  [ http-bio-8080-exec-10:1518996 ] - [ INFO ]  request end, id: 210a640f-fd4c-484a-a3f0-366292a27666, cost: 43ms
+2024-01-04 15:25:38  [ http-bio-8080-exec-10:1519011 ] - [ INFO ]  request start，id: 0e360a4e-9895-47aa-af3f-26d7f81887c7, path: /user/list/page, ip: 0:0:0:0:0:0:0:1, params: [UserQueryRequest(id=null, userName=null, userProfile=null, userRole=null)]
+2024-01-04 15:25:38  [ http-bio-8080-exec-10:1519024 ] - [ INFO ]  request end, id: 0e360a4e-9895-47aa-af3f-26d7f81887c7, cost: 12ms
+2024-01-04 15:25:39  [ http-bio-8080-exec-10:1520440 ] - [ INFO ]  request start，id: ff5ee06f-6533-4d34-9098-c203673fa9db, path: /purchase/list/page, ip: 0:0:0:0:0:0:0:1, params: [PurchaseQueryRequest(purchaseId=null, userId=null, purchaseTime=null)]
+2024-01-04 15:25:39  [ http-bio-8080-exec-10:1520465 ] - [ INFO ]  request end, id: ff5ee06f-6533-4d34-9098-c203673fa9db, cost: 24ms
+2024-01-04 15:26:05  [ http-bio-8080-exec-10:1546381 ] - [ INFO ]  request start，id: 07d9761b-9f2e-46f7-9ad9-082a2deb98de, path: /purchase/add, ip: 0:0:0:0:0:0:0:1, params: [PurchaseAddDTO(purchaseId=null, productName=demo, userId=1, purchaseTime=Thu Jan 11 08:00:00 CST 2024, purchaseQuantity=1100, totalCost=1000)]
+2024-01-04 15:26:05  [ http-bio-8080-exec-10:1546429 ] - [ INFO ]  request end, id: 07d9761b-9f2e-46f7-9ad9-082a2deb98de, cost: 49ms
+2024-01-04 15:26:05  [ http-bio-8080-exec-10:1546442 ] - [ INFO ]  request start，id: 20a07c7d-63b4-4c1e-943c-0d48878c1b35, path: /purchase/list/page, ip: 0:0:0:0:0:0:0:1, params: [PurchaseQueryRequest(purchaseId=null, userId=null, purchaseTime=null)]
+2024-01-04 15:26:05  [ http-bio-8080-exec-10:1546465 ] - [ INFO ]  request end, id: 20a07c7d-63b4-4c1e-943c-0d48878c1b35, cost: 22ms
+2024-01-04 15:26:08  [ http-bio-8080-exec-10:1548775 ] - [ INFO ]  request start，id: f6865d34-55e5-4867-84c9-a872350f13a5, path: /product/list/page, ip: 0:0:0:0:0:0:0:1, params: [ProductQueryRequest(id=null, productName=null)]
+2024-01-04 15:26:08  [ http-bio-8080-exec-10:1548787 ] - [ INFO ]  request end, id: f6865d34-55e5-4867-84c9-a872350f13a5, cost: 12ms
+2024-01-04 15:26:44  [ http-bio-8080-exec-10:1585317 ] - [ INFO ]  request start，id: 544f7567-e075-4644-8e9d-38fbfa0bb11b, path: /sale/list/page, ip: 0:0:0:0:0:0:0:1, params: [SaleQueryRequest(saleId=null, userId=null, productId=null, saleTime=null)]
+2024-01-04 15:26:44  [ http-bio-8080-exec-10:1585384 ] - [ INFO ]  request end, id: 544f7567-e075-4644-8e9d-38fbfa0bb11b, cost: 67ms
+2024-01-04 15:26:49  [ http-bio-8080-exec-10:1590029 ] - [ INFO ]  request start，id: f53aa10d-6822-40ab-9088-ac3c38277c7d, path: /product/list/page, ip: 0:0:0:0:0:0:0:1, params: [ProductQueryRequest(id=null, productName=null)]
+2024-01-04 15:26:49  [ http-bio-8080-exec-10:1590037 ] - [ INFO ]  request end, id: f53aa10d-6822-40ab-9088-ac3c38277c7d, cost: 7ms
+2024-01-04 15:26:50  [ http-bio-8080-exec-10:1590831 ] - [ INFO ]  request start，id: d3b9b51a-fcc6-4da0-a7a2-428c4f0a3019, path: /sale/list/page, ip: 0:0:0:0:0:0:0:1, params: [SaleQueryRequest(saleId=null, userId=null, productId=null, saleTime=null)]
+2024-01-04 15:26:50  [ http-bio-8080-exec-10:1590855 ] - [ INFO ]  request end, id: d3b9b51a-fcc6-4da0-a7a2-428c4f0a3019, cost: 23ms
+2024-01-04 15:27:01  [ http-bio-8080-exec-10:1602438 ] - [ INFO ]  request start，id: eb03a35d-43a1-4226-82ab-f7c1c4216ac6, path: /sale/add, ip: 0:0:0:0:0:0:0:1, params: [SaleAddDTO(productName=demo, productId=null, userId=1, saleDate=Fri Jan 05 08:00:00 CST 2024, saleQuantity=1, saleTotal=1)]
+2024-01-04 15:27:01  [ http-bio-8080-exec-10:1602485 ] - [ INFO ]  request end, id: eb03a35d-43a1-4226-82ab-f7c1c4216ac6, cost: 46ms
+2024-01-04 15:27:01  [ http-bio-8080-exec-10:1602499 ] - [ INFO ]  request start，id: de4049bd-df83-4733-840a-d88354d25e20, path: /sale/list/page, ip: 0:0:0:0:0:0:0:1, params: [SaleQueryRequest(saleId=null, userId=null, productId=null, saleTime=null)]
+2024-01-04 15:27:01  [ http-bio-8080-exec-10:1602519 ] - [ INFO ]  request end, id: de4049bd-df83-4733-840a-d88354d25e20, cost: 19ms
+2024-01-04 15:27:03  [ http-bio-8080-exec-10:1604327 ] - [ INFO ]  request start，id: fc56b275-33cd-4805-b133-d4e9d3893941, path: /product/list/page, ip: 0:0:0:0:0:0:0:1, params: [ProductQueryRequest(id=null, productName=null)]
+2024-01-04 15:27:03  [ http-bio-8080-exec-10:1604336 ] - [ INFO ]  request end, id: fc56b275-33cd-4805-b133-d4e9d3893941, cost: 9ms
+2024-01-04 15:27:09  [ http-bio-8080-exec-10:1610215 ] - [ INFO ]  request start，id: 07d0be87-7f71-42b2-a69e-41fda93f02e0, path: /sale/list/page, ip: 0:0:0:0:0:0:0:1, params: [SaleQueryRequest(saleId=null, userId=null, productId=null, saleTime=null)]
+2024-01-04 15:27:09  [ http-bio-8080-exec-10:1610243 ] - [ INFO ]  request end, id: 07d0be87-7f71-42b2-a69e-41fda93f02e0, cost: 28ms
+2024-01-04 15:27:20  [ http-bio-8080-exec-10:1621375 ] - [ INFO ]  request start，id: f20e945b-0589-4cea-b7ad-1174c19770c6, path: /sale/add, ip: 0:0:0:0:0:0:0:1, params: [SaleAddDTO(productName=demo, productId=null, userId=1, saleDate=Thu Jan 11 08:00:00 CST 2024, saleQuantity=2000, saleTotal=100)]
+2024-01-04 15:27:20  [ http-bio-8080-exec-10:1621379 ] - [ INFO ]  request end, id: f20e945b-0589-4cea-b7ad-1174c19770c6, cost: 3ms
+2024-01-04 15:27:26  [ http-bio-8080-exec-10:1627381 ] - [ INFO ]  request start，id: c70eef3c-8983-495f-82b0-b4994718abba, path: /product/list/page, ip: 0:0:0:0:0:0:0:1, params: [ProductQueryRequest(id=null, productName=null)]
+2024-01-04 15:27:26  [ http-bio-8080-exec-10:1627386 ] - [ INFO ]  request end, id: c70eef3c-8983-495f-82b0-b4994718abba, cost: 5ms
+2024-01-04 15:27:30  [ http-bio-8080-exec-10:1630684 ] - [ INFO ]  request start，id: 5fba54de-aacb-4451-92e0-8a87559f898c, path: /sale/list/page, ip: 0:0:0:0:0:0:0:1, params: [SaleQueryRequest(saleId=null, userId=null, productId=null, saleTime=null)]
+2024-01-04 15:27:30  [ http-bio-8080-exec-10:1630704 ] - [ INFO ]  request end, id: 5fba54de-aacb-4451-92e0-8a87559f898c, cost: 19ms
+2024-01-04 15:27:54  [ http-bio-8080-exec-5:1655361 ] - [ WARN ]  No mapping for GET /sale
+2024-01-04 15:28:16  [ http-bio-8080-exec-10:1677473 ] - [ INFO ]  request start，id: 75b9bd46-9cf5-49ae-b5e5-64c1ee6c2ce1, path: /product/list/page, ip: 0:0:0:0:0:0:0:1, params: [ProductQueryRequest(id=null, productName=null)]
+2024-01-04 15:28:16  [ http-bio-8080-exec-10:1677479 ] - [ INFO ]  request end, id: 75b9bd46-9cf5-49ae-b5e5-64c1ee6c2ce1, cost: 6ms

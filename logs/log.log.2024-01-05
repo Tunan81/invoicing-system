@@ -1,3 +1,11 @@
+2024-01-05 22:02:55  [ localhost-startStop-1:0 ] - [ INFO ]  Root WebApplicationContext: initialization started
+2024-01-05 22:02:56  [ localhost-startStop-1:1273 ] - [ INFO ]  Root WebApplicationContext initialized in 1271 ms
+2024-01-05 22:02:56  [ localhost-startStop-1:1281 ] - [ INFO ]  Initializing Servlet 'dispatcher'
+2024-01-05 22:02:57  [ localhost-startStop-1:1994 ] - [ WARN ]  For Jackson Kotlin classes support please add "com.fasterxml.jackson.module:jackson-module-kotlin" to the classpath
+2024-01-05 22:02:57  [ localhost-startStop-1:2105 ] - [ INFO ]  Completed initialization in 824 ms
+2024-01-05 22:04:14  [ http-bio-8080-exec-3:79133 ] - [ INFO ]  request start，id: 817a97b6-38ba-4d8d-bd05-b3d2a9529c53, path: /user/login, ip: 0:0:0:0:0:0:0:1, params: [UserLoginRequest(userAccount=219970149, userPassword=261615xhK), org.apache.catalina.connector.RequestFacade@310660ab]
+2024-01-05 22:04:14  [ http-bio-8080-exec-3:79227 ] - [ INFO ]  {dataSource-1} inited
+2024-01-05 22:04:14  [ http-bio-8080-exec-3:79420 ] - [ INFO ]  user login failed, userAccount cannot match userPassword
 2024-01-05 22:04:14  [ http-bio-8080-exec-3:79422 ] - [ ERROR ]  BusinessException
 team.tunan.exception.BusinessException: 用户不存在或密码错误
 	at team.tunan.service.impl.UserServiceImpl.userLogin(UserServiceImpl.java:103)
@@ -67,3 +75,18 @@ team.tunan.exception.BusinessException: 用户不存在或密码错误
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
 	at java.lang.Thread.run(Thread.java:750)
+2024-01-05 22:04:18  [ http-bio-8080-exec-4:82902 ] - [ INFO ]  request start，id: 32b5b89e-9a71-47a4-b202-d0fe58504796, path: /user/login, ip: 0:0:0:0:0:0:0:1, params: [UserLoginRequest(userAccount=219970149, userPassword=261615xhk), org.apache.catalina.connector.RequestFacade@310660ab]
+2024-01-05 22:04:18  [ http-bio-8080-exec-4:82910 ] - [ INFO ]  request end, id: 32b5b89e-9a71-47a4-b202-d0fe58504796, cost: 7ms
+2024-01-05 22:04:18  [ http-bio-8080-exec-5:82921 ] - [ INFO ]  request start，id: d5c54eed-eb02-46b6-b976-d18d905eb02b, path: /user/get/login, ip: 0:0:0:0:0:0:0:1, params: [org.apache.catalina.connector.RequestFacade@310660ab]
+2024-01-05 22:04:18  [ http-bio-8080-exec-5:82925 ] - [ INFO ]  request end, id: d5c54eed-eb02-46b6-b976-d18d905eb02b, cost: 3ms
+2024-01-05 22:04:44  [ http-bio-8080-exec-6:109549 ] - [ INFO ]  request start，id: bfbb0ad3-88c3-4244-b184-e39b5507f5bd, path: /user/list/page, ip: 0:0:0:0:0:0:0:1, params: [UserQueryRequest(id=null, userName=null, userProfile=null, userRole=null)]
+2024-01-05 22:04:44  [ http-bio-8080-exec-6:109714 ] - [ INFO ]  request end, id: bfbb0ad3-88c3-4244-b184-e39b5507f5bd, cost: 164ms
+2024-01-05 22:05:01  [ http-bio-8080-exec-8:126780 ] - [ INFO ]  request start，id: aa059686-0f2a-4e07-82ea-90c073710bdb, path: /purchase/list/page, ip: 0:0:0:0:0:0:0:1, params: [PurchaseQueryRequest(purchaseId=null, userId=null, purchaseTime=null)]
+2024-01-05 22:05:01  [ http-bio-8080-exec-8:126822 ] - [ INFO ]  request end, id: aa059686-0f2a-4e07-82ea-90c073710bdb, cost: 41ms
+2024-01-05 22:05:18  [ http-bio-8080-exec-4:143554 ] - [ INFO ]  request start，id: 8ec669c2-29c0-4801-ba13-dade64032377, path: /sale/list/page, ip: 0:0:0:0:0:0:0:1, params: [SaleQueryRequest(saleId=null, userId=null, productId=null, saleTime=null)]
+2024-01-05 22:05:18  [ http-bio-8080-exec-4:143595 ] - [ INFO ]  request end, id: 8ec669c2-29c0-4801-ba13-dade64032377, cost: 41ms
+2024-01-05 22:05:38  [ http-bio-8080-exec-4:163732 ] - [ INFO ]  request start，id: 06679890-c21c-40d0-b046-9dd465f1cb34, path: /product/list/page, ip: 0:0:0:0:0:0:0:1, params: [ProductQueryRequest(id=null, productName=null)]
+2024-01-05 22:05:38  [ http-bio-8080-exec-4:163742 ] - [ INFO ]  request end, id: 06679890-c21c-40d0-b046-9dd465f1cb34, cost: 9ms
+2024-01-05 22:05:53  [ localhost-startStop-2:178659 ] - [ INFO ]  {dataSource-1} closing ...
+2024-01-05 22:05:53  [ localhost-startStop-2:178661 ] - [ INFO ]  {dataSource-1} closed
+2024-01-05 22:05:53  [ localhost-startStop-2:178667 ] - [ INFO ]  {dataSource-0} closing ...

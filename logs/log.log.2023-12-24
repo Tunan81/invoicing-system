@@ -1,0 +1,545 @@
+2023-12-24 12:40:33  [ localhost-startStop-1:0 ] - [ INFO ]  Root WebApplicationContext: initialization started
+2023-12-24 12:40:34  [ localhost-startStop-1:1274 ] - [ INFO ]  Root WebApplicationContext initialized in 1272 ms
+2023-12-24 12:40:34  [ localhost-startStop-1:1296 ] - [ INFO ]  Initializing Servlet 'dispatcher'
+2023-12-24 12:40:35  [ localhost-startStop-1:2016 ] - [ WARN ]  For Jackson Kotlin classes support please add "com.fasterxml.jackson.module:jackson-module-kotlin" to the classpath
+2023-12-24 12:40:35  [ localhost-startStop-1:2150 ] - [ INFO ]  Completed initialization in 853 ms
+2023-12-24 12:41:52  [ http-bio-8080-exec-3:78925 ] - [ INFO ]  request start，id: 3e0a1ed6-291b-40c2-97fd-b5225ece2aee, path: /user/register, ip: 0:0:0:0:0:0:0:1, params: [UserRegisterRequest(userAccount=demo, userPassword=1234578, checkPassword=1234578)]
+2023-12-24 12:41:52  [ http-bio-8080-exec-3:78939 ] - [ ERROR ]  BusinessException
+team.tunan.exception.BusinessException: 用户密码过短
+	at team.tunan.service.impl.UserServiceImpl.userRegister(UserServiceImpl.java:50)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:344)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:205)
+	at com.sun.proxy.$Proxy76.userRegister(Unknown Source)
+	at team.tunan.controller.UserController.userRegister(UserController.java:56)
+	at team.tunan.controller.UserController$$FastClassBySpringCGLIB$$ad25d0f4.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:771)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:749)
+	at org.springframework.aop.aspectj.MethodInvocationProceedingJoinPoint.proceed(MethodInvocationProceedingJoinPoint.java:88)
+	at team.tunan.aop.LogInterceptor.doInterceptor(LogInterceptor.java:57)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethodWithGivenArgs(AbstractAspectJAdvice.java:644)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethod(AbstractAspectJAdvice.java:633)
+	at org.springframework.aop.aspectj.AspectJAroundAdvice.invoke(AspectJAroundAdvice.java:70)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:749)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:95)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:749)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:691)
+	at team.tunan.controller.UserController$$EnhancerBySpringCGLIB$$cb63429.userRegister(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:105)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:878)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:792)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:647)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:728)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:305)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:222)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:123)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:472)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:171)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:99)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:936)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:407)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1004)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:589)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:310)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:750)
+2023-12-24 12:42:04  [ http-bio-8080-exec-5:91106 ] - [ INFO ]  request start，id: d1690bd1-4ec5-4372-a8fb-3a92995aaf16, path: /user/register, ip: 0:0:0:0:0:0:0:1, params: [UserRegisterRequest(userAccount=demo, userPassword=12345678, checkPassword=12345678)]
+2023-12-24 12:42:04  [ http-bio-8080-exec-5:91214 ] - [ INFO ]  {dataSource-1} inited
+2023-12-24 12:42:04  [ http-bio-8080-exec-5:91420 ] - [ INFO ]  request end, id: d1690bd1-4ec5-4372-a8fb-3a92995aaf16, cost: 313ms
+2023-12-24 12:42:14  [ http-bio-8080-exec-9:101574 ] - [ INFO ]  request start，id: 8cb580d1-2302-42d8-b05c-fd1feab6bcf2, path: /user/login, ip: 0:0:0:0:0:0:0:1, params: [UserLoginRequest(userAccount=demo, userPassword=12345678), org.apache.catalina.connector.RequestFacade@7fe698f6]
+2023-12-24 12:42:14  [ http-bio-8080-exec-9:101584 ] - [ INFO ]  request end, id: 8cb580d1-2302-42d8-b05c-fd1feab6bcf2, cost: 10ms
+2023-12-24 12:42:14  [ http-bio-8080-exec-10:101593 ] - [ INFO ]  request start，id: 7e86e9b2-73cf-42f9-9b39-68f3a84846ad, path: /user/get/login, ip: 0:0:0:0:0:0:0:1, params: [org.apache.catalina.connector.RequestFacade@7fe698f6]
+2023-12-24 12:42:14  [ http-bio-8080-exec-10:101595 ] - [ INFO ]  request end, id: 7e86e9b2-73cf-42f9-9b39-68f3a84846ad, cost: 2ms
+2023-12-24 12:42:39  [ http-bio-8080-exec-3:126328 ] - [ INFO ]  request start，id: ad21e8ca-034f-4b17-977c-7af7e0aaba3d, path: /user/login, ip: 0:0:0:0:0:0:0:1, params: [UserLoginRequest(userAccount=219970149, userPassword=261615xhk), org.apache.catalina.connector.RequestFacade@7fe698f6]
+2023-12-24 12:42:39  [ http-bio-8080-exec-3:126331 ] - [ INFO ]  request end, id: ad21e8ca-034f-4b17-977c-7af7e0aaba3d, cost: 2ms
+2023-12-24 12:42:39  [ http-bio-8080-exec-3:126336 ] - [ INFO ]  request start，id: ac0336e9-1113-412c-b2c6-6022cccbe6e6, path: /user/get/login, ip: 0:0:0:0:0:0:0:1, params: [org.apache.catalina.connector.RequestFacade@6dbdb21a]
+2023-12-24 12:42:39  [ http-bio-8080-exec-3:126338 ] - [ INFO ]  request end, id: ac0336e9-1113-412c-b2c6-6022cccbe6e6, cost: 2ms
+2023-12-24 12:42:41  [ http-bio-8080-exec-3:127761 ] - [ INFO ]  request start，id: 644e8330-40aa-49c8-9a15-7a0b535d07cb, path: /user/list/page, ip: 0:0:0:0:0:0:0:1, params: [UserQueryRequest(id=null, userName=null, userProfile=null, userRole=null)]
+2023-12-24 12:42:41  [ http-bio-8080-exec-3:127928 ] - [ INFO ]  request end, id: 644e8330-40aa-49c8-9a15-7a0b535d07cb, cost: 167ms
+2023-12-24 12:42:42  [ http-bio-8080-exec-3:129528 ] - [ INFO ]  request start，id: da4241cc-8356-4e78-ad60-2234ac7cd7f0, path: /purchase/list/page, ip: 0:0:0:0:0:0:0:1, params: [PurchaseQueryRequest(purchaseId=null, userId=null, purchaseTime=null)]
+2023-12-24 12:42:42  [ http-bio-8080-exec-3:129569 ] - [ INFO ]  request end, id: da4241cc-8356-4e78-ad60-2234ac7cd7f0, cost: 40ms
+2023-12-24 12:42:43  [ http-bio-8080-exec-3:129896 ] - [ INFO ]  request start，id: e361940a-54a3-4068-9128-7b63260f0d7b, path: /user/list/page, ip: 0:0:0:0:0:0:0:1, params: [UserQueryRequest(id=null, userName=null, userProfile=null, userRole=null)]
+2023-12-24 12:42:43  [ http-bio-8080-exec-3:129904 ] - [ INFO ]  request end, id: e361940a-54a3-4068-9128-7b63260f0d7b, cost: 7ms
+2023-12-24 12:42:58  [ http-bio-8080-exec-2:145734 ] - [ INFO ]  request start，id: 87a241de-7dec-401e-b042-ad5d4e1bb2ce, path: /user/update, ip: 0:0:0:0:0:0:0:1, params: [UserUpdateRequest(id=1738782067888480258, userName=demo, userAvatar=null, userProfile=null, userRole=buyer)]
+2023-12-24 12:42:58  [ http-bio-8080-exec-2:145755 ] - [ INFO ]  request end, id: 87a241de-7dec-401e-b042-ad5d4e1bb2ce, cost: 20ms
+2023-12-24 12:42:59  [ http-bio-8080-exec-2:145764 ] - [ INFO ]  request start，id: e3d89706-b987-45e2-8603-f68584d476a7, path: /user/list/page, ip: 0:0:0:0:0:0:0:1, params: [UserQueryRequest(id=null, userName=null, userProfile=null, userRole=null)]
+2023-12-24 12:42:59  [ http-bio-8080-exec-2:145768 ] - [ INFO ]  request end, id: e3d89706-b987-45e2-8603-f68584d476a7, cost: 3ms
+2023-12-24 12:43:12  [ http-bio-8080-exec-8:159603 ] - [ INFO ]  request start，id: ee420b11-e17f-4d1d-bc79-10fccaf9aa83, path: /user/login, ip: 0:0:0:0:0:0:0:1, params: [UserLoginRequest(userAccount=demo, userPassword=12345678), org.apache.catalina.connector.RequestFacade@2fffa1e]
+2023-12-24 12:43:12  [ http-bio-8080-exec-8:159606 ] - [ INFO ]  request end, id: ee420b11-e17f-4d1d-bc79-10fccaf9aa83, cost: 2ms
+2023-12-24 12:43:12  [ http-bio-8080-exec-8:159610 ] - [ INFO ]  request start，id: 9c96ab44-ff85-4a24-b017-a54149a9d80e, path: /user/get/login, ip: 0:0:0:0:0:0:0:1, params: [org.apache.catalina.connector.RequestFacade@2fffa1e]
+2023-12-24 12:43:12  [ http-bio-8080-exec-8:159612 ] - [ INFO ]  request end, id: 9c96ab44-ff85-4a24-b017-a54149a9d80e, cost: 1ms
+2023-12-24 12:43:14  [ http-bio-8080-exec-8:160965 ] - [ INFO ]  request start，id: 62901def-9e93-4f6c-b22a-8c299853da0b, path: /purchase/list/page, ip: 0:0:0:0:0:0:0:1, params: [PurchaseQueryRequest(purchaseId=null, userId=null, purchaseTime=null)]
+2023-12-24 12:43:14  [ http-bio-8080-exec-8:160974 ] - [ INFO ]  request end, id: 62901def-9e93-4f6c-b22a-8c299853da0b, cost: 8ms
+2023-12-24 12:44:45  [ http-bio-8080-exec-7:252581 ] - [ INFO ]  request start，id: 6f3df9eb-142d-4289-9f01-3edf23703369, path: /purchase/list/page, ip: 0:0:0:0:0:0:0:1, params: [PurchaseQueryRequest(purchaseId=null, userId=null, purchaseTime=null)]
+2023-12-24 12:44:45  [ http-bio-8080-exec-7:252599 ] - [ INFO ]  request end, id: 6f3df9eb-142d-4289-9f01-3edf23703369, cost: 18ms
+2023-12-24 12:45:07  [ http-bio-8080-exec-7:274144 ] - [ INFO ]  request start，id: 3f69dd27-e83f-47df-8b2f-33c8c4eac990, path: /sale/list/page, ip: 0:0:0:0:0:0:0:1, params: [SaleQueryRequest(saleId=null, userId=null, productId=null, saleTime=null)]
+2023-12-24 12:45:07  [ http-bio-8080-exec-7:274166 ] - [ INFO ]  request end, id: 3f69dd27-e83f-47df-8b2f-33c8c4eac990, cost: 22ms
+2023-12-24 12:45:15  [ http-bio-8080-exec-7:282091 ] - [ INFO ]  request start，id: 56ede51f-49d3-4d86-aaea-6feb85853ea6, path: /product/list/page, ip: 0:0:0:0:0:0:0:1, params: [ProductQueryRequest(id=null, productName=null)]
+2023-12-24 12:45:15  [ http-bio-8080-exec-7:282105 ] - [ INFO ]  request end, id: 56ede51f-49d3-4d86-aaea-6feb85853ea6, cost: 13ms
+2023-12-24 12:45:17  [ http-bio-8080-exec-7:284396 ] - [ INFO ]  request start，id: 2b2d9e9d-08cc-4d7c-b928-7997a2b2afaa, path: /sale/list/page, ip: 0:0:0:0:0:0:0:1, params: [SaleQueryRequest(saleId=null, userId=null, productId=null, saleTime=null)]
+2023-12-24 12:45:17  [ http-bio-8080-exec-7:284399 ] - [ INFO ]  request end, id: 2b2d9e9d-08cc-4d7c-b928-7997a2b2afaa, cost: 2ms
+2023-12-24 12:49:46  [ localhost-startStop-2:552791 ] - [ INFO ]  {dataSource-1} closing ...
+2023-12-24 12:49:46  [ localhost-startStop-2:552794 ] - [ INFO ]  {dataSource-1} closed
+2023-12-24 12:49:46  [ localhost-startStop-2:552801 ] - [ INFO ]  {dataSource-0} closing ...
+2023-12-24 12:50:01  [ localhost-startStop-1:0 ] - [ INFO ]  Root WebApplicationContext: initialization started
+2023-12-24 12:50:02  [ localhost-startStop-1:1191 ] - [ INFO ]  Root WebApplicationContext initialized in 1189 ms
+2023-12-24 12:50:02  [ localhost-startStop-1:1214 ] - [ INFO ]  Initializing Servlet 'dispatcher'
+2023-12-24 12:50:03  [ localhost-startStop-1:1935 ] - [ WARN ]  For Jackson Kotlin classes support please add "com.fasterxml.jackson.module:jackson-module-kotlin" to the classpath
+2023-12-24 12:50:03  [ localhost-startStop-1:2033 ] - [ INFO ]  Completed initialization in 816 ms
+2023-12-24 12:50:39  [ http-bio-8080-exec-3:38382 ] - [ INFO ]  request start，id: 6ba3c43b-1988-442d-82da-e90623c16758, path: /sale/add, ip: 0:0:0:0:0:0:0:1, params: [SaleAddDTO(productName=水蜜桃, productId=null, userId=1, saleDate=Sun Dec 24 08:00:00 CST 2023, saleQuantity=10, saleTotal=100)]
+2023-12-24 12:50:39  [ http-bio-8080-exec-3:38480 ] - [ INFO ]  {dataSource-1} inited
+2023-12-24 12:50:39  [ http-bio-8080-exec-3:38640 ] - [ INFO ]  request end, id: 6ba3c43b-1988-442d-82da-e90623c16758, cost: 261ms
+2023-12-24 12:50:42  [ http-bio-8080-exec-4:40964 ] - [ INFO ]  request start，id: e87730e1-72d5-46c2-9d55-608503e4dab5, path: /product/list/page, ip: 0:0:0:0:0:0:0:1, params: [ProductQueryRequest(id=null, productName=null)]
+2023-12-24 12:50:42  [ http-bio-8080-exec-4:41014 ] - [ INFO ]  request end, id: e87730e1-72d5-46c2-9d55-608503e4dab5, cost: 50ms
+2023-12-24 12:50:48  [ http-bio-8080-exec-5:47169 ] - [ INFO ]  request start，id: b75be171-5bb3-462c-85a0-a709d527afa4, path: /sale/list/page, ip: 0:0:0:0:0:0:0:1, params: [SaleQueryRequest(saleId=null, userId=null, productId=null, saleTime=null)]
+2023-12-24 12:50:48  [ http-bio-8080-exec-5:47178 ] - [ INFO ]  request end, id: b75be171-5bb3-462c-85a0-a709d527afa4, cost: 9ms
+2023-12-24 12:50:48  [ http-bio-8080-exec-6:47734 ] - [ INFO ]  request start，id: d17412e6-0787-4253-a680-696b740a9a77, path: /purchase/list/page, ip: 0:0:0:0:0:0:0:1, params: [PurchaseQueryRequest(purchaseId=null, userId=null, purchaseTime=null)]
+2023-12-24 12:50:49  [ http-bio-8080-exec-6:47751 ] - [ INFO ]  request end, id: d17412e6-0787-4253-a680-696b740a9a77, cost: 16ms
+2023-12-24 12:50:49  [ http-bio-8080-exec-7:48511 ] - [ INFO ]  request start，id: 38948483-f339-4ba6-8280-2be9cd8f3f6c, path: /sale/list/page, ip: 0:0:0:0:0:0:0:1, params: [SaleQueryRequest(saleId=null, userId=null, productId=null, saleTime=null)]
+2023-12-24 12:50:49  [ http-bio-8080-exec-7:48515 ] - [ INFO ]  request end, id: 38948483-f339-4ba6-8280-2be9cd8f3f6c, cost: 4ms
+2023-12-24 12:51:24  [ http-bio-8080-exec-8:83247 ] - [ INFO ]  request start，id: edbd6850-cfac-46d3-9879-1e4cf209d235, path: /sale/add, ip: 0:0:0:0:0:0:0:1, params: [SaleAddDTO(productName=火龙果, productId=null, userId=1, saleDate=Sun Dec 24 08:00:00 CST 2023, saleQuantity=10, saleTotal=100)]
+2023-12-24 12:51:24  [ http-bio-8080-exec-8:83300 ] - [ ERROR ]  RuntimeException
+org.springframework.dao.DataIntegrityViolationException: 
+### Error updating database.  Cause: java.sql.SQLException: Field 'sale_id' doesn't have a default value
+### The error may exist in team/tunan/mapper/SaleMapper.java (best guess)
+### The error may involve team.tunan.mapper.SaleMapper.insert-Inline
+### The error occurred while setting parameters
+### SQL: INSERT INTO sale  ( user_id, sale_date, sale_quantity )  VALUES  ( ?, ?, ? )
+### Cause: java.sql.SQLException: Field 'sale_id' doesn't have a default value
+; Field 'sale_id' doesn't have a default value; nested exception is java.sql.SQLException: Field 'sale_id' doesn't have a default value
+	at org.springframework.jdbc.support.SQLErrorCodeSQLExceptionTranslator.doTranslate(SQLErrorCodeSQLExceptionTranslator.java:251)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:72)
+	at org.mybatis.spring.MyBatisExceptionTranslator.translateExceptionIfPossible(MyBatisExceptionTranslator.java:91)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:441)
+	at com.sun.proxy.$Proxy68.insert(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.insert(SqlSessionTemplate.java:272)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperMethod.execute(MybatisMapperMethod.java:59)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy$PlainMethodInvoker.invoke(MybatisMapperProxy.java:148)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.invoke(MybatisMapperProxy.java:89)
+	at com.sun.proxy.$Proxy81.insert(Unknown Source)
+	at team.tunan.service.impl.SaleServiceImpl.saveDate(SaleServiceImpl.java:74)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:344)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:205)
+	at com.sun.proxy.$Proxy83.saveDate(Unknown Source)
+	at team.tunan.controller.SaleController.add(SaleController.java:81)
+	at team.tunan.controller.SaleController$$FastClassBySpringCGLIB$$ca723a70.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:771)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:749)
+	at org.springframework.aop.aspectj.MethodInvocationProceedingJoinPoint.proceed(MethodInvocationProceedingJoinPoint.java:88)
+	at team.tunan.aop.LogInterceptor.doInterceptor(LogInterceptor.java:57)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethodWithGivenArgs(AbstractAspectJAdvice.java:644)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethod(AbstractAspectJAdvice.java:633)
+	at org.springframework.aop.aspectj.AspectJAroundAdvice.invoke(AspectJAroundAdvice.java:70)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:749)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:95)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:749)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:691)
+	at team.tunan.controller.SaleController$$EnhancerBySpringCGLIB$$25a411b6.add(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:105)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:878)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:792)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:647)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:728)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:305)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:222)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:123)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:472)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:171)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:99)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:936)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:407)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1004)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:589)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:312)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:750)
+Caused by: java.sql.SQLException: Field 'sale_id' doesn't have a default value
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:965)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3978)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3914)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2530)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2683)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2495)
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1903)
+	at com.mysql.jdbc.PreparedStatement.execute(PreparedStatement.java:1242)
+	at com.alibaba.druid.pool.DruidPooledPreparedStatement.execute(DruidPooledPreparedStatement.java:497)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.update(PreparedStatementHandler.java:47)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.update(RoutingStatementHandler.java:74)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.ibatis.plugin.Plugin.invoke(Plugin.java:64)
+	at com.sun.proxy.$Proxy108.update(Unknown Source)
+	at org.apache.ibatis.executor.SimpleExecutor.doUpdate(SimpleExecutor.java:50)
+	at org.apache.ibatis.executor.BaseExecutor.update(BaseExecutor.java:117)
+	at org.apache.ibatis.executor.CachingExecutor.update(CachingExecutor.java:76)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.ibatis.plugin.Invocation.proceed(Invocation.java:49)
+	at com.baomidou.mybatisplus.extension.plugins.MybatisPlusInterceptor.intercept(MybatisPlusInterceptor.java:106)
+	at org.apache.ibatis.plugin.Plugin.invoke(Plugin.java:62)
+	at com.sun.proxy.$Proxy107.update(Unknown Source)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.update(DefaultSqlSession.java:194)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.insert(DefaultSqlSession.java:181)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:427)
+	... 73 more
+2023-12-24 12:51:55  [ localhost-startStop-2:114590 ] - [ INFO ]  {dataSource-1} closing ...
+2023-12-24 12:51:55  [ localhost-startStop-2:114592 ] - [ INFO ]  {dataSource-1} closed
+2023-12-24 12:51:55  [ localhost-startStop-2:114598 ] - [ INFO ]  {dataSource-0} closing ...
+2023-12-24 12:52:04  [ localhost-startStop-1:0 ] - [ INFO ]  Root WebApplicationContext: initialization started
+2023-12-24 12:52:06  [ localhost-startStop-1:1202 ] - [ INFO ]  Root WebApplicationContext initialized in 1201 ms
+2023-12-24 12:52:06  [ localhost-startStop-1:1231 ] - [ INFO ]  Initializing Servlet 'dispatcher'
+2023-12-24 12:52:06  [ localhost-startStop-1:2017 ] - [ WARN ]  For Jackson Kotlin classes support please add "com.fasterxml.jackson.module:jackson-module-kotlin" to the classpath
+2023-12-24 12:52:07  [ localhost-startStop-1:2125 ] - [ INFO ]  Completed initialization in 894 ms
+2023-12-24 12:53:33  [ http-bio-8080-exec-1:88655 ] - [ INFO ]  request start，id: 141b26ba-3e4e-4d65-9d5c-007016a0aad1, path: /sale/add, ip: 0:0:0:0:0:0:0:1, params: [SaleAddDTO(productName=火龙果, productId=null, userId=1, saleDate=Sun Dec 24 08:00:00 CST 2023, saleQuantity=10, saleTotal=100)]
+2023-12-24 12:53:33  [ http-bio-8080-exec-1:88748 ] - [ INFO ]  {dataSource-1} inited
+2023-12-24 12:53:33  [ http-bio-8080-exec-1:88946 ] - [ INFO ]  request end, id: 141b26ba-3e4e-4d65-9d5c-007016a0aad1, cost: 296ms
+2023-12-24 12:53:33  [ http-bio-8080-exec-2:88975 ] - [ INFO ]  request start，id: bcfc76b0-e521-44eb-bd75-1a8571bdb7e9, path: /sale/list/page, ip: 0:0:0:0:0:0:0:1, params: [SaleQueryRequest(saleId=null, userId=null, productId=null, saleTime=null)]
+2023-12-24 12:53:33  [ http-bio-8080-exec-2:89021 ] - [ INFO ]  request end, id: bcfc76b0-e521-44eb-bd75-1a8571bdb7e9, cost: 45ms
+2023-12-24 12:53:55  [ http-bio-8080-exec-3:111051 ] - [ INFO ]  request start，id: f340c935-1467-479b-b238-376838941d3e, path: /user/login, ip: 0:0:0:0:0:0:0:1, params: [UserLoginRequest(userAccount=219970149, userPassword=261615xhk), org.apache.catalina.connector.RequestFacade@27c9e8ca]
+2023-12-24 12:53:55  [ http-bio-8080-exec-3:111063 ] - [ INFO ]  request end, id: f340c935-1467-479b-b238-376838941d3e, cost: 11ms
+2023-12-24 12:53:55  [ http-bio-8080-exec-4:111071 ] - [ INFO ]  request start，id: 3f6c5e22-ca29-4c37-8d51-b4f0c70bc132, path: /user/get/login, ip: 0:0:0:0:0:0:0:1, params: [org.apache.catalina.connector.RequestFacade@27c9e8ca]
+2023-12-24 12:53:55  [ http-bio-8080-exec-4:111074 ] - [ INFO ]  request end, id: 3f6c5e22-ca29-4c37-8d51-b4f0c70bc132, cost: 2ms
+2023-12-24 12:53:57  [ http-bio-8080-exec-5:112736 ] - [ INFO ]  request start，id: 0c480712-e033-4458-b999-23958ab40f3d, path: /sale/list/page, ip: 0:0:0:0:0:0:0:1, params: [SaleQueryRequest(saleId=null, userId=null, productId=null, saleTime=null)]
+2023-12-24 12:53:57  [ http-bio-8080-exec-5:112739 ] - [ INFO ]  request end, id: 0c480712-e033-4458-b999-23958ab40f3d, cost: 3ms
+2023-12-24 12:56:21  [ http-bio-8080-exec-7:256417 ] - [ INFO ]  request start，id: 87223223-b72a-43a4-8d9e-71153c6a62ba, path: /product/list/page, ip: 0:0:0:0:0:0:0:1, params: [ProductQueryRequest(id=null, productName=null)]
+2023-12-24 12:56:21  [ http-bio-8080-exec-7:256431 ] - [ INFO ]  request end, id: 87223223-b72a-43a4-8d9e-71153c6a62ba, cost: 14ms
+2023-12-24 12:56:21  [ http-bio-8080-exec-8:256859 ] - [ INFO ]  request start，id: 2632d839-6d95-4da1-95dc-06ff51a7c624, path: /sale/list/page, ip: 0:0:0:0:0:0:0:1, params: [SaleQueryRequest(saleId=null, userId=null, productId=null, saleTime=null)]
+2023-12-24 12:56:21  [ http-bio-8080-exec-8:256864 ] - [ INFO ]  request end, id: 2632d839-6d95-4da1-95dc-06ff51a7c624, cost: 4ms
+2023-12-24 12:56:44  [ http-bio-8080-exec-9:279156 ] - [ INFO ]  request start，id: ccecfccc-76ab-46d2-b8d4-d9c1ea34704b, path: /purchase/list/page, ip: 0:0:0:0:0:0:0:1, params: [PurchaseQueryRequest(purchaseId=null, userId=null, purchaseTime=null)]
+2023-12-24 12:56:44  [ http-bio-8080-exec-9:279187 ] - [ INFO ]  request end, id: ccecfccc-76ab-46d2-b8d4-d9c1ea34704b, cost: 30ms
+2023-12-24 12:56:44  [ http-bio-8080-exec-10:279621 ] - [ INFO ]  request start，id: f1d1a2c7-ebb4-4db6-8366-c8ddce6f24db, path: /sale/list/page, ip: 0:0:0:0:0:0:0:1, params: [SaleQueryRequest(saleId=null, userId=null, productId=null, saleTime=null)]
+2023-12-24 12:56:44  [ http-bio-8080-exec-10:279630 ] - [ ERROR ]  RuntimeException
+java.lang.NullPointerException
+	at team.tunan.controller.SaleController.lambda$listPage$0(SaleController.java:65)
+	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
+	at java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1384)
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:482)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:472)
+	at java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:708)
+	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:566)
+	at team.tunan.controller.SaleController.listPage(SaleController.java:69)
+	at team.tunan.controller.SaleController$$FastClassBySpringCGLIB$$ca723a70.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:771)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:749)
+	at org.springframework.aop.aspectj.MethodInvocationProceedingJoinPoint.proceed(MethodInvocationProceedingJoinPoint.java:88)
+	at team.tunan.aop.LogInterceptor.doInterceptor(LogInterceptor.java:57)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethodWithGivenArgs(AbstractAspectJAdvice.java:644)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethod(AbstractAspectJAdvice.java:633)
+	at org.springframework.aop.aspectj.AspectJAroundAdvice.invoke(AspectJAroundAdvice.java:70)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:749)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:95)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:749)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:691)
+	at team.tunan.controller.SaleController$$EnhancerBySpringCGLIB$$374142e0.listPage(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:105)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:878)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:792)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:647)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:728)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:305)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:222)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:123)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:472)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:171)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:99)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:936)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:407)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1004)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:589)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:312)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:750)
+2023-12-24 12:58:24  [ localhost-startStop-2:379718 ] - [ INFO ]  {dataSource-1} closing ...
+2023-12-24 12:58:24  [ localhost-startStop-2:379720 ] - [ INFO ]  {dataSource-1} closed
+2023-12-24 12:58:24  [ localhost-startStop-2:379726 ] - [ INFO ]  {dataSource-0} closing ...
+2023-12-24 12:58:34  [ localhost-startStop-1:0 ] - [ INFO ]  Root WebApplicationContext: initialization started
+2023-12-24 12:58:35  [ localhost-startStop-1:1189 ] - [ INFO ]  Root WebApplicationContext initialized in 1188 ms
+2023-12-24 12:58:35  [ localhost-startStop-1:1216 ] - [ INFO ]  Initializing Servlet 'dispatcher'
+2023-12-24 12:58:36  [ localhost-startStop-1:1934 ] - [ WARN ]  For Jackson Kotlin classes support please add "com.fasterxml.jackson.module:jackson-module-kotlin" to the classpath
+2023-12-24 12:58:36  [ localhost-startStop-1:2050 ] - [ INFO ]  Completed initialization in 834 ms
+2023-12-24 13:00:01  [ http-bio-8080-exec-1:86596 ] - [ INFO ]  request start，id: c4a7e1a8-3a5c-4171-9299-e59193567f08, path: /purchase/list/page, ip: 0:0:0:0:0:0:0:1, params: [PurchaseQueryRequest(purchaseId=null, userId=null, purchaseTime=null)]
+2023-12-24 13:00:01  [ http-bio-8080-exec-1:86725 ] - [ INFO ]  {dataSource-1} inited
+2023-12-24 13:00:01  [ http-bio-8080-exec-2:86775 ] - [ INFO ]  request start，id: 04305774-406e-49ac-8d00-255c2468ecf5, path: /sale/list/page, ip: 0:0:0:0:0:0:0:1, params: [SaleQueryRequest(saleId=null, userId=null, productId=null, saleTime=null)]
+2023-12-24 13:00:01  [ http-bio-8080-exec-1:86912 ] - [ INFO ]  request end, id: c4a7e1a8-3a5c-4171-9299-e59193567f08, cost: 320ms
+2023-12-24 13:00:01  [ http-bio-8080-exec-2:86912 ] - [ INFO ]  request end, id: 04305774-406e-49ac-8d00-255c2468ecf5, cost: 138ms
+2023-12-24 13:00:35  [ http-bio-8080-exec-4:120840 ] - [ INFO ]  request start，id: 62e6f271-cfa5-4ad5-b343-8acf69e114f5, path: /sale/add, ip: 0:0:0:0:0:0:0:1, params: [SaleAddDTO(productName=火龙果, productId=null, userId=1, saleDate=Sun Dec 24 08:00:00 CST 2023, saleQuantity=10, saleTotal=100)]
+2023-12-24 13:00:35  [ http-bio-8080-exec-4:120884 ] - [ INFO ]  request end, id: 62e6f271-cfa5-4ad5-b343-8acf69e114f5, cost: 43ms
+2023-12-24 13:00:35  [ http-bio-8080-exec-5:120894 ] - [ INFO ]  request start，id: dd59ce9a-8ef5-44d9-a008-4b4c2d0a29f0, path: /sale/list/page, ip: 0:0:0:0:0:0:0:1, params: [SaleQueryRequest(saleId=null, userId=null, productId=null, saleTime=null)]
+2023-12-24 13:00:35  [ http-bio-8080-exec-5:120908 ] - [ INFO ]  request end, id: dd59ce9a-8ef5-44d9-a008-4b4c2d0a29f0, cost: 14ms
+2023-12-24 13:00:42  [ http-bio-8080-exec-6:128289 ] - [ INFO ]  request start，id: 33dd0b2f-a477-4678-9015-83a1dc5e338d, path: /product/list/page, ip: 0:0:0:0:0:0:0:1, params: [ProductQueryRequest(id=null, productName=null)]
+2023-12-24 13:00:42  [ http-bio-8080-exec-6:128301 ] - [ INFO ]  request end, id: 33dd0b2f-a477-4678-9015-83a1dc5e338d, cost: 11ms
+2023-12-24 13:00:46  [ http-bio-8080-exec-7:131606 ] - [ INFO ]  request start，id: d7fa684d-c5a5-4765-a853-f29de928e94c, path: /sale/list/page, ip: 0:0:0:0:0:0:0:1, params: [SaleQueryRequest(saleId=null, userId=null, productId=null, saleTime=null)]
+2023-12-24 13:00:46  [ http-bio-8080-exec-7:131622 ] - [ INFO ]  request end, id: d7fa684d-c5a5-4765-a853-f29de928e94c, cost: 16ms
+2023-12-24 13:00:47  [ localhost-startStop-1:0 ] - [ INFO ]  Root WebApplicationContext: initialization started
+2023-12-24 13:00:48  [ localhost-startStop-1:1187 ] - [ INFO ]  Root WebApplicationContext initialized in 1186 ms
+2023-12-24 13:00:48  [ localhost-startStop-1:1193 ] - [ INFO ]  Initializing Servlet 'dispatcher'
+2023-12-24 13:00:48  [ localhost-startStop-1:1902 ] - [ WARN ]  For Jackson Kotlin classes support please add "com.fasterxml.jackson.module:jackson-module-kotlin" to the classpath
+2023-12-24 13:00:49  [ localhost-startStop-1:1990 ] - [ INFO ]  Completed initialization in 797 ms
+2023-12-24 13:03:05  [ http-bio-8080-exec-9:270888 ] - [ INFO ]  request start，id: 94f25308-4ce2-4b36-8370-c05caee99533, path: /sale/add, ip: 0:0:0:0:0:0:0:1, params: [SaleAddDTO(productName=火龙果, productId=null, userId=1, saleDate=Sun Dec 24 08:00:00 CST 2023, saleQuantity=10, saleTotal=100)]
+2023-12-24 13:03:05  [ http-bio-8080-exec-9:270959 ] - [ INFO ]  request end, id: 94f25308-4ce2-4b36-8370-c05caee99533, cost: 70ms
+2023-12-24 13:03:05  [ http-bio-8080-exec-10:270968 ] - [ INFO ]  request start，id: 2dd1c01b-505d-47ac-a7f3-8a9770333df6, path: /sale/list/page, ip: 0:0:0:0:0:0:0:1, params: [SaleQueryRequest(saleId=null, userId=null, productId=null, saleTime=null)]
+2023-12-24 13:03:05  [ http-bio-8080-exec-10:270984 ] - [ INFO ]  request end, id: 2dd1c01b-505d-47ac-a7f3-8a9770333df6, cost: 15ms
+2023-12-24 13:03:44  [ localhost-startStop-2:176986 ] - [ INFO ]  {dataSource-0} closing ...
+2023-12-24 13:03:44  [ localhost-startStop-2:176988 ] - [ INFO ]  {dataSource-0} closing ...
+2023-12-24 13:03:44  [ localhost-startStop-2:309393 ] - [ INFO ]  {dataSource-1} closing ...
+2023-12-24 13:03:44  [ localhost-startStop-2:309395 ] - [ INFO ]  {dataSource-1} closed
+2023-12-24 13:03:44  [ localhost-startStop-2:309402 ] - [ INFO ]  {dataSource-0} closing ...
+2023-12-24 13:04:03  [ localhost-startStop-1:0 ] - [ INFO ]  Root WebApplicationContext: initialization started
+2023-12-24 13:04:04  [ localhost-startStop-1:1154 ] - [ INFO ]  Root WebApplicationContext initialized in 1153 ms
+2023-12-24 13:04:04  [ localhost-startStop-1:1177 ] - [ INFO ]  Initializing Servlet 'dispatcher'
+2023-12-24 13:04:05  [ localhost-startStop-1:1864 ] - [ WARN ]  For Jackson Kotlin classes support please add "com.fasterxml.jackson.module:jackson-module-kotlin" to the classpath
+2023-12-24 13:04:05  [ localhost-startStop-1:1995 ] - [ INFO ]  Completed initialization in 818 ms
+2023-12-24 13:04:26  [ http-bio-8080-exec-1:23103 ] - [ INFO ]  request start，id: 850b5ad0-2f60-4f53-b3ed-406a0192d8e9, path: /sale/add, ip: 0:0:0:0:0:0:0:1, params: [SaleAddDTO(productName=火龙果, productId=null, userId=1, saleDate=Sun Dec 24 08:00:00 CST 2023, saleQuantity=10, saleTotal=100)]
+2023-12-24 13:04:26  [ http-bio-8080-exec-1:23190 ] - [ INFO ]  {dataSource-1} inited
+2023-12-24 13:04:26  [ http-bio-8080-exec-1:23401 ] - [ INFO ]  request end, id: 850b5ad0-2f60-4f53-b3ed-406a0192d8e9, cost: 301ms
+2023-12-24 13:04:26  [ http-bio-8080-exec-2:23431 ] - [ INFO ]  request start，id: 1082a976-7a52-41a1-b643-2d9f4de38038, path: /sale/list/page, ip: 0:0:0:0:0:0:0:1, params: [SaleQueryRequest(saleId=null, userId=null, productId=null, saleTime=null)]
+2023-12-24 13:04:27  [ http-bio-8080-exec-2:23586 ] - [ INFO ]  request end, id: 1082a976-7a52-41a1-b643-2d9f4de38038, cost: 155ms
+2023-12-24 13:14:09  [ localhost-startStop-2:606182 ] - [ INFO ]  {dataSource-1} closing ...
+2023-12-24 13:14:09  [ localhost-startStop-2:606184 ] - [ INFO ]  {dataSource-1} closed
+2023-12-24 13:14:09  [ localhost-startStop-2:606190 ] - [ INFO ]  {dataSource-0} closing ...
+2023-12-24 13:33:26  [ localhost-startStop-1:0 ] - [ INFO ]  Root WebApplicationContext: initialization started
+2023-12-24 13:33:28  [ localhost-startStop-1:1502 ] - [ INFO ]  Root WebApplicationContext initialized in 1500 ms
+2023-12-24 13:33:28  [ localhost-startStop-1:1539 ] - [ INFO ]  Initializing Servlet 'dispatcher'
+2023-12-24 13:33:29  [ localhost-startStop-1:2354 ] - [ WARN ]  For Jackson Kotlin classes support please add "com.fasterxml.jackson.module:jackson-module-kotlin" to the classpath
+2023-12-24 13:33:29  [ localhost-startStop-1:2489 ] - [ INFO ]  Completed initialization in 949 ms
+2023-12-24 13:34:38  [ http-bio-8080-exec-3:71580 ] - [ INFO ]  request start，id: 0612916e-4ca5-4ead-b162-a608c4c38b43, path: /user/login, ip: 0:0:0:0:0:0:0:1, params: [UserLoginRequest(userAccount=219970149, userPassword=261615), org.apache.catalina.connector.RequestFacade@23a87c15]
+2023-12-24 13:34:38  [ http-bio-8080-exec-3:71593 ] - [ ERROR ]  BusinessException
+team.tunan.exception.BusinessException: 密码错误
+	at team.tunan.service.impl.UserServiceImpl.userLogin(UserServiceImpl.java:91)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:344)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:205)
+	at com.sun.proxy.$Proxy86.userLogin(Unknown Source)
+	at team.tunan.controller.UserController.userLogin(UserController.java:73)
+	at team.tunan.controller.UserController$$FastClassBySpringCGLIB$$ad25d0f4.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:771)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:749)
+	at org.springframework.aop.aspectj.MethodInvocationProceedingJoinPoint.proceed(MethodInvocationProceedingJoinPoint.java:88)
+	at team.tunan.aop.LogInterceptor.doInterceptor(LogInterceptor.java:57)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethodWithGivenArgs(AbstractAspectJAdvice.java:644)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethod(AbstractAspectJAdvice.java:633)
+	at org.springframework.aop.aspectj.AspectJAroundAdvice.invoke(AspectJAroundAdvice.java:70)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:749)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:95)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:749)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:691)
+	at team.tunan.controller.UserController$$EnhancerBySpringCGLIB$$40b89961.userLogin(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:105)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:878)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:792)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:647)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:728)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:305)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:222)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:123)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:472)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:171)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:99)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:936)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:407)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1004)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:589)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:310)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:750)
+2023-12-24 13:34:40  [ http-bio-8080-exec-4:73157 ] - [ INFO ]  request start，id: 1abb306d-604a-4cd6-8ee9-76cec90ad5f4, path: /user/login, ip: 0:0:0:0:0:0:0:1, params: [UserLoginRequest(userAccount=219970149, userPassword=261615xhk), org.apache.catalina.connector.RequestFacade@23a87c15]
+2023-12-24 13:34:40  [ http-bio-8080-exec-4:73243 ] - [ INFO ]  {dataSource-1} inited
+2023-12-24 13:34:40  [ http-bio-8080-exec-4:73417 ] - [ INFO ]  request end, id: 1abb306d-604a-4cd6-8ee9-76cec90ad5f4, cost: 259ms
+2023-12-24 13:34:40  [ http-bio-8080-exec-5:73428 ] - [ INFO ]  request start，id: 54e4b080-9aea-467b-a5ef-bb13c6edf282, path: /user/get/login, ip: 0:0:0:0:0:0:0:1, params: [org.apache.catalina.connector.RequestFacade@23a87c15]
+2023-12-24 13:34:40  [ http-bio-8080-exec-5:73431 ] - [ INFO ]  request end, id: 54e4b080-9aea-467b-a5ef-bb13c6edf282, cost: 3ms
+2023-12-24 13:34:43  [ http-bio-8080-exec-6:76224 ] - [ INFO ]  request start，id: ca9beda6-a3e7-4f85-965b-a81cf4c697d6, path: /sale/list/page, ip: 0:0:0:0:0:0:0:1, params: [SaleQueryRequest(saleId=null, userId=null, productId=null, saleTime=null)]
+2023-12-24 13:34:43  [ http-bio-8080-exec-6:76288 ] - [ INFO ]  request end, id: ca9beda6-a3e7-4f85-965b-a81cf4c697d6, cost: 65ms
+2023-12-24 13:35:08  [ http-bio-8080-exec-1:101330 ] - [ INFO ]  request start，id: d1f08b48-64f1-41d9-ba83-2934eba365c8, path: /sale/list/page, ip: 0:0:0:0:0:0:0:1, params: [SaleQueryRequest(saleId=null, userId=null, productId=null, saleTime=null)]
+2023-12-24 13:35:08  [ http-bio-8080-exec-1:101346 ] - [ INFO ]  request end, id: d1f08b48-64f1-41d9-ba83-2934eba365c8, cost: 15ms
+2023-12-24 13:37:06  [ localhost-startStop-2:219456 ] - [ INFO ]  {dataSource-1} closing ...
+2023-12-24 13:37:06  [ localhost-startStop-2:219459 ] - [ INFO ]  {dataSource-1} closed
+2023-12-24 13:37:06  [ localhost-startStop-2:219466 ] - [ INFO ]  {dataSource-0} closing ...
+2023-12-24 13:37:14  [ localhost-startStop-1:0 ] - [ INFO ]  Root WebApplicationContext: initialization started
+2023-12-24 13:37:16  [ localhost-startStop-1:1311 ] - [ INFO ]  Root WebApplicationContext initialized in 1309 ms
+2023-12-24 13:37:16  [ localhost-startStop-1:1332 ] - [ INFO ]  Initializing Servlet 'dispatcher'
+2023-12-24 13:37:17  [ localhost-startStop-1:2083 ] - [ WARN ]  For Jackson Kotlin classes support please add "com.fasterxml.jackson.module:jackson-module-kotlin" to the classpath
+2023-12-24 13:37:17  [ localhost-startStop-1:2182 ] - [ INFO ]  Completed initialization in 850 ms
+2023-12-24 13:38:04  [ http-bio-8080-exec-3:49334 ] - [ INFO ]  request start，id: d9377f6f-fcca-4831-a36d-0c470060ce49, path: /purchase/list/page, ip: 0:0:0:0:0:0:0:1, params: [PurchaseQueryRequest(purchaseId=null, userId=null, purchaseTime=null)]
+2023-12-24 13:38:04  [ http-bio-8080-exec-3:49456 ] - [ INFO ]  {dataSource-1} inited
+2023-12-24 13:38:04  [ http-bio-8080-exec-3:49619 ] - [ INFO ]  request end, id: d9377f6f-fcca-4831-a36d-0c470060ce49, cost: 289ms
+2023-12-24 13:38:27  [ localhost-startStop-2:72646 ] - [ INFO ]  {dataSource-1} closing ...
+2023-12-24 13:38:27  [ localhost-startStop-2:72648 ] - [ INFO ]  {dataSource-1} closed
+2023-12-24 13:38:27  [ localhost-startStop-2:72655 ] - [ INFO ]  {dataSource-0} closing ...
+2023-12-24 13:38:37  [ localhost-startStop-1:0 ] - [ INFO ]  Root WebApplicationContext: initialization started
+2023-12-24 13:38:38  [ localhost-startStop-1:1166 ] - [ INFO ]  Root WebApplicationContext initialized in 1165 ms
+2023-12-24 13:38:38  [ localhost-startStop-1:1190 ] - [ INFO ]  Initializing Servlet 'dispatcher'
+2023-12-24 13:38:39  [ localhost-startStop-1:1838 ] - [ WARN ]  For Jackson Kotlin classes support please add "com.fasterxml.jackson.module:jackson-module-kotlin" to the classpath
+2023-12-24 13:38:39  [ localhost-startStop-1:1931 ] - [ INFO ]  Completed initialization in 741 ms
+2023-12-24 13:38:48  [ http-bio-8080-exec-1:10634 ] - [ INFO ]  request start，id: c2a9883b-9e13-46db-b286-cc3c08f5b169, path: /sale/list/page, ip: 0:0:0:0:0:0:0:1, params: [SaleQueryRequest(saleId=null, userId=null, productId=null, saleTime=null)]
+2023-12-24 13:38:48  [ http-bio-8080-exec-1:10807 ] - [ INFO ]  {dataSource-1} inited
+2023-12-24 13:38:48  [ http-bio-8080-exec-1:11011 ] - [ INFO ]  request end, id: c2a9883b-9e13-46db-b286-cc3c08f5b169, cost: 384ms
+2023-12-24 13:38:54  [ http-bio-8080-exec-2:16855 ] - [ INFO ]  request start，id: 86d06382-b82a-4ca3-b754-712fbb37530e, path: /sale/update, ip: 0:0:0:0:0:0:0:1, params: [Sale(saleId=1738787697361661953, productId=null, userId=null, saleDate=Sun Dec 24 08:00:00 CST 2023, saleQuantity=10, saleTotal=10, createTime=null, updateTime=null, isDelete=null)]
+2023-12-24 13:38:54  [ http-bio-8080-exec-2:16909 ] - [ INFO ]  request end, id: 86d06382-b82a-4ca3-b754-712fbb37530e, cost: 54ms
+2023-12-24 13:38:54  [ http-bio-8080-exec-5:16920 ] - [ INFO ]  request start，id: 97a7347c-1e71-4ee3-a7a2-16ce8b1cb25f, path: /sale/list/page, ip: 0:0:0:0:0:0:0:1, params: [SaleQueryRequest(saleId=null, userId=null, productId=null, saleTime=null)]
+2023-12-24 13:38:54  [ http-bio-8080-exec-5:16933 ] - [ INFO ]  request end, id: 97a7347c-1e71-4ee3-a7a2-16ce8b1cb25f, cost: 13ms
+2023-12-24 13:39:01  [ http-bio-8080-exec-6:23830 ] - [ INFO ]  request start，id: 68e22370-2e8f-44f2-a2fe-c53e115a471e, path: /sale/update, ip: 0:0:0:0:0:0:0:1, params: [Sale(saleId=1738787697361661953, productId=null, userId=null, saleDate=Sun Dec 24 08:00:00 CST 2023, saleQuantity=10, saleTotal=100, createTime=null, updateTime=null, isDelete=null)]
+2023-12-24 13:39:01  [ http-bio-8080-exec-6:23843 ] - [ INFO ]  request end, id: 68e22370-2e8f-44f2-a2fe-c53e115a471e, cost: 12ms
+2023-12-24 13:39:01  [ http-bio-8080-exec-7:23850 ] - [ INFO ]  request start，id: 0b7962d6-29d9-402a-9108-c2aad6d3808d, path: /sale/list/page, ip: 0:0:0:0:0:0:0:1, params: [SaleQueryRequest(saleId=null, userId=null, productId=null, saleTime=null)]
+2023-12-24 13:39:01  [ http-bio-8080-exec-7:23860 ] - [ INFO ]  request end, id: 0b7962d6-29d9-402a-9108-c2aad6d3808d, cost: 10ms
+2023-12-24 13:42:06  [ http-bio-8080-exec-9:208919 ] - [ INFO ]  request start，id: 1fe7d5c2-a591-44c0-8b00-ed9ecde89149, path: /purchase/list/page, ip: 0:0:0:0:0:0:0:1, params: [PurchaseQueryRequest(purchaseId=null, userId=null, purchaseTime=null)]
+2023-12-24 13:42:06  [ http-bio-8080-exec-9:208940 ] - [ INFO ]  request end, id: 1fe7d5c2-a591-44c0-8b00-ed9ecde89149, cost: 20ms
+2023-12-24 13:46:28  [ http-bio-8080-exec-1:470783 ] - [ INFO ]  request start，id: 7f5b529a-f783-4724-908b-7636be6195b2, path: /purchase/list/page, ip: 0:0:0:0:0:0:0:1, params: [PurchaseQueryRequest(purchaseId=null, userId=null, purchaseTime=null)]
+2023-12-24 13:46:28  [ http-bio-8080-exec-1:470795 ] - [ INFO ]  request end, id: 7f5b529a-f783-4724-908b-7636be6195b2, cost: 11ms
+2023-12-24 13:46:30  [ http-bio-8080-exec-2:472868 ] - [ WARN ]  No mapping for OPTIONS /purchase/update
+2023-12-24 13:46:44  [ localhost-startStop-2:487200 ] - [ INFO ]  {dataSource-1} closing ...
+2023-12-24 13:46:44  [ localhost-startStop-2:487203 ] - [ INFO ]  {dataSource-1} closed
+2023-12-24 13:46:45  [ localhost-startStop-2:487210 ] - [ INFO ]  {dataSource-0} closing ...
+2023-12-24 13:46:55  [ localhost-startStop-1:0 ] - [ INFO ]  Root WebApplicationContext: initialization started
+2023-12-24 13:46:56  [ localhost-startStop-1:1340 ] - [ INFO ]  Root WebApplicationContext initialized in 1339 ms
+2023-12-24 13:46:56  [ localhost-startStop-1:1379 ] - [ INFO ]  Initializing Servlet 'dispatcher'
+2023-12-24 13:46:57  [ localhost-startStop-1:2128 ] - [ WARN ]  For Jackson Kotlin classes support please add "com.fasterxml.jackson.module:jackson-module-kotlin" to the classpath
+2023-12-24 13:46:57  [ localhost-startStop-1:2278 ] - [ INFO ]  Completed initialization in 899 ms
+2023-12-24 13:47:08  [ http-bio-8080-exec-3:13013 ] - [ INFO ]  request start，id: 11404f21-e7e2-4869-af76-56a20ac26910, path: /purchase/update, ip: 0:0:0:0:0:0:0:1, params: [PurchaseAddDTO(purchaseId=1736329744163487747, productName=火龙果, userId=1, purchaseTime=Sun Dec 17 08:00:00 CST 2023, purchaseQuantity=100, totalCost=1000)]
+2023-12-24 13:47:08  [ http-bio-8080-exec-3:13080 ] - [ INFO ]  {dataSource-1} inited
+2023-12-24 13:47:08  [ http-bio-8080-exec-3:13278 ] - [ INFO ]  request end, id: 11404f21-e7e2-4869-af76-56a20ac26910, cost: 269ms
+2023-12-24 13:47:08  [ http-bio-8080-exec-4:13306 ] - [ INFO ]  request start，id: 9b20bd17-c654-45ba-9082-a72e617fc45b, path: /purchase/list/page, ip: 0:0:0:0:0:0:0:1, params: [PurchaseQueryRequest(purchaseId=null, userId=null, purchaseTime=null)]
+2023-12-24 13:47:08  [ http-bio-8080-exec-4:13370 ] - [ INFO ]  request end, id: 9b20bd17-c654-45ba-9082-a72e617fc45b, cost: 64ms
+2023-12-24 13:47:24  [ http-bio-8080-exec-5:28842 ] - [ INFO ]  request start，id: 76b765da-2020-48a5-a640-81c385fe0eda, path: /sale/list/page, ip: 0:0:0:0:0:0:0:1, params: [SaleQueryRequest(saleId=null, userId=null, productId=null, saleTime=null)]
+2023-12-24 13:47:24  [ http-bio-8080-exec-5:28868 ] - [ INFO ]  request end, id: 76b765da-2020-48a5-a640-81c385fe0eda, cost: 25ms
+2023-12-24 13:47:24  [ http-bio-8080-exec-6:29385 ] - [ INFO ]  request start，id: 1a8232a6-ef22-4152-9c00-9e8b00a56039, path: /purchase/list/page, ip: 0:0:0:0:0:0:0:1, params: [PurchaseQueryRequest(purchaseId=null, userId=null, purchaseTime=null)]
+2023-12-24 13:47:24  [ http-bio-8080-exec-6:29397 ] - [ INFO ]  request end, id: 1a8232a6-ef22-4152-9c00-9e8b00a56039, cost: 11ms
+2023-12-24 13:47:28  [ http-bio-8080-exec-7:32990 ] - [ INFO ]  request start，id: 9f641d2f-5913-4a88-acbd-87acf3908557, path: /purchase/update, ip: 0:0:0:0:0:0:0:1, params: [PurchaseAddDTO(purchaseId=1736329744163487747, productName=火龙果, userId=1, purchaseTime=Sun Dec 17 08:00:00 CST 2023, purchaseQuantity=100, totalCost=1000)]
+2023-12-24 13:47:28  [ http-bio-8080-exec-7:32998 ] - [ INFO ]  request end, id: 9f641d2f-5913-4a88-acbd-87acf3908557, cost: 7ms
+2023-12-24 13:47:28  [ http-bio-8080-exec-8:33006 ] - [ INFO ]  request start，id: 0feb2e34-f3e1-4630-ae54-ecfbb9575b0a, path: /purchase/list/page, ip: 0:0:0:0:0:0:0:1, params: [PurchaseQueryRequest(purchaseId=null, userId=null, purchaseTime=null)]
+2023-12-24 13:47:28  [ http-bio-8080-exec-8:33017 ] - [ INFO ]  request end, id: 0feb2e34-f3e1-4630-ae54-ecfbb9575b0a, cost: 10ms
+2023-12-24 13:49:00  [ http-bio-8080-exec-10:124948 ] - [ INFO ]  request start，id: 8c0220b9-e65d-4c77-bc49-90a712c611c6, path: /purchase/list/page, ip: 0:0:0:0:0:0:0:1, params: [PurchaseQueryRequest(purchaseId=null, userId=null, purchaseTime=null)]
+2023-12-24 13:49:00  [ http-bio-8080-exec-10:124967 ] - [ INFO ]  request end, id: 8c0220b9-e65d-4c77-bc49-90a712c611c6, cost: 18ms
+2023-12-24 13:49:05  [ http-bio-8080-exec-10:130424 ] - [ INFO ]  request start，id: 60dbbb0b-5e8e-4fe0-b0c5-b009b2fb7ed3, path: /purchase/update, ip: 0:0:0:0:0:0:0:1, params: [PurchaseAddDTO(purchaseId=1736329744163487747, productName=火龙果, userId=1, purchaseTime=Sun Dec 17 08:00:00 CST 2023, purchaseQuantity=100, totalCost=10000)]
+2023-12-24 13:49:05  [ http-bio-8080-exec-10:130443 ] - [ INFO ]  request end, id: 60dbbb0b-5e8e-4fe0-b0c5-b009b2fb7ed3, cost: 19ms
+2023-12-24 13:49:05  [ http-bio-8080-exec-10:130453 ] - [ INFO ]  request start，id: 88965440-0c7e-43d3-b05b-4d747237e00c, path: /purchase/list/page, ip: 0:0:0:0:0:0:0:1, params: [PurchaseQueryRequest(purchaseId=null, userId=null, purchaseTime=null)]
+2023-12-24 13:49:05  [ http-bio-8080-exec-10:130462 ] - [ INFO ]  request end, id: 88965440-0c7e-43d3-b05b-4d747237e00c, cost: 9ms
+2023-12-24 13:50:10  [ localhost-startStop-2:195241 ] - [ INFO ]  {dataSource-1} closing ...
+2023-12-24 13:50:10  [ localhost-startStop-2:195243 ] - [ INFO ]  {dataSource-1} closed
+2023-12-24 13:50:10  [ localhost-startStop-2:195249 ] - [ INFO ]  {dataSource-0} closing ...

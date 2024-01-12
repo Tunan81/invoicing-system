@@ -1,0 +1,132 @@
+2024-01-02 22:12:28  [ localhost-startStop-1:0 ] - [ INFO ]  Root WebApplicationContext: initialization started
+2024-01-02 22:12:29  [ localhost-startStop-1:1246 ] - [ INFO ]  Root WebApplicationContext initialized in 1242 ms
+2024-01-02 22:12:29  [ localhost-startStop-1:1281 ] - [ INFO ]  Initializing Servlet 'dispatcher'
+2024-01-02 22:12:30  [ localhost-startStop-1:1965 ] - [ WARN ]  For Jackson Kotlin classes support please add "com.fasterxml.jackson.module:jackson-module-kotlin" to the classpath
+2024-01-02 22:12:30  [ localhost-startStop-1:2067 ] - [ INFO ]  Completed initialization in 786 ms
+2024-01-02 22:15:30  [ http-bio-8080-exec-3:181546 ] - [ INFO ]  request start，id: 9b8022d7-e2cb-429f-a724-9281004c422e, path: /user/login, ip: 0:0:0:0:0:0:0:1, params: [UserLoginRequest(userAccount=219970149, userPassword=12345678), org.apache.catalina.connector.RequestFacade@18e15727]
+2024-01-02 22:15:30  [ http-bio-8080-exec-3:181663 ] - [ INFO ]  {dataSource-1} inited
+2024-01-02 22:15:30  [ http-bio-8080-exec-3:181835 ] - [ INFO ]  user login failed, userAccount cannot match userPassword
+2024-01-02 22:15:30  [ http-bio-8080-exec-3:181837 ] - [ ERROR ]  BusinessException
+team.tunan.exception.BusinessException: 用户不存在或密码错误
+	at team.tunan.service.impl.UserServiceImpl.userLogin(UserServiceImpl.java:103)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:344)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:205)
+	at com.sun.proxy.$Proxy76.userLogin(Unknown Source)
+	at team.tunan.controller.UserController.userLogin(UserController.java:73)
+	at team.tunan.controller.UserController$$FastClassBySpringCGLIB$$ad25d0f4.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:771)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:749)
+	at org.springframework.aop.aspectj.MethodInvocationProceedingJoinPoint.proceed(MethodInvocationProceedingJoinPoint.java:88)
+	at team.tunan.aop.LogInterceptor.doInterceptor(LogInterceptor.java:57)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethodWithGivenArgs(AbstractAspectJAdvice.java:644)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethod(AbstractAspectJAdvice.java:633)
+	at org.springframework.aop.aspectj.AspectJAroundAdvice.invoke(AspectJAroundAdvice.java:70)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:749)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:95)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:749)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:691)
+	at team.tunan.controller.UserController$$EnhancerBySpringCGLIB$$de4e762b.userLogin(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:105)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:878)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:792)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:647)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:728)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:305)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:222)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:123)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:472)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:171)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:99)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:936)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:407)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1004)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:589)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:310)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:750)
+2024-01-02 22:15:37  [ http-bio-8080-exec-4:189206 ] - [ INFO ]  request start，id: 2568ebfa-e58b-41be-bb40-20e969ce83a2, path: /user/login, ip: 0:0:0:0:0:0:0:1, params: [UserLoginRequest(userAccount=219970149, userPassword=261615xhk), org.apache.catalina.connector.RequestFacade@18e15727]
+2024-01-02 22:15:37  [ http-bio-8080-exec-4:189213 ] - [ INFO ]  request end, id: 2568ebfa-e58b-41be-bb40-20e969ce83a2, cost: 7ms
+2024-01-02 22:15:37  [ http-bio-8080-exec-5:189223 ] - [ INFO ]  request start，id: 1d38bde6-9213-48a3-b2dd-fc9185b3c16a, path: /user/get/login, ip: 0:0:0:0:0:0:0:1, params: [org.apache.catalina.connector.RequestFacade@18e15727]
+2024-01-02 22:15:37  [ http-bio-8080-exec-5:189226 ] - [ INFO ]  request end, id: 1d38bde6-9213-48a3-b2dd-fc9185b3c16a, cost: 3ms
+2024-01-02 22:15:39  [ http-bio-8080-exec-6:191094 ] - [ INFO ]  request start，id: d6162fb2-232e-4139-abe8-a706b14382ba, path: /user/list/page, ip: 0:0:0:0:0:0:0:1, params: [UserQueryRequest(id=null, userName=null, userProfile=null, userRole=null)]
+2024-01-02 22:15:39  [ http-bio-8080-exec-6:191271 ] - [ INFO ]  request end, id: d6162fb2-232e-4139-abe8-a706b14382ba, cost: 176ms
+2024-01-02 22:15:47  [ http-bio-8080-exec-8:199364 ] - [ INFO ]  request start，id: d16d0dd7-544d-4096-b15f-4c668d80304f, path: /user/update, ip: 0:0:0:0:0:0:0:1, params: [UserUpdateRequest(id=1738191261058072577, userName=test, userAvatar=null, userProfile=jianjie1, userRole=buyer)]
+2024-01-02 22:15:47  [ http-bio-8080-exec-8:199383 ] - [ INFO ]  request end, id: d16d0dd7-544d-4096-b15f-4c668d80304f, cost: 20ms
+2024-01-02 22:15:47  [ http-bio-8080-exec-10:199392 ] - [ INFO ]  request start，id: b70eefa0-c9b8-45b9-87af-2f34cc4e94f6, path: /user/list/page, ip: 0:0:0:0:0:0:0:1, params: [UserQueryRequest(id=null, userName=null, userProfile=null, userRole=null)]
+2024-01-02 22:15:47  [ http-bio-8080-exec-10:199396 ] - [ INFO ]  request end, id: b70eefa0-c9b8-45b9-87af-2f34cc4e94f6, cost: 3ms
+2024-01-02 22:16:43  [ http-bio-8080-exec-10:255051 ] - [ INFO ]  request start，id: 9f6f9a99-0e7a-41c3-bdf6-c0fbf2096235, path: /user/list/page, ip: 0:0:0:0:0:0:0:1, params: [UserQueryRequest(id=null, userName=null, userProfile=null, userRole=null)]
+2024-01-02 22:16:43  [ http-bio-8080-exec-10:255059 ] - [ INFO ]  request end, id: 9f6f9a99-0e7a-41c3-bdf6-c0fbf2096235, cost: 8ms
+2024-01-02 22:17:38  [ http-bio-8080-exec-2:309958 ] - [ INFO ]  request start，id: 8d724a65-4eec-4ab4-a3c7-a1eead37cc10, path: /user/delete, ip: 0:0:0:0:0:0:0:1, params: [DeleteRequest(id=1738191356809838593)]
+2024-01-02 22:17:38  [ http-bio-8080-exec-2:310000 ] - [ INFO ]  request end, id: 8d724a65-4eec-4ab4-a3c7-a1eead37cc10, cost: 41ms
+2024-01-02 22:17:38  [ http-bio-8080-exec-2:310008 ] - [ INFO ]  request start，id: a02d43bf-3226-4891-8bf0-aba010827132, path: /user/list/page, ip: 0:0:0:0:0:0:0:1, params: [UserQueryRequest(id=null, userName=null, userProfile=null, userRole=null)]
+2024-01-02 22:17:38  [ http-bio-8080-exec-2:310013 ] - [ INFO ]  request end, id: a02d43bf-3226-4891-8bf0-aba010827132, cost: 4ms
+2024-01-02 22:17:40  [ http-bio-8080-exec-2:311619 ] - [ INFO ]  request start，id: 57851192-d857-4710-ae78-f8b0cb0cc23c, path: /purchase/list/page, ip: 0:0:0:0:0:0:0:1, params: [PurchaseQueryRequest(purchaseId=null, userId=null, purchaseTime=null)]
+2024-01-02 22:17:40  [ http-bio-8080-exec-2:311651 ] - [ INFO ]  request end, id: 57851192-d857-4710-ae78-f8b0cb0cc23c, cost: 32ms
+2024-01-02 22:17:45  [ http-bio-8080-exec-2:317328 ] - [ INFO ]  request start，id: 27c0594a-d32e-4842-bbdb-90533d19984f, path: /purchase/update, ip: 0:0:0:0:0:0:0:1, params: [PurchaseAddDTO(purchaseId=1, productName=苹果, userId=1, purchaseTime=Thu Dec 14 08:00:00 CST 2023, purchaseQuantity=100, totalCost=1000)]
+2024-01-02 22:17:45  [ http-bio-8080-exec-2:317362 ] - [ INFO ]  request end, id: 27c0594a-d32e-4842-bbdb-90533d19984f, cost: 33ms
+2024-01-02 22:17:45  [ http-bio-8080-exec-2:317369 ] - [ INFO ]  request start，id: f9c1cf0f-90ff-409a-a951-5218d6a343a5, path: /purchase/list/page, ip: 0:0:0:0:0:0:0:1, params: [PurchaseQueryRequest(purchaseId=null, userId=null, purchaseTime=null)]
+2024-01-02 22:17:45  [ http-bio-8080-exec-2:317378 ] - [ INFO ]  request end, id: f9c1cf0f-90ff-409a-a951-5218d6a343a5, cost: 9ms
+2024-01-02 22:17:49  [ http-bio-8080-exec-2:320942 ] - [ INFO ]  request start，id: f6b61280-5768-4971-aa64-d5436c9ecd9c, path: /sale/list/page, ip: 0:0:0:0:0:0:0:1, params: [SaleQueryRequest(saleId=null, userId=null, productId=null, saleTime=null)]
+2024-01-02 22:17:49  [ http-bio-8080-exec-2:320969 ] - [ INFO ]  request end, id: f6b61280-5768-4971-aa64-d5436c9ecd9c, cost: 26ms
+2024-01-02 22:17:52  [ http-bio-8080-exec-2:323725 ] - [ INFO ]  request start，id: c72a6d99-6213-4436-a8c9-3b894d951dea, path: /purchase/list/page, ip: 0:0:0:0:0:0:0:1, params: [PurchaseQueryRequest(purchaseId=null, userId=null, purchaseTime=null)]
+2024-01-02 22:17:52  [ http-bio-8080-exec-2:323733 ] - [ INFO ]  request end, id: c72a6d99-6213-4436-a8c9-3b894d951dea, cost: 7ms
+2024-01-02 22:17:53  [ http-bio-8080-exec-2:324663 ] - [ INFO ]  request start，id: 701696e2-78e4-423c-b30f-8f8e54609177, path: /sale/list/page, ip: 0:0:0:0:0:0:0:1, params: [SaleQueryRequest(saleId=null, userId=null, productId=null, saleTime=null)]
+2024-01-02 22:17:53  [ http-bio-8080-exec-2:324679 ] - [ INFO ]  request end, id: 701696e2-78e4-423c-b30f-8f8e54609177, cost: 15ms
+2024-01-02 22:17:55  [ http-bio-8080-exec-2:327245 ] - [ INFO ]  request start，id: cd08ea79-c9c2-4d6b-b5f9-1f39aa55740a, path: /product/list/page, ip: 0:0:0:0:0:0:0:1, params: [ProductQueryRequest(id=null, productName=null)]
+2024-01-02 22:17:55  [ http-bio-8080-exec-2:327252 ] - [ INFO ]  request end, id: cd08ea79-c9c2-4d6b-b5f9-1f39aa55740a, cost: 6ms
+2024-01-02 22:18:37  [ http-bio-8080-exec-2:369273 ] - [ INFO ]  request start，id: 26617c9f-0460-4736-93aa-655ec75ed9a6, path: /sale/list/page, ip: 0:0:0:0:0:0:0:1, params: [SaleQueryRequest(saleId=null, userId=null, productId=null, saleTime=null)]
+2024-01-02 22:18:37  [ http-bio-8080-exec-2:369286 ] - [ INFO ]  request end, id: 26617c9f-0460-4736-93aa-655ec75ed9a6, cost: 13ms
+2024-01-02 22:18:38  [ http-bio-8080-exec-2:370194 ] - [ INFO ]  request start，id: 819bf8a3-0dd7-4ea1-91a9-e22dfdf749f7, path: /purchase/list/page, ip: 0:0:0:0:0:0:0:1, params: [PurchaseQueryRequest(purchaseId=null, userId=null, purchaseTime=null)]
+2024-01-02 22:18:38  [ http-bio-8080-exec-2:370200 ] - [ INFO ]  request end, id: 819bf8a3-0dd7-4ea1-91a9-e22dfdf749f7, cost: 5ms
+2024-01-02 22:18:39  [ http-bio-8080-exec-2:371338 ] - [ INFO ]  request start，id: 9b26389e-7bc4-4a9f-959b-510e1857eb0e, path: /user/list/page, ip: 0:0:0:0:0:0:0:1, params: [UserQueryRequest(id=null, userName=null, userProfile=null, userRole=null)]
+2024-01-02 22:18:39  [ http-bio-8080-exec-2:371341 ] - [ INFO ]  request end, id: 9b26389e-7bc4-4a9f-959b-510e1857eb0e, cost: 3ms
+2024-01-02 22:18:40  [ http-bio-8080-exec-2:372174 ] - [ INFO ]  request start，id: 1ab6179a-f25e-4d2f-91cd-8c23ad4b959f, path: /purchase/list/page, ip: 0:0:0:0:0:0:0:1, params: [PurchaseQueryRequest(purchaseId=null, userId=null, purchaseTime=null)]
+2024-01-02 22:18:40  [ http-bio-8080-exec-2:372181 ] - [ INFO ]  request end, id: 1ab6179a-f25e-4d2f-91cd-8c23ad4b959f, cost: 7ms
+2024-01-02 22:18:41  [ http-bio-8080-exec-2:372861 ] - [ INFO ]  request start，id: a5506014-36a5-44d8-9573-1575c2362537, path: /sale/list/page, ip: 0:0:0:0:0:0:0:1, params: [SaleQueryRequest(saleId=null, userId=null, productId=null, saleTime=null)]
+2024-01-02 22:18:41  [ http-bio-8080-exec-2:372870 ] - [ INFO ]  request end, id: a5506014-36a5-44d8-9573-1575c2362537, cost: 8ms
+2024-01-02 22:18:42  [ http-bio-8080-exec-2:373464 ] - [ INFO ]  request start，id: a6d2fa0d-5099-4347-a1fb-5d15b621c30a, path: /product/list/page, ip: 0:0:0:0:0:0:0:1, params: [ProductQueryRequest(id=null, productName=null)]
+2024-01-02 22:18:42  [ http-bio-8080-exec-2:373468 ] - [ INFO ]  request end, id: a6d2fa0d-5099-4347-a1fb-5d15b621c30a, cost: 3ms
+2024-01-02 22:19:35  [ http-bio-8080-exec-2:426958 ] - [ INFO ]  request start，id: 8009fb9e-b604-4b1d-a923-01a57bbd20ae, path: /product/list/page, ip: 0:0:0:0:0:0:0:1, params: [ProductQueryRequest(id=null, productName=null)]
+2024-01-02 22:19:35  [ http-bio-8080-exec-2:426963 ] - [ INFO ]  request end, id: 8009fb9e-b604-4b1d-a923-01a57bbd20ae, cost: 5ms
+2024-01-02 22:19:35  [ http-bio-8080-exec-2:427086 ] - [ INFO ]  request start，id: 0ab28b37-4837-4e53-9e50-e4ca58f316e6, path: /product/list/page, ip: 0:0:0:0:0:0:0:1, params: [ProductQueryRequest(id=null, productName=null)]
+2024-01-02 22:19:35  [ http-bio-8080-exec-2:427090 ] - [ INFO ]  request end, id: 0ab28b37-4837-4e53-9e50-e4ca58f316e6, cost: 3ms
+2024-01-02 22:20:34  [ http-bio-8080-exec-9:486246 ] - [ WARN ]  No mapping for GET /product
+2024-01-02 22:22:46  [ http-bio-8080-exec-10:618204 ] - [ WARN ]  No mapping for GET /app.d3c0ef19663b009d.hot-update.json
+2024-01-02 22:27:34  [ http-bio-8080-exec-5:906135 ] - [ INFO ]  request start，id: e9d40403-a0a0-4388-ac7e-82c900ad0a60, path: /product/list/page, ip: 0:0:0:0:0:0:0:1, params: [ProductQueryRequest(id=null, productName=null)]
+2024-01-02 22:27:34  [ http-bio-8080-exec-5:906143 ] - [ INFO ]  request end, id: e9d40403-a0a0-4388-ac7e-82c900ad0a60, cost: 8ms
+2024-01-02 22:27:35  [ http-bio-8080-exec-5:907417 ] - [ INFO ]  request start，id: 00ee1be8-8015-4d0d-819e-d2a88c48c59f, path: /product/list/page, ip: 0:0:0:0:0:0:0:1, params: [ProductQueryRequest(id=null, productName=null)]
+2024-01-02 22:27:35  [ http-bio-8080-exec-5:907419 ] - [ INFO ]  request end, id: 00ee1be8-8015-4d0d-819e-d2a88c48c59f, cost: 2ms
+2024-01-02 22:28:12  [ localhost-startStop-2:944179 ] - [ INFO ]  {dataSource-1} closing ...
+2024-01-02 22:28:12  [ localhost-startStop-2:944182 ] - [ INFO ]  {dataSource-1} closed
+2024-01-02 22:28:12  [ localhost-startStop-2:944190 ] - [ INFO ]  {dataSource-0} closing ...
